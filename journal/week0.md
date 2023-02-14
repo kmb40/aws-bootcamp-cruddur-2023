@@ -8,6 +8,10 @@ The following line items outline tasks that I've completed.
 
 ### 3. Watched Ashish's Week 0 - Security Considerations  
 
-### 4. Cruddur Conceptual Napkin Diagram 
+### 4. Cruddur Conceptual Diagram 
 
+* Napkin  
 <img src="https://user-images.githubusercontent.com/1646055/218515054-589de2bd-d983-402a-9de4-45ef00cb5697.jpg" width="450">
+
+* Digital (<a href="https://lucid.app/lucidchart/d6001220-63ae-4bc7-afe6-215c53ae4aba/edit?viewport_loc=-131%2C-40%2C2219%2C1151%2C0_0&invitationId=inv_4664376a-d244-4bde-9003-d7d1e637cfd3" target="_blank">Lucid Charts version</a>)
+<img src="https://user-images.githubusercontent.com/1646055/218799773-54122b31-3e7a-49f4-8e6f-2064a5833402.png" width="450">

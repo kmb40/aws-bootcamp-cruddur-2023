@@ -28,5 +28,7 @@ After launching this service from the console menu, I activated Auto-prompt. [Au
 ![AWS CloudShell](/assets/aws-cloudshell.png)
 
 #### Generated AWS Credentials
+I generated Access Keys and intend to use them for AWS CLI access.
 
 #### Install AWS CLI
+I installed AWS CLI in a gitpod workspace.

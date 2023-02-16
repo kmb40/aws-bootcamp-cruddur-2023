@@ -24,7 +24,7 @@ Additionally, I destroyed the root account credentials, reset them and re-enable
 
 #### Use CloudShell
 After launching this service from the console menu, I activated Auto-prompt. [Auto-prompt](https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-parameters-prompting.html) which functions similar to [Googles auto suggest](https://support.google.com/websearch/answer/7368877?hl=en#:~:text=Autocomplete%20is%20a%20feature%20within,they%20already%20intended%20to%20do.) feature. I then called the `aws sts get-caller-identity` command as seen below.
-
+![AWS CloudShell](assets/aws-cloudshell.png)
 
 #### Generated AWS Credentials
 

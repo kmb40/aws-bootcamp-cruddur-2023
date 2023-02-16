@@ -27,8 +27,9 @@ Additionally, I destroyed the root account credentials, reset them and re-enable
 After launching this service from the console menu, I activated Auto-prompt. [Auto-prompt](https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-parameters-prompting.html) which functions similar to [Googles auto suggest](https://support.google.com/websearch/answer/7368877?hl=en#:~:text=Autocomplete%20is%20a%20feature%20within,they%20already%20intended%20to%20do.) feature. I then called the `aws sts get-caller-identity` command as seen below.  
 ![AWS CloudShell](/assets/aws-cloudshell.png)
 
-#### Generated AWS Credentials
-I generated Access Keys and intend to use them for AWS CLI access.
+#### Generated AWS Credentials  
+I generated Access Keys and intend to use them for AWS CLI access.  
 
-#### Install AWS CLI
-I installed AWS CLI in a gitpod workspace.
+#### Install AWS CLI  
+I installed AWS CLI in a gitpod workspace.  
+![AWS CLI Installed on gitpod](/assets/gitpod-aws-cli.png)

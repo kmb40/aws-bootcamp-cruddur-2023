@@ -46,7 +46,7 @@ I ultimately resovled this by activating IAM Access in the "IAM User and Role Ac
 **Note:** The free tier only allows for two budgets. 
 
 #### Homework Challenges
-- Destroy your root account credentials, Set MFA, IAM role
+- Destroy your root account credentials, Set MFA, IAM role - Completed
 - Use EventBridge to hookup Health Dashboard to SNS and send notification when there is a service health issue.
 - Review all the questions of each pillars in the Well Architected Tool (No specialized lens)
 - Create an architectural diagram (to the best of your ability) the CI/CD logical pipeline in Lucid Charts

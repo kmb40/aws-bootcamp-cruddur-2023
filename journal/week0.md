@@ -35,10 +35,12 @@ I installed AWS CLI in a gitpod workspace.
 ![AWS CLI Installed on gitpod](/assets/gitpod-aws-cli.png)
 
 #### Create a Billing Alarm
-I configured a billing alarm by selecting the two alarms options in the "billing preferences" section of the "account" page. As illustarted in [Chirag's Week 0 - Spend Considerations](#2-watched-chirags-week-0---spend-considerations). I completed setup a new billing alarm in Cloud Watch and created an SNS Topics to faciliated email notifications.
+I configured a billing alarm by selecting the two alarms options in the "billing preferences" section of the "account" page. As illustarted in [Chirag's Week 0 - Spend Considerations](#2-watched-chirags-week-0---spend-considerations). I completed setup a new billing alarm in Cloud Watch and created an SNS Topics to faciliated email notifications.  
+<img width="450" alt="Screenshot 2023-02-14 at 6 36 04 PM" src="/assets/alarm.png">
 
 #### Create an AWS Budget
 I configured two "cost" budgets. One using the template for "Zero Spend" and the other custom for AWS credits.  
+<img width="450" alt="Screenshot 2023-02-14 at 6 36 04 PM" src="/assets/budgets.png">  
 **Note:** During AWS budget creation from an IAM admin account, I was presented with a "You need permissions" error. ![budget-error](/assets/budget-error.png).  
 I ultimately resovled this by activating IAM Access in the "IAM User and Role Access to Billing Information" section of the root accounts "account" section. In other words; Root user --> Account --> "IAM User and Role Access to Billing Information". [Reference](https://docs.aws.amazon.com/IAM/latest/UserGuide/tutorial_billing.html?icmpid=docs_iam_console#tutorial-billing-step1).  
 **Note:** The free tier only allows for two budgets. 

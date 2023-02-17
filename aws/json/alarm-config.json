@@ -1,0 +1,27 @@
+{
+    "Type": "AWS::CloudWatch::Alarm",
+    "Properties": {
+        "AlarmName": "CloudCamp-2023-Billing-Alarm",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+            "arn:aws:sns:us-east-1:734732107779:Default_CloudWatch_Alarms_Topic"
+        ],
+        "InsufficientDataActions": [],
+        "MetricName": "CloudCamp-2023-Alert",
+        "Namespace": "AWS/Billing",
+        "Statistic": "Maximum",
+        "Dimensions": [
+            {
+                "Name": "Currency",
+                "Value": "USD"
+            }
+        ],
+        "Period": 21600,
+        "EvaluationPeriods": 1,
+        "DatapointsToAlarm": 1,
+        "Threshold": 5,
+        "ComparisonOperator": "GreaterThanThreshold",
+        "TreatMissingData": "missing"
+    }
+}

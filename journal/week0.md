@@ -46,12 +46,16 @@ I ultimately resovled this by activating IAM Access in the "IAM User and Role Ac
 **Note:** The free tier only allows for two budgets before becoming billiable. 
 
 #### Homework Challenges
-- Destroy your root account credentials, Set MFA, IAM role - **Completed all of these tasks in both the root account as well as the IAM role.**  
+- Destroy your root account credentials, Set MFA, IAM role. **Completed all of these tasks in both the root account as well as the IAM role.**  
 ![mfa](/assets/root-mfa.png)  
 - Use EventBridge to hookup Health Dashboard to SNS and send notification when there is a service health issue.  **Completed! Created an SNS Topic then used EventBridge to define a rule that targets thata SNS in the event of a AWS Health Service issue related to all "EC2" events.**  
 ![event-bridge-health-sns](/assets/event-bridge.png)  
 
-- Review all the questions of each pillars in the Well Architected Tool (No specialized lens)  
-- Create an architectural diagram (to the best of your ability) the CI/CD logical pipeline in Lucid Charts
-- Research the technical and service limits of specific services and how they could impact the technical path for technical flexibility. 
-- Open a support ticket and request a service limit
+- Review all the questions of each pillars in the Well Architected Tool (No specialized lens)  **Completed the questionaires - without lenses - for the Operation Excellence, Security, Reliability, Performance efficency, Cost Optimization pillars, and Sustainability. Found the questions and answers to be thought provoking and full of best practices. Generated a report which can be found in this repo at** [Cruddur Well Architected Tool Report](/assets/Cruddur_wellarchitected.pdf)
+
+- Create an architectural diagram (to the best of your ability) the CI/CD logical pipeline in Lucid Charts. **Completed and attached**  
+<img width="450" alt="cicd-pipeline" src="/assets/CI_CD%20pipeline.png">
+
+- Research the technical and service limits of specific services and how they could impact the technical path for technical flexibility. **Completed. Service limits are the maximum values for the resources in an AWS account. These limits can serve as boundaries from which the technical path should consider and request adjustments as needed.** [Reference](https://docs.aws.amazon.com/servicequotas/latest/userguide/intro.html)  
+
+- Open a support ticket and request a service limit. **Completed. I requested a Service Quota increase for S3 Access Points** <img width="450" alt="service-quota-limits" src="/assets/service-limit-quotas.png">

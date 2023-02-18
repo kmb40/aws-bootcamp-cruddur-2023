@@ -1,27 +1,35 @@
 {
-    "Type": "AWS::CloudWatch::Alarm",
-    "Properties": {
-        "AlarmName": "CloudCamp-2023-Billing-Alarm",
-        "ActionsEnabled": true,
-        "OKActions": [],
-        "AlarmActions": [
-            "arn:aws:sns:us-east-1:734732107779:Default_CloudWatch_Alarms_Topic"
-        ],
-        "InsufficientDataActions": [],
-        "MetricName": "CloudCamp-2023-Alert",
-        "Namespace": "AWS/Billing",
-        "Statistic": "Maximum",
-        "Dimensions": [
-            {
-                "Name": "Currency",
-                "Value": "USD"
-            }
-        ],
-        "Period": 21600,
-        "EvaluationPeriods": 1,
-        "DatapointsToAlarm": 1,
-        "Threshold": 5,
-        "ComparisonOperator": "GreaterThanThreshold",
-        "TreatMissingData": "missing"
-    }
-}
+    "AlarmName": "CloudCamp-DailyEstimatedCharges",
+    "AlarmDescription": "This alarm would be triggered if the daily estimated charges exceeds 1$",
+    "ActionsEnabled": true,
+    "AlarmActions": [
+        "arn:aws:sns:us-east-1:734732107779:billing-alarm"
+    ],
+    "EvaluationPeriods": 1,
+    "DatapointsToAlarm": 1,
+    "Threshold": 1,
+    "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+    "TreatMissingData": "breaching",
+    "Metrics": [{
+        "Id": "m1",
+        "MetricStat": {
+            "Metric": {
+                "Namespace": "AWS/Billing",
+                "MetricName": "EstimatedCharges",
+                "Dimensions": [{
+                    "Name": "Currency",
+                    "Value": "USD"
+                }]
+            },
+            "Period": 86400,
+            "Stat": "Maximum"
+        },
+        "ReturnData": false
+    },
+    {
+        "Id": "e1",
+        "Expression": "IF(RATE(m1)>0,RATE(m1)*86400,0)",
+        "Label": "DailyEstimatedCharges",
+        "ReturnData": true
+    }]
+  }

@@ -12,3 +12,5 @@ Watched a series of videos and attended the live stream.
 
 #### Containerize Application (Dockerfiles, Docker Compose)
 Containerized the front end and backend of the Cruddur application leveraging Gitpod. Configured the environment variables. Created docker files for the frontend and backend. Used Docker Compose to run both containers simutaneouly. Files can be referenced in github at [Frontend](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-1/frontend-react-js/Dockerfile), [Backend](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-1/backend-flask/Dockerfile), [Composer](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-1/docker-compose.yml)
+
+#### Document the Notification Endpoint for the OpenAI Document

@@ -20,3 +20,4 @@ Started the containers for Cruddur and created an account in the app. Documented
 I essentially updated [docker-compose.yml](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-1/docker-compose.yml) to support dynamodb and postgres databases. I viewed the database using the postgres extenion in Gitpod. I updated the [gitpod.yml](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-1/.gitpod.yml) to launch postgres viewer during workspace start.
 
 #### Homework Challenges
+This is an area I'd like to spend more time working. Updates for these challenges will be ongoing.

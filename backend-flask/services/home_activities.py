@@ -10,7 +10,7 @@ class HomeActivities:
     with tracer.start_as_current_span("home-activities-custom-span-mock-data"):  #Honeycomb custom span
       span = trace.get_current_span() #Honeycomb attribute
       now = datetime.now(timezone.utc).astimezone()
-      span.set_attribute("app,now", now.isoformat()) #Honeycomb attribute
+      span.set_attribute("app.now", now.isoformat()) #Honeycomb attribute
       now = datetime.now(timezone.utc).astimezone()
       results = [{
         'uuid': '68f126b0-1ceb-4a33-88be-d90fa7109eee',
@@ -51,5 +51,5 @@ class HomeActivities:
         'replies': []
       }
       ]
-      span.set_attributes("app.result_length",len(results)) #Honeycomb attribute
+      span.set_attribute("app.result_length",len(results)) #Honeycomb attribute
       return results

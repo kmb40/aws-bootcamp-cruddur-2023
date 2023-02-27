@@ -11,4 +11,7 @@ Watched a series of videos and attended the live stream.
 
 
 #### Homework Challenges
-- Added a custom instrumentation to Honeycomb to add more attributes eg. UserId, Add a custom span
+1. Honeycomb
+ - Added a custom instrumentation to Honeycomb to add more attributes eg. UserId.
+ - Added a custom span for home activities. Reference "#Honeycomb" in [backend-flask](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-2/backend-flask/services/home_activities.py)  
+ ![HoneyComb Custom Span](/assets/)

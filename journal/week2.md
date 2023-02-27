@@ -9,6 +9,11 @@ Watched a series of videos and attended the live stream.
 #### 4. [Watched Security observability](https://www.youtube.com/watch?v=bOf4ITxAcXc&list=PLBfufR7vyJJ7k25byhRXJldB5AiwgNnWv&index=31)
 #### Instrumented HoneyComb
 
+#### Instrumented AWS Xray
+
+#### Instrumented Cloudwatch Logs
+
+#### Instrumented Rollerbar
 
 #### Homework Challenges
 1. Honeycomb

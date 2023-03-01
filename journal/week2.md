@@ -8,8 +8,10 @@ Watched a series of videos and attended the live stream.
 #### 3. [Watched Instrument CloudWatch Logs](https://www.youtube.com/watch?v=ipdFizZjOF4&list=PLBfufR7vyJJ7k25byhRXJldB5AiwgNnWv&index=33)
 #### 4. [Watched Security observability](https://www.youtube.com/watch?v=bOf4ITxAcXc&list=PLBfufR7vyJJ7k25byhRXJldB5AiwgNnWv&index=31)
 #### Instrumented HoneyComb
+Integrated Honeycomb into the Cruddur application. Configured tracing and a custom span in [home activities](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-2/backend-flask/services/home_activities.py)
 
 #### Instrumented AWS Xray
+Integrated AWS Xray into the Cruddur application. Configured tracing, a custom segment and a custom subsegment as commented in [user activities](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-2/backend-flask/services/user_activities.py)
 
 #### Instrumented Cloudwatch Logs
 

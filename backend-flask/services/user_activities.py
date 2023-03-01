@@ -21,7 +21,7 @@ class UserActivities:
         }]
       model['data'] = results
 
-      subsegment = xray_recorder.begin_subsegment('mock-data') #aws xray custom segment
+      subsegment = xray_recorder.begin_subsegment('mock-data') #aws xray custom subsegment
       dict ={ #aws xray custom segment
         "now": now.isoformat(),
         "results-size": len(model['data'])

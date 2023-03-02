@@ -16,7 +16,7 @@ Integrated AWS Xray into the Cruddur application. Configured tracing, a custom s
 #### Instrumented Cloudwatch Logs
 Integrated AWS CloudWatch logs into the Cruddur application. Configured as commented in [backend home activities](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-2/backend-flask/services/home_activities.py) and [backend app.py](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-2/backend-flask/services/home_activities.py)
 
-![CloudWatch](/assets/)
+![CloudWatch](/assets/cloudwatch-logs.png)
 
 #### Instrumented Rollerbar
 

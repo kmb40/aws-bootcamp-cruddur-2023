@@ -10,7 +10,7 @@ tasks:
       cd $THEIA_WORKSPACE_ROOT
   - name: frontend-react-js
     before: |
-      cd /frontend-react-js
+      cd /workspace/frontend-react-js
     init: |
       echo npm install
     command: |

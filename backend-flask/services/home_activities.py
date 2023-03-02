@@ -7,7 +7,7 @@ tracer = trace.get_tracer("home.activities")
 
 class HomeActivities:
   def run():
-    #logger.info("HomeActivities")
+    #logger.info("HomeActivities") #CloudWatch logs
     with tracer.start_as_current_span("home-activities-custom-span-mock-data"):  #Honeycomb custom span
       span = trace.get_current_span() #Honeycomb attribute
       now = datetime.now(timezone.utc).astimezone()

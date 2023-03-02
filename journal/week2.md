@@ -19,6 +19,7 @@ Integrated AWS CloudWatch logs into the Cruddur application. Configured as comme
 ![CloudWatch](/assets/cloudwatch-logs.png)
 
 #### Instrumented Rollerbar
+Integrated Rollbar into the Cruddur application. Configured as commented or seen in [backend App.py](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-2/backend-flask/requirements.txt), [backend requirements](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-2/backend-flask/requirements.txt), [Environmental Variables set in docker-compose](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-2/docker-compose.yml)   
 
 #### Homework Challenges
 1. Honeycomb

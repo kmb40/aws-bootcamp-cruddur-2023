@@ -15,14 +15,14 @@ Integrated AWS Xray into the Cruddur application. Configured tracing, a custom s
 
 #### Instrumented Cloudwatch Logs
 Integrated AWS CloudWatch logs into the Cruddur application. Configured as commented in [backend home activities](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-2/backend-flask/services/home_activities.py) and [backend app.py](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-2/backend-flask/services/home_activities.py)
-![CloudWatch](/assets/cloudwatch-logs.png)
+<img src="/assets/cloudwatch-logs.png" width="450" alt="cloudwatch">
 
 #### Instrumented Rollerbar
 Integrated Rollbar into the Cruddur application. Configured as commented or seen in [backend App.py](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-2/backend-flask/requirements.txt), [backend requirements](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-2/backend-flask/requirements.txt), [Environmental Variables set in docker-compose](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-2/docker-compose.yml)   
-![Roolbar](/assets/rollbar.png)
+<img src="/assets/rollbar.png" width="450" alt="rollbar">
 
 #### Homework Challenges
 1. Honeycomb
  - Added a custom span "home-activities..." for home activities. Reference "#Honeycomb" in [backend-flask](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-2/backend-flask/services/home_activities.py)  
- ![HoneyComb Custom Span](/assets/honeycomb-custom-span.png)
+<img src="/assets/honeycomb-custom-span.png" width="450" alt="honeycomb">
 - Added two attributes to the custom span (app.now = time stamp and app.result_length)

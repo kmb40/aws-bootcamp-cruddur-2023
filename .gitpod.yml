@@ -9,12 +9,9 @@ tasks:
       sudo ./aws/install
       cd $THEIA_WORKSPACE_ROOT
   - name: frontend-react-js
-    before: |
-      cd /workspace/frontend-react-js
-    init: |
-      echo npm install
     command: |
-      echo npm run dev
+      cd /frontend-react-js
+      npm i
   - name: postgres
     init: |
       curl -fsSL https://www.postgresql.org/media/keys/ACCC4CF8.asc|sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/postgresql.gpg

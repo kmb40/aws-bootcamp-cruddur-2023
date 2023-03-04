@@ -31,5 +31,5 @@ Integrated Rollbar into the Cruddur application. Configured as commented or seen
  - Added two attributes to the custom span (app.now = time stamp and app.result_length)  
 <img src="/assets/honeycomb-custom-span.png" width="450" alt="honeycomb">   
   
- - Created and saved a customer query for Trace Volumes.   
+ - Created and saved a custom query for Trace Volumes.   
 <img src="/assets/honeycomb-custom-trace.png" width="450" alt="honeycomb-custom-trace">

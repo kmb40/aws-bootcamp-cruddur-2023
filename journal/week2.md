@@ -24,5 +24,8 @@ Integrated Rollbar into the Cruddur application. Configured as commented or seen
 #### Homework Challenges
 1. Honeycomb
  - Added a custom span "home-activities..." for home activities. Reference "#Honeycomb" in [backend-flask](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-2/backend-flask/services/home_activities.py)  
-<img src="/assets/honeycomb-custom-span.png" width="450" alt="honeycomb">
-- Added two attributes to the custom span (app.now = time stamp and app.result_length)
+ - Added two attributes to the custom span (app.now = time stamp and app.result_length)  
+<img src="/assets/honeycomb-custom-span.png" width="450" alt="honeycomb">   
+  
+ - Created and saved a customer query for Trace Volumes.   
+<img src="/assets/honeycomb-custom-trace.png" width="450" alt="honeycomb-custom-trace">

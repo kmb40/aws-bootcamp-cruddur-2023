@@ -1,6 +1,6 @@
 # Week 2 — Distributed Tracing
 
-The following information outlines tasks that I've completed for Week 1 of the bootcamp.
+The following information outlines tasks that I've completed for Week 2 of the bootcamp.
 
 Watched a series of videos and attended the live stream.
 #### 1. [Attended Week 2 Live Stream]() 

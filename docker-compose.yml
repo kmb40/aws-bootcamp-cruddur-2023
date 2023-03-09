@@ -13,8 +13,8 @@ services:
       AWS_ACCESS_KEY_ID: "${AWS_ACCESS_KEY_ID}"
       AWS_SECRET_ACCESS_KEY: "${AWS_SECRET_ACCESS_KEY}"
       ROLLBAR_ACCESS_TOKEN: "${ROLLBAR_ACCESS_TOKEN}" #Rolllbar
-      AWS_COGNITO_USER_POOL_ID: "ca-central-1_CQ4wDfnwc"
-      AWS_COGNITO_USER_POOL_CLIENT_ID: "5b6ro31g97urk767adrbrdj1g5"
+      AWS_COGNITO_USER_POOL_ID: "us-east-1_Pzbe5SksT"
+      AWS_COGNITO_USER_POOL_CLIENT_ID: "3fh1vt9f05kih07blqk4if3oqb"
     build: ./backend-flask
     ports:
       - "4567:4567"

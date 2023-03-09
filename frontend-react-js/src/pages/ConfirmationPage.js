@@ -39,24 +39,15 @@ export default function ConfirmationPage() {
       }
     }
   }
-
+//AWS Cognito
   const onsubmit = async (event) => {
     event.preventDefault();
-    console.log('ConfirmationPage.onsubmit')
-    // [TODO] Authenication
-    if (Cookies.get('user.email') === undefined || Cookies.get('user.email') === '' || Cookies.get('user.email') === null){
-      setErrors("You need to provide an email in order to send Resend Activiation Code")   
-    } else {
-      if (Cookies.get('user.email') === email){
-        if (Cookies.get('user.confirmation_code') === code){
-          Cookies.set('user.logged_in',true)
-          window.location.href = "/"
-        } else {
-          setErrors("Code is not valid")
-        }
-      } else {
-        setErrors("Email is invalid or cannot be found.")   
-      }
+    setErrors('')
+    try {
+      await Auth.confirmSignUp(email, code);
+      window.location.href = "/"
+    } catch (error) {
+      setErrors(error.message)
     }
     return false
   }

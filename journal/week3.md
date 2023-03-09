@@ -8,7 +8,7 @@ Watched a series of videos and attended the live stream.
 #### 3. [Watched Chirag Week 3 - Spending Considerations](#) 
 
 #### Implement Custom Signin Page
-Implemented a custom signin page leveraging AWS Cognito. Integrated code at Frontend-react-js/ App.js, HomeFeedPage.js, Signin.js, docker-compose.yml and others as relfect at https://github.com/omenking/aws-bootcamp-cruddur-2023/blob/week-3/journal/week3.md. Setup a new user in AWS Cognito. Testing and confirmed login.  
+Implemented a custom signin page leveraging AWS Cognito. Integrated code at Frontend-react-js/ App.js, HomeFeedPage.js, Signin.js, [docker-compose.yml](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-3/docker-compose.yml) and others as relfect at https://github.com/omenking/aws-bootcamp-cruddur-2023/blob/week-3/journal/week3.md. Setup a new user in AWS Cognito. Testing and confirmed login.  
 <img src="/assets/cruddur-signed-in.png" width="450">  
 
 Updated name and username attributes.  
@@ -16,7 +16,7 @@ Updated name and username attributes.
 Per instruction, the user was removed from Cognito since CLI workaround is required to address the forced to change password status assigned to users created in Cognito.
 
 #### Implement Custom Signup Page
-Implemented a custom signup page leveraging AWS Cognito. Integrated code at Frontend-react-js/ ConfigurationPage.js, SignupPage.js, docker-compose.yml and others as relfect at https://github.com/omenking/aws-bootcamp-cruddur-2023/blob/week-3/journal/week3.md. Setup a new user in AWS Cognito. Testing and confirmed login.  
+Implemented a custom signup page leveraging AWS Cognito. Integrated code at Frontend-react-js/ [ConfigurationPage.js](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-3/frontend-react-js/src/pages/ConfirmationPage.js), [SignupPage.js](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-3/frontend-react-js/src/pages/SignupPage.js), [docker-compose.yml](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-3/docker-compose.yml) and others as relfect at https://github.com/omenking/aws-bootcamp-cruddur-2023/blob/week-3/journal/week3.md. Setup a new user in AWS Cognito. Testing and confirmed login.  
 <img src="/assets/signup-page.png" width="450">  
 
 

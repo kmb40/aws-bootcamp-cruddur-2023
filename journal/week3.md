@@ -20,7 +20,7 @@ Implemented a custom signup page leveraging AWS Cognito. Integrated code at Fron
 <img src="/assets/signup-page.png" width="450">  
 
 #### Implement Custom Recovery Page
-Implemented a custom recovery page leveraging AWS Cognito. Integrated code at Frontend-react-js/ [ConfigurationPage.js](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-3/frontend-react-js/src/pages/ConfirmationPage.js) and [RecoveryPage.js](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-3/frontend-react-js/src/pages/RecoverPage.js). Testing and confirmed login with new password.  
+Implemented a custom recovery page leveraging AWS Cognito. Integrated code at Frontend-react-js/ [ConfigurationPage.js](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-3/frontend-react-js/src/pages/ConfirmationPage.js) and [RecoveryPage.js](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-3/frontend-react-js/src/pages/RecoverPage.js). Tested and confirmed login with new password.  
 <img src="/assets/recovery-page.png" width="450">  
 
 **Note:** Revisited ["Week 2 - X-Ray Subsegments Solved"](https://www.youtube.com/watch?v=4SGTW0Db5y0&list=PLBfufR7vyJJ7k25byhRXJldB5AiwgNnWv&index=38) as it was added after I had submitted homework for week 2. Made and tested the suggested changes succesfully. Hat tip to @Olley article which is referenced in the video @ https://olley.hashnode.dev/aws-free-cloud-bootcamp-instrumenting-aws-x-ray-subsegments  

@@ -15,5 +15,10 @@ Updated name and username attributes.
 <img src="/assets/cruddur-user-pool-b.png" width="450">  
 Per instruction, the user was removed from Cognito since CLI workaround is required to address the forced to change password status assigned to users created in Cognito.
 
+#### Implement Custom Signup Page
+Implemented a custom signup page leveraging AWS Cognito. Integrated code at Frontend-react-js/ ConfigurationPage.js, SignupPage.js, docker-compose.yml and others as relfect at https://github.com/omenking/aws-bootcamp-cruddur-2023/blob/week-3/journal/week3.md. Setup a new user in AWS Cognito. Testing and confirmed login.  
+<img src="/assets/cruddur-signup-page.png" width="450">  
+
+
 **Note:** Revisited ["Week 2 - X-Ray Subsegments Solved"](https://www.youtube.com/watch?v=4SGTW0Db5y0&list=PLBfufR7vyJJ7k25byhRXJldB5AiwgNnWv&index=38) as it was added after I had submitted homework for week 2. Made and tested the suggested changes succesfully. Hat tip to @Olley article which is referenced in the video @ https://olley.hashnode.dev/aws-free-cloud-bootcamp-instrumenting-aws-x-ray-subsegments  
-<img src="/assets/xray-subsegment.png" width="450">
+<img src="/assets/xray-subsegment.png" width="450">  

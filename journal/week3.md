@@ -21,7 +21,7 @@ Implemented a custom signup page leveraging AWS Cognito. Integrated code at Fron
 <img src="/assets/signup-page.png" width="450">  
 
 #### Implement Custom Recovery Page
-Implemented a custom recovery page leveraging AWS Cognito. Integrated code at Frontend-react-js/ [ConfigurationPage.js](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-3/frontend-react-js/src/pages/ConfirmationPage.js) and [RecoveryPage.js](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-3/frontend-react-js/src/pages/RecoverPage.js). Tested and confirmed login with new password.  
+Implemented a custom recovery page leveraging AWS Cognito as detailed at [Week 3 Congito JWT Server side Verify](https://www.youtube.com/watch?v=d079jccoG-M&list=PLBfufR7vyJJ7k25byhRXJldB5AiwgNnWv&index=42). Integrated code at Frontend-react-js/ [ConfigurationPage.js](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-3/frontend-react-js/src/pages/ConfirmationPage.js) and [RecoveryPage.js](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-3/frontend-react-js/src/pages/RecoverPage.js). Tested and confirmed login with new password.  
 <img src="/assets/recover-page.png" width="450">  
 
 #### Implement Server Side Verifications with JSON Web Tokens

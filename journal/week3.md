@@ -28,7 +28,7 @@ Implemented a custom recovery page leveraging AWS Cognito. Integrated code at Fr
 Implemented user authentication using JSON Web Token on the server side /backend as detailed at [Week 3 Congito JWT Server side Verify](https://www.youtube.com/watch?v=d079jccoG-M&list=PLBfufR7vyJJ7k25byhRXJldB5AiwgNnWv&index=42). Created a token [file](https://github.com/omenking/aws-bootcamp-cruddur-2023/blob/week-3-improved-ui/backend-flask/lib/cognito_jwt_token.py). Integrated code at Backend/ [home_activities.py](https://github.com/omenking/aws-bootcamp-cruddur-2023/blob/week-3-improved-ui/backend-flask/services/home_activities.py), [docker-compose.yml](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-3/docker-compose.yml) and others as relfected at https://github.com/omenking/aws-bootcamp-cruddur-2023/blob/week-3/journal/week3.md. To serve API endpoints in the Cruddur application. Further Reference - [AWS Docs - Using Tokens](https://docs.aws.amazon.com/cognito/latest/developerguide/amazon-cognito-user-pools-using-tokens-with-identity-providers.html)
 
 #### Homework Challenges  
-#### Implemented UI changes (Not listed in outline or checklist)
+#### Implemented UI changes (Note: Not listed in Course Outline or Student Portal Checklist)
 Implemented UI chages using CSS and Dev Tool in Chrone. Web Token on the server side /frontend-react-js as detailed at [Week 3 Improving UI Contrast and Implementing CSS Variables for Theming](https://www.youtube.com/watch?v=m9V4SmJWoJU).
 
 #### **Note:** 

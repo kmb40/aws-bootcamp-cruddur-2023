@@ -48,7 +48,7 @@ article.signup-article input[type='password'] {
   width: 100%;
   padding: 16px;
   border: solid 1px var(--field-border);
-  background: #1f1f1f;
+  background: var(--field-bg);
   color: #fff;
 }
 

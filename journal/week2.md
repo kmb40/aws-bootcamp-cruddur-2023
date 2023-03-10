@@ -18,7 +18,7 @@ Integrated Honeycomb into the Cruddur application. Configured tracing and a cust
 Integrated AWS Xray into the Cruddur application. Configured tracing, a custom segment and a custom subsegment as commented in [user activities](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-2/backend-flask/services/user_activities.py)
 
 #### Instrumented AWS X-Ray Subsegments
-Made and tested the suggested changes succesfully.  
+Made and tested the suggested changes succesfully.  See [details](https://github.com/kmb40/aws-bootcamp-cruddur-2023/edit/week-3/journal/week3.md#note-revisited-week-2---x-ray-subsegments-solved-as-it-was-added-after-i-had-submitted-homework-for-week-2-updated-week-2-journal-to-reflect-made-and-tested-the-suggested-changes-succesfully-hat-tip-to-olley-article-which-is-referenced-in-the-video--httpsolleyhashnodedevaws-free-cloud-bootcamp-instrumenting-aws-x-ray-subsegments).   
 <img src="/assets/xray-subsegment.png" width="450"> 
 
 #### Instrumented Cloudwatch Logs

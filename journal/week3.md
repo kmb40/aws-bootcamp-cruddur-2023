@@ -3,7 +3,7 @@
 The following information outlines tasks that I've completed for Week 3 of the bootcamp.
 
 Watched a series of videos and attended the live stream.
-#### 1. [Attended Week 3 Live Stream](#) 
+#### 1. [Attended Week 3 Live Stream](https://www.youtube.com/watch?v=9obl7rVgzJw&t=6036s) 
 #### 2. [Watched Ashish's Week 3 - Decenteralized Authentication](https://www.youtube.com/watch?v=tEJIeII66pY&list=PLBfufR7vyJJ7k25byhRXJldB5AiwgNnWv&index=39) 
 #### 3. [Plan to watch Chirag Week 3 - Spending Considerations(Not posted as of the end of week 3)](#) 
 #### 4. [Watched Exploring JWTs](https://www.youtube.com/watch?v=nJjbI4BbasU&list=PLBfufR7vyJJ7k25byhRXJldB5AiwgNnWv&index=43)

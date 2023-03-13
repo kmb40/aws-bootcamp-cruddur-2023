@@ -8,4 +8,4 @@ Watched a series of videos and attended the live stream.
 #### 3. [Watched Chirag Week 3 - Spending Considerations](#) 
 
 #### Provision an RDS Instance  
-Setup and AWS RDS instance in the console. Placed a temporary stop (7 days then system will restart) on the RDS database.
+Setup an AWS RDS instance in the console. Placed a temporary stop (7 days then system will restart) on the RDS database.

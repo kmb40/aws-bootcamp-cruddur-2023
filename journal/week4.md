@@ -7,4 +7,5 @@ Watched a series of videos and attended the live stream.
 #### 2. [Watched Ashish's Week 4 - Security Considerations](https://www.youtube.com/watch?v=UourWxz7iQg&list=PLBfufR7vyJJ7k25byhRXJldB5AiwgNnWv&index=45) 
 #### 3. [Watched Chirag Week 3 - Spending Considerations](#) 
 
-#### Provision and RDS Instance
+#### Provision an RDS Instance  
+Setup and AWS RDS instance in the console. Placed a temporary stop (7 days then system will restart) on the RDS database.

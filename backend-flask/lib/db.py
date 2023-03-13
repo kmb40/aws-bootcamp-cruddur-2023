@@ -100,7 +100,7 @@ class Db:
     # get details about the exception
     err_type, err_obj, traceback = sys.exc_info()
 
-    # get the line number when exception occured
+    # Grab the line number when an exception occured
     line_num = traceback.tb_lineno
 
     # print the connect() error

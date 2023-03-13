@@ -12,4 +12,4 @@ Setup an AWS RDS instance using the command line in Gitpod. Shown in the AWS con
 <img src="/assets/RDS.png" width=450>  
 
 Placed a temporary stop (7 days then system will restart) on the RDS database.  
-<img src="https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-4/assets/RDS-Temporary-stop.png" width=450>  
+<img src="/assets/RDS-Temporary-stop-b.png" width=450>  

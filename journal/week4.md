@@ -42,3 +42,8 @@ Created the "backend-flask/db" directory and "schema.sql" file, then used the fo
 ```
 psql cruddur < db/schema.sql -h localhost -U postgres
 ```
+#### Wrote several bash scripts for database 
+Created bash scripts for dropping, creating, schemas, seeding, and setup which runs the four scripts mentioned. I also created a db-sessions script which displays processes that are running. Reference [backend-flask/bin](https://github.com/kmb40/aws-bootcamp-cruddur-2023/tree/week-4-redux/backend-flask/bin)  
+
+#### Installed Postgres Driver in Backend Application  
+Installed psycopg Postgres driver.

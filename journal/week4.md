@@ -38,6 +38,7 @@ Placed a temporary stop (7 days then system will restart) on the RDS database. R
 <figcaption>Fig 2</figcaption>   
    
 #### Created and imported a .sql script
+Created the "backend-flask/db" directory and "schema.sql" file, then used the following command to import the script.
 ```
 psql cruddur < db/schema.sql -h localhost -U postgres
 ```

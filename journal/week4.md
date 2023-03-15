@@ -7,7 +7,7 @@ Watched a series of videos and attended the live stream.
 #### 2. [Watched Ashish's Week 4 - Security Considerations](https://www.youtube.com/watch?v=UourWxz7iQg&list=PLBfufR7vyJJ7k25byhRXJldB5AiwgNnWv&index=45) 
 #### 3. [Watched Chirag Week 3 - Spending Considerations](#) 
 
-#### Provisioned an RDS Instance  
+#### Provisioned an AWS RDS Postgres Instance  
 Setup an AWS RDS instance using the command line in Gitpod. Substituting proper instanace class, password, avaialbility zone, and port. 
 ```aws rds create-db-instance \
   --db-instance-identifier cruddur-db-instance \
@@ -33,7 +33,11 @@ Reference the AWS console in Fig 1.
 <img src="/assets/RDS.png" width=450>
 <figcaption>Fig 1</figcaption>   
    
-   
 Placed a temporary stop (7 days then system will restart) on the RDS database. Reference Fig 2.
 <img src="/assets/RDS-Temporary-stop-b.png" width=450>
 <figcaption>Fig 2</figcaption>
+
+Created and imported a .sql script
+```
+psql cruddur < db/schema.sql -h localhost -U postgres
+```

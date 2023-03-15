@@ -47,5 +47,3 @@ Created bash scripts for dropping, creating, schemas, seeding, and setup which r
 
 #### Installed Postgres Driver in Backend Application  
 Succesfully installed psycopg Postgres driver. Installed by adding to the [requirements.txt](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-4-redux/backend-flask/requirements.txt) and running pip install in the backend-flask directory. I then conducted extensive troubleshooting primarily in the home_activities.py to resolve various errors specifically with environmental variables. Reference files [home_activities.py](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-4-redux/backend-flask/services/home_activities.py), [db.py](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-4-redux/backend-flask/lib/db.py), and [docker-compose.yml](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-4-redux/docker-compose.yml).  
-
-#### Connected Gitpod to RDS Instance

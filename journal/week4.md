@@ -7,7 +7,7 @@ Watched a series of videos and attended the live stream.
 #### 2. [Watched Ashish's Week 4 - Security Considerations](https://www.youtube.com/watch?v=UourWxz7iQg&list=PLBfufR7vyJJ7k25byhRXJldB5AiwgNnWv&index=45) 
 #### 3. [Watched Chirag Week 3 - Spending Considerations](#) 
 
-#### Provision an RDS Instance  
+#### Provisioned an RDS Instance  
 Setup an AWS RDS instance using the command line in Gitpod. Shown in the AWS console in the image below.  
 <img src="/assets/RDS.png" width=450>  
 

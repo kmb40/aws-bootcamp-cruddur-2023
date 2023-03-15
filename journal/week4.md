@@ -35,9 +35,9 @@ Reference the AWS console in Fig 1.
    
 Placed a temporary stop (7 days then system will restart) on the RDS database. Reference Fig 2.
 <img src="/assets/RDS-Temporary-stop-b.png" width=450>
-<figcaption>Fig 2</figcaption></br>   
-
-Created and imported a .sql script
+<figcaption>Fig 2</figcaption>   
+   
+#### Created and imported an .sql script
 ```
 psql cruddur < db/schema.sql -h localhost -U postgres
 ```

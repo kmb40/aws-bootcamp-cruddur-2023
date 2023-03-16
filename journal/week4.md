@@ -56,3 +56,4 @@ The objective is to have the new user data -orchestrated using AWS Cognito - ins
 <img src="/assets/AWS-Lambda.png" width=450>
 <figcaption>Fig 3</figcaption>   
 <br/><br/>   
+When adding an [AWS Lambda layer for psycopg2](https://github.com/jetbridge/psycopg2-lambda-layer) be sure that the proper ARN for your region is being used.

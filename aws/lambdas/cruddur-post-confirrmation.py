@@ -1,4 +1,3 @@
-# Lambda Function week 4
 import json
 import psycopg2
 import os
@@ -21,19 +20,18 @@ def lambda_handler(event, context):
           handle, 
           cognito_user_id
           ) 
-        VALUES(%s,%s,%s,%s)
+        VALUES(
+          {user_display_name},
+          {user_email},
+          {user_handle},
+          {user_cognito_id}
+        )
       """
       print('SQL Statement ----')
       print(sql)
       conn = psycopg2.connect(os.getenv('CONNECTION_URL'))
       cur = conn.cursor()
-      params = [
-        user_display_name,
-        user_email,
-        user_handle,
-        user_cognito_id
-      ]
-      cur.execute(sql,*params)
+      cur.execute(sql)
       conn.commit() 
 
     except (Exception, psycopg2.DatabaseError) as error:

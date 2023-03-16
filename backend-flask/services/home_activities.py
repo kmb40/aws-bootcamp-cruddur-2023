@@ -15,6 +15,7 @@ class HomeActivities:
       now = datetime.now(timezone.utc).astimezone()
       span.set_attribute("app.now", now.isoformat()) #Honeycomb attribute
       
+      # pyscopg excercise - calls and joins data from the database
       sql = query_wrap_array("""
       SELECT
         activities.uuid,
@@ -32,6 +33,7 @@ class HomeActivities:
       ORDER BY activities.created_at DESC
       """)
       #span.set_attribute("app.result_length",len(results)) #Honeycomb 
+      # pyscopg exercise 
       with pool.connection() as conn:
         with conn.cursor() as cur:
           cur.execute(sql)

@@ -52,5 +52,5 @@ Succesfully installed psycopg Postgres driver. Installed by adding to the [requi
 Modified the RDS instance security group to allow inbound traffic from Gitpod. Succesfully connected to AWS RDS from Gitpod. Created a batch script - [rds-update-sg-rule](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-4-redux/backend-flask/bin/rds-update-sg-rule) - to account for dynamic IP addresses for security group values. In other words, since the IP addresses assigned by Gitpod are dynamic and subject to change, this script calls the IP address and sends it to the AWS security group when the Gitpod space is started.
  
 #### Created Congito Trigger to insert user into database
-The objective is to have the new user data -orchestrated using AWS Cognito - inserted into the AWS RDS database after new user account creation. I created a Lamda function.  
+The objective is to have the new user data -orchestrated using AWS Cognito - inserted into the AWS RDS database after new user account creation. I created a Lamda function named "cruddur-post-confirmation".  
 <img src="/assets/AWS-Lambda.png" width=450>

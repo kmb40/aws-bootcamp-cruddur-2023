@@ -53,4 +53,4 @@ Modified the RDS instance security group to allow inbound traffic from Gitpod. S
  
 #### Created Congito Trigger to insert user into database
 The objective is to have the new user data -orchestrated using AWS Cognito - inserted into the AWS RDS database after new user account creation. I created a Lamda function.  
-<img src="/assests/AWS Lambda" width=450>
+<img src="/assests/AWS-Lambda.png" width=450>

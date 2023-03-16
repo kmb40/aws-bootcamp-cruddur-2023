@@ -32,7 +32,7 @@ Setup an AWS RDS instance using the command line in Gitpod. Substituting proper 
 Reference the AWS console in Fig 1.  
 <img src="/assets/RDS.png" width=450>
 <figcaption>Fig 1</figcaption>   
-   
+<br/><br/>   
 Placed a temporary stop (7 days then system will restart) on the RDS database. Reference Fig 2.
 <img src="/assets/RDS-Temporary-stop-b.png" width=450>
 <figcaption>Fig 2</figcaption>   
@@ -52,5 +52,7 @@ Succesfully installed psycopg Postgres driver. Installed by adding to the [requi
 Modified the RDS instance security group to allow inbound traffic from Gitpod. Succesfully connected to AWS RDS from Gitpod. Created a batch script - [rds-update-sg-rule](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-4-redux/backend-flask/bin/rds-update-sg-rule) - to account for dynamic IP addresses for security group values. In other words, since the IP addresses assigned by Gitpod are dynamic and subject to change, this script calls the IP address and sends it to the AWS security group when the Gitpod space is started.
  
 #### Created Congito Trigger to insert user into database
-The objective is to have the new user data -orchestrated using AWS Cognito - inserted into the AWS RDS database after new user account creation. I created a Lamda function named "cruddur-post-confirmation".  
+The objective is to have the new user data -orchestrated using AWS Cognito - inserted into the AWS RDS database after new user account creation. I created a Lamda function named "cruddur-post-confirmation".  See Fig 3
 <img src="/assets/AWS-Lambda.png" width=450>
+<figcaption>Fig 3</figcaption>   
+<br/><br/>   

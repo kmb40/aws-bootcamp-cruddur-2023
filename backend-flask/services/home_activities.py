@@ -2,7 +2,7 @@ from datetime import datetime, timedelta, timezone
 #Honeycomb
 from opentelemetry import trace 
 # pyscopg
-from lib.db import pool
+from lib.db import db
 
 #Honeycomb
 tracer = trace.get_tracer("home.activities")

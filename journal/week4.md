@@ -56,6 +56,6 @@ The objective is to have the new user data -orchestrated using AWS Cognito - ins
 <img src="/assets/AWS-Lambda.png" width=450>
 <figcaption>Fig 3</figcaption>   
 <br/><br/>   
-When adding an [AWS Lambda layer for psycopg2](https://github.com/jetbridge/psycopg2-lambda-layer) be sure that the proper ARN for your region is being used. I added a stock AWS lambda execution policy to the lambda function. The account needs to be removed from AWS Cognito and recreated from Cruddur in order to test that the user is in fact inserted into the AWS RDS database.
+When adding an [AWS Lambda layer for psycopg2](https://github.com/jetbridge/psycopg2-lambda-layer ) be sure that the proper ARN for your region is being used. I added a stock AWS lambda execution policy to the lambda function. The account needs to be removed from AWS Cognito and recreated from Cruddur in order to test that the user is in fact inserted into the AWS RDS database.
 
 #### Created new activities with a database insert

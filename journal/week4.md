@@ -59,4 +59,13 @@ The objective is to have the new user data -orchestrated using AWS Cognito - ins
 When adding an [AWS Lambda layer for psycopg2](https://github.com/jetbridge/psycopg2-lambda-layer ) be sure that the proper ARN for your region is being used. I added a stock AWS lambda execution policy to the lambda function. The account needs to be removed from AWS Cognito and recreated from Cruddur (possibly multiple times) in order to test that the user is in fact inserted into the AWS RDS database.
 
 #### Created new activities with an AWS RDS database insert
-The objective is to have the activities - Cruds - created in the Cruddur front end and then inserted into the AWS RDS. The Lamda function named "cruddur-post-confirmation" see - Fig 3 - helps orchestrate this.
+The objective is to have the activities - Cruds - created in the Cruddur front end and then inserted into the AWS RDS. The Lamda function named "cruddur-post-confirmation" see - Fig 3 - helps orchestrate this.  
+<img src="/assets/crud-activities-cli-aws-rds-1.png" width=450>  
+<figcaption>Fig 4</figcaption>  
+<br/><br/>  
+<img src="/assets/crud-insert.png" width=450>  
+<figcaption>Cruddur Crud form whiled signed in</figcaption>  
+<br/><br/>  
+<img src="/assets/crud-activities-displayed.png" width=450>  
+<figcaption>Cruddur Front End Home</figcaption>  
+<br/><br/>  

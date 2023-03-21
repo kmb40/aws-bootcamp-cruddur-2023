@@ -5,6 +5,7 @@ import uuid
 import os
 import botocore.exceptions
 
+#Class definitions and Client
 class Ddb:
   def client():
     endpoint_url = os.getenv("AWS_ENDPOINT_URL")

@@ -7,7 +7,9 @@ Watched a series of videos and attended the live stream.
 #### 2. [Watched Ashish's Week 5 - How to use Amazon DynamoDB for security and speed](https://www.youtube.com/watch?v=gFPljPNnK2Q) 
 
 #### Implemented DynamoDB
-First, I installed "Boto3" by adding it to the [requirements.txt](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-4-redux/backend-flask/requirements.txt) and running ``` pip intall -r requirments.txt .``` The next goal was to setup a local Dynamodb. I created a schema to build a table, seeded it with data, then scanned it to check that the database displayed the data and was functioning properly.
+First, I installed "Boto3" by adding it to the [requirements.txt](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-4-redux/backend-flask/requirements.txt) and running ``` pip intall -r requirments.txt .``` Additionally, I added this to the [gitpod.yml](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-5/.gitpod.yml) file with the name "flask" so that this installation would be automatted for future Gitpod workspaces spin ups.  
+
+The next goal was to setup a local Dynamodb. I created a schema to build a table "cruddur-messages", seeded it with mock data, then scanned it to check that the database displayed the data and was functioning properly.
 
 #### Implemented conversations
 

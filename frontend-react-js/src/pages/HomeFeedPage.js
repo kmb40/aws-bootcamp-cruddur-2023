@@ -21,7 +21,7 @@ export default function HomeFeedPage() {
       const backend_url = `${process.env.REACT_APP_BACKEND_URL}/api/activities/home`
       const res = await fetch(backend_url, {
         headers: {
-          Authorization: 'Bearer ${localStorage.getItem("access_token")}'
+          Authorization: `Bearer ${localStorage.getItem("access_token")}`
         },
         method: "GET"
       });

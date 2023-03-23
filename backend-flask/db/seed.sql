@@ -9,7 +9,7 @@ VALUES
 INSERT INTO public.activities (user_uuid, message, expires_at)
 VALUES
   (
-    (SELECT uuid from public.users WHERE users.handle = 'andrewbrown' LIMIT 1), --changing to match query with prod cognito user
+    (SELECT uuid from public.users WHERE users.handle = 'andrewbrown' LIMIT 1),
     'This was imported as seed data!',
     current_timestamp + interval '10 day'
   )

@@ -46,15 +46,16 @@ Created scripts to list conversations and get all conversations.
 Objective was to replace the local cookie authentication method with the AWS Cognito powered token authentication method. Extensive testing was required in part due to the complexity of the task, coding changes of hard coded variables to support dynamic data, and constant token expiration.
 
 #### Implemented (Pattern A) Listing Messages in Message Group into Application
-A user wants to see a list of messages that belong to a message group The messages must be ordered by the created_at timestamp from newest to oldest (DESC)
+A user wants to see a list of messages that belong to a message group The messages must be ordered by the created_at timestamp from newest to oldest (DESC).
 
 #### Implemented (Pattern B) Listing Messages Group into Application
-A user wants to see a list of messages that belong to a message group The messages must be ordered by the created_at timestamp from newest to oldest (DESC)
+A user wants to see a list of messages that belong to a message group The messages must be ordered by the created_at timestamp from newest to oldest (DESC).
 
 #### Implemented (Pattern C) Creating a Message for an existing Message Group into Application
+When a user creates a message we need to update the conversation to display the last message for the conversation.
 
 #### Implemented (Pattern D) Creating a Message for a new Message Group into Application
-When a user creates a message we need to update the conversation to display the last message information for the conversation
+When a user creates a new message we need to update the conversation to display the last message in the conversation.
 
 #### Implemented (Pattern E) Updating a Message Group using DynamoDB Streams
 Activated DynamoDB streams that capture item-level changes in tables, and push the changes to a DynamoDB stream which can then be accessed through the DynamoDB Streams API.

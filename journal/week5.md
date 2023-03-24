@@ -5,6 +5,7 @@ The following information outlines tasks that I've completed for Week 5 of the b
 Watched a series of videos and attended the live stream.
 #### 1. [Attended Week 5 Live Stream](https://www.youtube.com/watch?v=5oZHNOaL8Og) 
 ##### DynamoDB Data Modeling for Cruddur
+The single table desgin was the model that was used for this application as illustrated in Fig Data Modeling.
 <img src="/assets/DynamoDB%20Modelling.png" width=450>
 <figcaption>Fig Data Modeling</figcaption>   
 <br/><br/> 
@@ -15,7 +16,7 @@ Watched a series of videos and attended the live stream.
 #### Implemented DynamoDB
 First, I installed "Boto3" by adding it to the [requirements.txt](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-4-redux/backend-flask/requirements.txt) and running ``` pip intall -r requirments.txt .``` Additionally, I added this to the [gitpod.yml](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-5/.gitpod.yml) file with the name "flask" so that this installation would be automatted for future Gitpod workspaces spin ups.  
 
-The next goal was to setup a local Dynamodb. I created a schema to build a table "cruddur-messages", seeded it with mock data, then scanned it to check that the database displayed the data and was functioning properly.
+The next goal was to setup a local Dynamodb. I created a schema to build a table named, "cruddur-messages", seeded it with mock data, then scanned it to check that the database displayed the data and was functioning properly.
 
 #### Implemented conversations
 First, I created a library for DynamoDB and stored in a newly created file backend-flask/lib/ddb.py. [requirements.txt](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-4-redux/backend-flask/requirements.txt) and running ``` pip intall -r requirments.txt .``` Additionally, I added this to the [gitpod.yml](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-5/.gitpod.yml) file with the name "flask" so that this installation would be automatted for future Gitpod workspaces spin ups.  

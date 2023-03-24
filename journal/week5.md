@@ -13,13 +13,13 @@ The single table desgin was the model that was used for this application as illu
 #### 2. [Watched Ashish's Week 5 - How to use Amazon DynamoDB for security and speed](https://www.youtube.com/watch?v=gFPljPNnK2Q) 
 #### 3. [Watched Lou's - What cloud hiring managers want from your resume](https://www.youtube.com/watch?v=S_89vwVHC9Y&t=0s)
 
-#### Implemented DynamoDB
-First, I installed "Boto3" by adding it to the [requirements.txt](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-4-redux/backend-flask/requirements.txt) and running ``` pip intall -r requirments.txt .``` Additionally, I added this to the [gitpod.yml](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-5/.gitpod.yml) file with the name "flask" so that this installation would be automatted for future Gitpod workspaces spin ups.  
+#### Implemented DynamoDB (local)
+I installed "Boto3" by adding it to the [requirements.txt](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-5/backend-flask/requirements.txt) and running ``` pip intall -r requirments.txt .``` Additionally, I added this to the [gitpod.yml](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-5/.gitpod.yml) file with the name "flask" so that this installation would be automatted for future Gitpod workspaces spin ups.  
 
 The next goal was to setup a local Dynamodb. I created a schema to build a table named, "cruddur-messages", seeded it with mock data, then scanned it to check that the database displayed the data and was functioning properly.
 
 #### Implemented conversations
-First, I created a library for DynamoDB and stored in a newly created file backend-flask/lib/ddb.py. [requirements.txt](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-4-redux/backend-flask/requirements.txt) and running ``` pip intall -r requirments.txt .``` Additionally, I added this to the [gitpod.yml](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-5/.gitpod.yml) file with the name "flask" so that this installation would be automatted for future Gitpod workspace spin ups.  
+I created a library for DynamoDB and stored in a newly created file backend-flask/lib/ddb.py. [requirements.txt](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-5/backend-flask/requirements.txt) and running ``` pip intall -r requirments.txt .``` Additionally, I added this to the [gitpod.yml](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-5/.gitpod.yml) file with the name "flask" so that this installation would be automatted for future Gitpod workspace spin ups.  
 
 The next goal was to setup a local Dynamodb. I did so by:  
 * Created a schema to build a table "cruddur-messages"

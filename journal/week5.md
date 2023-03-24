@@ -13,18 +13,20 @@ The single table desgin was the model that was used for this application as illu
 #### 2. [Watched Ashish's Week 5 - How to use Amazon DynamoDB for security and speed](https://www.youtube.com/watch?v=gFPljPNnK2Q) 
 #### 3. [Watched Lou's - What cloud hiring managers want from your resume](https://www.youtube.com/watch?v=S_89vwVHC9Y&t=0s)
 
-#### Implemented DynamoDB (local)
-I installed "Boto3" by adding it to the [requirements.txt](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-5/backend-flask/requirements.txt) and running ``` pip intall -r requirments.txt .``` Additionally, I added this to the [gitpod.yml](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-5/.gitpod.yml) file with the name "flask" so that this installation would be automatted for future Gitpod workspaces spin ups.  
-
-The next goal was to setup a local Dynamodb. I created a schema to build a table named, "cruddur-messages", seeded it with mock data, then scanned it to check that the database displayed the data and was functioning properly.
-
 #### Implemented conversations
-I created a library for DynamoDB and stored in a newly created file backend-flask/lib/ddb.py. [requirements.txt](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-5/backend-flask/requirements.txt) and running ``` pip intall -r requirments.txt .``` Additionally, I added this to the [gitpod.yml](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-5/.gitpod.yml) file with the name "flask" so that this installation would be automatted for future Gitpod workspace spin ups.  
+##### Configured Environment for DynamoDB (local)
+I installed "Boto3" by adding it to the [requirements.txt](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-5/backend-flask/requirements.txt) and running ``` pip intall -r requirments.txt .``` Additionally, I added this to the [gitpod.yml](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-5/.gitpod.yml) file with the name "flask" so that this installation would be automatted for future Gitpod workspace spin ups.  
 
-The next goal was to setup a local Dynamodb. I did so by:  
-* Created a schema to build a table "cruddur-messages"
-* Updated ```backend-flask/db/seed.sql``` with mock data for an actual production AWS Cognito account.
-* Scanned it to check that the database displayed the data and was functioning properly.
+I created a library for DynamoDB and stored it in a newly created file ```backend-flask/lib/ddb.py```. [Ref](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-5/backend-flask/lib/ddb.py) 
+
+**Additional configurations made were as follows:**  
+* Created a schema -``` backend-flask/bin/ddb/schema-load ``` - for the dynamodb table - "cruddur-messages". [Ref](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-5/backend-flask/bin/ddb/schema-load)
+* Created a ```backend-flask/bin/ddb/scan``` file to check that the database displayed all of the data stored and was functioning properly. [Ref](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-5/backend-flask/bin/ddb/scan)
+* Pointed to local postgres database with variable - `CONNECTION_URL: "postgresql://postgres:password@db:5432/cruddur"` in [docker-compose.yml](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-5/docker-compose.yml)
+* **IMPORTANT!** - Updated ```backend-flask/ddb/seed.sql``` to include mock data for an actual production AWS Cognito account (mine). [Ref](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-5/backend-flask/bin/ddb/seed)  
+* **IMPORTANT!** - Updated ```backend-flask/db/seed``` to swap the mock data - user handle "andrewbrown" - for an actual production AWS Cognito account (mine). [Ref](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-5/backend-flask/db/seed.sql)
+* Consolidated and restructured several postgres db files. [Ref](https://github.com/kmb40/aws-bootcamp-cruddur-2023/commit/90ef2f831faa4b5d5786704566c4deff90cb09aa)
+* Created multiple files to streamline and automate some of the dynamoDB task. [Ref](https://github.com/kmb40/aws-bootcamp-cruddur-2023/tree/week-5/backend-flask/bin/ddb), [Ref](https://github.com/kmb40/aws-bootcamp-cruddur-2023/commit/e30026356751b5587406d56c5d9110e0675a01d4)
 
 #### Implemented access Pattern B
 Reference the AWS console in Fig 1.  

@@ -4,7 +4,7 @@ The following information outlines tasks that I've completed for Week 5 of the b
 
 Watched a series of videos and attended the live stream.
 #### 1. [Attended Week 5 Live Stream](https://www.youtube.com/watch?v=5oZHNOaL8Og) 
-##### Understanding Data Modeling for DynamoDB
+##### DynamoDB Data Modeling for Cruddur
 <img src="/assets/DynamoDB%20Modelling.png" width=450>
 <figcaption>Fig Data Modeling</figcaption>   
 <br/><br/>    

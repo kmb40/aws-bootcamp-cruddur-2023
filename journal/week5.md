@@ -27,29 +27,13 @@ I created a library for DynamoDB and stored it in a newly created file ```backen
 * **IMPORTANT!** - Updated ```backend-flask/db/seed``` to swap the mock data - user handle "andrewbrown" - for an actual production AWS Cognito account (mine). [Ref](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-5/backend-flask/db/seed.sql)
 * Consolidated and restructured several postgres db files. [Ref](https://github.com/kmb40/aws-bootcamp-cruddur-2023/commit/90ef2f831faa4b5d5786704566c4deff90cb09aa)
 * Created multiple files to streamline and automate some of the dynamoDB task. [Ref](https://github.com/kmb40/aws-bootcamp-cruddur-2023/tree/week-5/backend-flask/bin/ddb), [Ref](https://github.com/kmb40/aws-bootcamp-cruddur-2023/commit/e30026356751b5587406d56c5d9110e0675a01d4)
-
-#### Implemented access Pattern A
-#### Implemented access Pattern B
-   
-##### Created and imported a .sql script
-Created the "backend-flask/db" directory and "schema.sql" file, then used the following command to import the script.
-```
-psql cruddur < db/schema.sql -h localhost -U postgres
-```
-##### Wrote several bash scripts for database 
-Created bash scripts for dropping, creating, schemas, seeding, and setup which runs the four scripts mentioned. I also created a db-sessions script which displays processes that are running. Reference [backend-flask/bin](https://github.com/kmb40/aws-bootcamp-cruddur-2023/tree/week-4-redux/backend-flask/bin)  
-
-##### Installed Postgres Driver in Backend Application  
- and [docker-compose.yml](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-4-redux/docker-compose.yml).   
-
-#### Implemented Pattern Scripts for Read and List Conversations
-Created scripts to list conversations and get all conversations.
-
-#### Updated Cognito ID Script for Postgres Database
-Objective was to replace the local cookie authentication method with the AWS Cognito powered token authentication method. Extensive testing was required in part due to the complexity of the task, coding changes of hard coded variables to support dynamic data, and constant token expiration.
+* Installed Postgres Driver in Backend Application  
+ and [docker-compose.yml](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-5/docker-compose.yml).
 
 #### Implemented (Pattern A) Listing Messages in Message Group into Application
-A user wants to see a list of messages that belong to a message group The messages must be ordered by the created_at timestamp from newest to oldest (DESC).
+A user wants to see a list of messages that belong to a message group The messages must be ordered by the created_at timestamp from newest to oldest (DESC).  
+**Note** Updated Cognito ID Script for Postgres Database  
+Objective was to replace the local cookie authentication method with the AWS Cognito powered token authentication method. Extensive testing was required in part due to the complexity of the task, coding changes of hard coded variables to support dynamic data, and constant token expiration.
 
 #### Implemented (Pattern B) Listing Messages Group into Application
 A user wants to see a list of messages that belong to a message group The messages must be ordered by the created_at timestamp from newest to oldest (DESC).

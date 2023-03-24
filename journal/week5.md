@@ -22,13 +22,15 @@ Reference the AWS console in Fig 1.
 <figcaption>Fig 1</figcaption>   
 <br/><br/>    
    
-#### Created and imported a .sql script
+##### Created and imported a .sql script
 Created the "backend-flask/db" directory and "schema.sql" file, then used the following command to import the script.
 ```
 psql cruddur < db/schema.sql -h localhost -U postgres
 ```
-#### Wrote several bash scripts for database 
+##### Wrote several bash scripts for database 
 Created bash scripts for dropping, creating, schemas, seeding, and setup which runs the four scripts mentioned. I also created a db-sessions script which displays processes that are running. Reference [backend-flask/bin](https://github.com/kmb40/aws-bootcamp-cruddur-2023/tree/week-4-redux/backend-flask/bin)  
 
-#### Installed Postgres Driver in Backend Application  
+##### Installed Postgres Driver in Backend Application  
  and [docker-compose.yml](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-4-redux/docker-compose.yml).   
+
+#### Implemented Pattern Scripts for Read and List Conversations

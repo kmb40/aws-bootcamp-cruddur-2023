@@ -34,3 +34,9 @@ Created bash scripts for dropping, creating, schemas, seeding, and setup which r
  and [docker-compose.yml](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-4-redux/docker-compose.yml).   
 
 #### Implemented Pattern Scripts for Read and List Conversations
+#### Updated Cognito ID Script for Postgres Database
+#### Implemented (Pattern A) Listing Messages in Message Group into Application
+#### Implemented (Pattern B) Listing Messages Group into Application
+#### Implemented (Pattern C) Creating a Message for an existing Message Group into Application
+#### Implemented (Pattern D) Creating a Message for a new Message Group into Application
+#### Implemented (Pattern E) Updating a Message Group using DynamoDB Streams

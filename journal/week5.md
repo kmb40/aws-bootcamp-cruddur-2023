@@ -7,7 +7,8 @@ Watched a series of videos and attended the live stream.
 ##### DynamoDB Data Modeling for Cruddur
 <img src="/assets/DynamoDB%20Modelling.png" width=450>
 <figcaption>Fig Data Modeling</figcaption>   
-<br/><br/>    
+<br/><br/> 
+
 #### 2. [Watched Ashish's Week 5 - How to use Amazon DynamoDB for security and speed](https://www.youtube.com/watch?v=gFPljPNnK2Q) 
 
 #### Implemented DynamoDB

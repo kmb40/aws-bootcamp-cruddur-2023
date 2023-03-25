@@ -2,7 +2,6 @@
 
 The following information outlines tasks that I've completed for Week 5 of the bootcamp.
 
-Watched a series of videos and attended the live stream.
 #### 1. [Attended Week 5 Live Stream](https://www.youtube.com/watch?v=5oZHNOaL8Og) 
 
 ##### DynamoDB Data Modeling for Cruddur
@@ -27,9 +26,9 @@ I created a library for DynamoDB and stored it in a newly created file ```backen
 * **IMPORTANT!** - Updated ```backend-flask/ddb/seed.sql``` to include mock data for an actual production AWS Cognito account (mine). [Ref](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-5/backend-flask/bin/ddb/seed)  
 * **IMPORTANT!** - Updated ```backend-flask/db/seed``` to swap the mock data - user handle "andrewbrown" - for an actual production AWS Cognito account (mine). [Ref](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-5/backend-flask/db/seed.sql)
 * Consolidated and restructured several postgres db files. [Ref](https://github.com/kmb40/aws-bootcamp-cruddur-2023/commit/90ef2f831faa4b5d5786704566c4deff90cb09aa)
-* Created multiple files to streamline and automate some of the dynamoDB task. [Ref](https://github.com/kmb40/aws-bootcamp-cruddur-2023/tree/week-5/backend-flask/bin/ddb), [Ref](https://github.com/kmb40/aws-bootcamp-cruddur-2023/commit/e30026356751b5587406d56c5d9110e0675a01d4)
-* Installed Postgres Driver in Backend Application  
- and [docker-compose.yml](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-5/docker-compose.yml).
+* Created multiple files and a ddb directory `backend-flask/bin/ddb/` to streamline and automate some of the dynamoDB task. [Ref](https://github.com/kmb40/aws-bootcamp-cruddur-2023/tree/week-5/backend-flask/bin/ddb)  
+* Created `backend-flask/bin/ddb/patterns/get-conversation` to display messages associated with the hard-coded message_group_uuid. [Ref](https://github.com/kmb40/aws-bootcamp-cruddur-2023/commit/e30026356751b5587406d56c5d9110e0675a01d4)
+* Created `backend-flask/bin/ddb/patterns/list-conversations` to display message groups. [Ref](https://github.com/kmb40/aws-bootcamp-cruddur-2023/commit/e30026356751b5587406d56c5d9110e0675a01d4)
 
 #### Implemented (Pattern A) Listing Messages in Message Group into Application
 A user wants to see a list of messages that belong to a message group The messages must be ordered by the created_at timestamp from newest to oldest (DESC).  
@@ -46,25 +45,3 @@ When a user creates a message we need to update the conversation to display the 
 When a user creates a new message we need to update the conversation to display the last message in the conversation.
 
 #### Implemented (Pattern E) Updating a Message Group using DynamoDB Streams
-Activated DynamoDB streams that capture item-level changes in tables, and push the changes to a DynamoDB stream which can then be accessed through the DynamoDB Streams API.
-=======
-#### 2. [Watched Ashish's Week 5 - How to use Amazon DynamoDB for security and speed](https://www.youtube.com/watch?v=gFPljPNnK2Q) 
-
-#### Implemented dynamoDB
-First, I installed "Boto3" by adding it to the [requirements.txt](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-4-redux/backend-flask/requirements.txt) and running ``` pip intall -r requirments.txt .```
-
-Reference the AWS console in Fig 1.  
-<img src="/assets/RDS.png" width=450>
-<figcaption>Fig 1</figcaption>   
-<br/><br/>    
-   
-#### Created and imported a .sql script
-Created the "backend-flask/db" directory and "schema.sql" file, then used the following command to import the script.
-```
-psql cruddur < db/schema.sql -h localhost -U postgres
-```
-#### Wrote several bash scripts for database 
-Created bash scripts for dropping, creating, schemas, seeding, and setup which runs the four scripts mentioned. I also created a db-sessions script which displays processes that are running. Reference [backend-flask/bin](https://github.com/kmb40/aws-bootcamp-cruddur-2023/tree/week-4-redux/backend-flask/bin)  
-
-#### Installed Postgres Driver in Backend Application  
- and [docker-compose.yml](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-4-redux/docker-compose.yml).  

@@ -71,6 +71,7 @@ Objective - As a user, I need the ability to update an existing conversation wit
 <br/><br/>  
 
 #### Implemented (Pattern E) Updating a Message Group using DynamoDB Streams
+
 Update dynamoDB records for all messages.  
 Preperations are as follows:
 - Point to the production instanse of DynamoDB instead of the local so I commented out `AWS_ENDPOINT_URL` in the docker-compose.yml.

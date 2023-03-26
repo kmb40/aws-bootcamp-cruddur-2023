@@ -38,7 +38,7 @@ Also, replacing the local cookie authentication method with the AWS Cognito toke
 
 This is shown with steps in the following section of the video that - https://youtu.be/dWHOsXiAIBU?list=PLBfufR7vyJJ7k25byhRXJldB5AiwgNnWv&t=2083. Extensive testing was required in part due to the complexity of the task, coding changes of hard coded variables to support dynamic data, and constant token expiration. 
 
-Before the functionality can be tested and implemented, the databases must be prepared as follows:
+##### Before the functionality can be tested and implemented, the databases must be prepared as follows:
 - Start local postgres database which contains seed data for tables “activity” and “users”?
 - Start local dynamobo database which will receive seed data from postgres db.
 - `./bin/db/setup` - drops, creates, schema-load, seed, updates cognito user ids (specifically those user ids that exists in AWS Cognito). [Ref](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-5/backend-flask/bin/db/seed)
@@ -72,6 +72,17 @@ Objective - As a user, I need the ability to update an existing conversation wit
 
 #### Implemented (Pattern E) Updating a Message Group using DynamoDB Streams
 Update dynamoDB records for all messages.  
+Preperations are as follows:
+- Point to the production instanse of DynamoDB instead of the local so I commented out `AWS_ENDPOINT_URL` in the docker-compose.yml.
+- Then complete the steps [outlined above.](https://github.com/kmb40/aws-bootcamp-cruddur-2023/edit/week-5/journal/week5.md#before-the-functionality-can-be-tested-and-implemented-the-databases-must-be-prepared-as-follows)
+- Create a table named "cruddur-messages" in AWS DynamoDB.
+  - Turn on DynamoDB stream with "new image".
+- Create a VPC endpoint named `cruddur-ddb`.
+  - choose the DynamoDB service, and select the default VPC and route table.
+- In the AWS Lambda console, create a new function named `cruddur-messaging-stream` and enable the VPC endpoint in its advanced settings and deploy the code.
+- Be sure to add the permission AWSLambdaInvocation-DynamoDB to the Lambda IAM role. 
+  - Additional permissions can be added if needed by creating inline policies as seen in [aws/policies/cruddur-message-stream-policy.json](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-5/aws/policies/cruddur-message-stream-policy.json)
+- Create a trigger for the `cruddur-messaging-stream`.
 <img src="/assets/DynamoDB%20Modelling.png" width=450>
 <figcaption>Pattern E</figcaption>   
 <br/><br/>

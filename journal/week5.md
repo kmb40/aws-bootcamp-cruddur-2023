@@ -38,11 +38,11 @@ Objective - As a user, I want to see a list of messages that belong to a message
 <figcaption>Pattern A</figcaption>   
 <br/><br/>  
 
-**Note** Updated Cognito ID Script for Postgres Database  
+**Note:** Updated Cognito ID Script for Postgres Database  
 Objective - Replace the local cookie authentication method with the AWS Cognito powered token authentication method. Extensive testing was required in part due to the complexity of the task, coding changes of hard coded variables to support dynamic data, and constant token expiration.
 
 #### Implemented (Pattern B) Listing Messages Group into Application
-Objective - As a user, I want to see a list of messages that belong to an existing message group The messages must be ordered by the created_at timestamp from newest to oldest (DESC).  
+Objective - As a user, I want to see a list of messages that belong to an existing message group.The messages must be ordered from newest to oldest.  
 <img src="/assets/DynamoDB%20Modelling.png" width=450>
 <figcaption>Pattern B</figcaption>   
 <br/><br/>  

@@ -39,22 +39,22 @@ Objective - As a user, I want to see a list of messages that belong to a message
 <br/><br/>  
 
 **Note:** Updated Cognito ID Script for Postgres Database  
-Objective - Replace the local cookie authentication method with the AWS Cognito powered token authentication method. Extensive testing was required in part due to the complexity of the task, coding changes of hard coded variables to support dynamic data, and constant token expiration.
+Replacing the local cookie authentication method with the AWS Cognito powered token authentication method is a critical step. Extensive testing was required in part due to the complexity of the task, coding changes of hard coded variables to support dynamic data, and constant token expiration.
 
 #### Implemented (Pattern B) Listing Messages Group into Application
-Objective - As a user, I want to see a list of messages that belong to an existing message group.The messages must be ordered from newest to oldest.  
+Objective - As a user, I want to see a list of messages that belong to an existing message group. The messages must be ordered from newest to oldest.  
 <img src="/assets/DynamoDB%20Modelling.png" width=450>
 <figcaption>Pattern B</figcaption>   
 <br/><br/>  
 
 #### Implemented (Pattern C) Creating a Message for an existing Message Group into Application
-Objective - When a user creates a message we need to update the conversation to display the last message for the conversation.  
+Objective - As a user, I need the ability to create a new message in a new message group.
 <img src="/assets/DynamoDB%20Modelling.png" width=450>
 <figcaption>Pattern C</figcaption>   
 <br/><br/>  
 
 #### Implemented (Pattern D) Creating a Message for a new Message Group into Application
-Objective - When a user creates a new message we need to update the conversation to display the last message in the conversation.  
+Objective - As a user, I need the ability to update an existing conversation with a new message and display it as the last message in the conversation.   
 <img src="/assets/DynamoDB%20Modelling.png" width=450>
 <figcaption>Pattern D</figcaption>   
 <br/><br/>  

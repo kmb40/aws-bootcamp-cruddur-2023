@@ -32,14 +32,24 @@ I created a library for DynamoDB and stored it in a newly created file ```backen
 * Created `backend-flask/bin/ddb/patterns/get-conversation` to display messages associated with the hard-coded message_group_uuid. [Ref](https://github.com/kmb40/aws-bootcamp-cruddur-2023/commit/e30026356751b5587406d56c5d9110e0675a01d4)
 * Created `backend-flask/bin/ddb/patterns/list-conversations` to display message groups. [Ref](https://github.com/kmb40/aws-bootcamp-cruddur-2023/commit/e30026356751b5587406d56c5d9110e0675a01d4)
 
+##### Envrionement preperation for implemention and testing
+**Note:** An AWS Cognito ID user must exist for this functionality to work. Noted as "Important" above.
+Also, replacing the local cookie authentication method with the AWS Cognito token authentication method is a critical step. I needed to update the `frontend-react-js/MessageGroupPage.js` file **and several others** to replace the cookie method with the token method.  
+
+This is shown with steps in the following section of the video that - https://youtu.be/dWHOsXiAIBU?list=PLBfufR7vyJJ7k25byhRXJldB5AiwgNnWv&t=2083. Extensive testing was required in part due to the complexity of the task, coding changes of hard coded variables to support dynamic data, and constant token expiration. 
+
+Before the functionality can be tested and implemented, the databases must be prepared as follows:
+- Start local postgres database which contains seed data for tables “activity” and “users”?
+- Start local dynamobo database which will receive seed data from postgres db.
+- `./bin/db/setup` - drops, creates, schema-load, seed, updates cognito user ids (specifically those user ids that exists in AWS Cognito). [Ref](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-5/backend-flask/bin/db/seed)
+- `./bin/ddb/schema-load` - setups up tables for dynamodb. [Ref](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-5/backend-flask/bin/ddb/schema-load)
+- `./bin/ddb/seed` - loads “activities” and “users” data into dynamodb. [Ref](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-5/backend-flask/bin/ddb/seed)
+
 #### Implemented (Pattern A) Listing Messages in Message Group into Application
 Objective - As a user, I want to see a list of messages that belong to a message group. The messages must be ordered from newest to oldest.  
 <img src="/assets/DynamoDB%20Modelling.png" width=450>
 <figcaption>Pattern A</figcaption>   
 <br/><br/>  
-
-**Note:** Updated Cognito ID Script for Postgres Database  
-Replacing the local cookie authentication method with the AWS Cognito powered token authentication method is a critical step. Extensive testing was required in part due to the complexity of the task, coding changes of hard coded variables to support dynamic data, and constant token expiration.
 
 #### Implemented (Pattern B) Listing Messages Group into Application
 Objective - As a user, I want to see a list of messages that belong to an existing message group. The messages must be ordered from newest to oldest.  
@@ -49,6 +59,7 @@ Objective - As a user, I want to see a list of messages that belong to an existi
 
 #### Implemented (Pattern C) Creating a Message for an existing Message Group into Application
 Objective - As a user, I need the ability to create a new message in a new message group.
+**Note:** I needed to append "[gitpod_url]/messages/[user handle for new message]" e.g. `gitpod_url/messages/new/bayko` to the url in order to execute this pattern in the application.
 <img src="/assets/DynamoDB%20Modelling.png" width=450>
 <figcaption>Pattern C</figcaption>   
 <br/><br/>  

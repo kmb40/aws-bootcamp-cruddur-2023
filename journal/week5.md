@@ -92,6 +92,6 @@ Preperations are as follows:
 <br/><br/>  
 <img src="/assets/2023-03-25_22-20-19.png" width=450>
 <figcaption>Lambda Table</figcaption>   
-<br/><br/>  
+<br/><br/>     
 
 #### Objective met error free and fully functional.

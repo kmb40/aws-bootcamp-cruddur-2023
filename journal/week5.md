@@ -46,27 +46,27 @@ This is shown with steps in the following section of the video that - https://yo
 - `./bin/ddb/seed` - loads “activities” and “users” data into dynamodb. [Ref](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-5/backend-flask/bin/ddb/seed)
 
 #### Implemented (Pattern A) Listing Messages in Message Group into Application
-Objective - As a user, I want to see a list of messages that belong to a message group. The messages must be ordered from newest to oldest.  
-<img src="/assets/DynamoDB%20Modelling.png" width=450>
+Objective - As a user, I want to see a list of messages that belong to a message group or groups. The messages must be ordered from newest to oldest.  
+<img src="/assets/cruddur-messages.png" width=450>
 <figcaption>Pattern A</figcaption>   
 <br/><br/>  
 
 #### Implemented (Pattern B) Listing Messages Group into Application
 Objective - As a user, I want to see a list of messages that belong to an existing message group. The messages must be ordered from newest to oldest.  
-<img src="/assets/DynamoDB%20Modelling.png" width=450>
+<img src="/assets/cruddur-message-group.png" width=450>
 <figcaption>Pattern B</figcaption>   
 <br/><br/>  
 
 #### Implemented (Pattern C) Creating a Message for an existing Message Group into Application
-Objective - As a user, I need the ability to create a new message in a new message group.
-**Note:** I needed to append "[gitpod_url]/messages/[user handle for new message]" e.g. `gitpod_url/messages/new/bayko` to the url in order to execute this pattern in the application.
-<img src="/assets/DynamoDB%20Modelling.png" width=450>
+Objective - As a user, I need the ability to create a new message in an existing message group.  
+<img src="/assets/cruddur-message-reply.png" width=450>
 <figcaption>Pattern C</figcaption>   
 <br/><br/>  
 
 #### Implemented (Pattern D) Creating a Message for a new Message Group into Application
-Objective - As a user, I need the ability to update an existing conversation with a new message and display it as the last message in the conversation.   
-<img src="/assets/DynamoDB%20Modelling.png" width=450>
+Objective - As a user, I need the ability to update an existing conversation with a new message and display it as the last message in the conversation.  
+**Note:** I needed to append "[gitpod_url]/messages/[user handle for new message]" e.g. `gitpod_url/messages/new/bayko` to the url in order to execute this pattern in the application.  
+<img src="/assets/cruddur-new-message.png" width=450>
 <figcaption>Pattern D</figcaption>   
 <br/><br/>  
 
@@ -83,6 +83,13 @@ Preperations are as follows:
 - Be sure to add the permission AWSLambdaInvocation-DynamoDB to the Lambda IAM role. 
   - Additional permissions can be added if needed by creating inline policies as seen in [aws/policies/cruddur-message-stream-policy.json](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-5/aws/policies/cruddur-message-stream-policy.json)
 - Create a trigger for the `cruddur-messaging-stream`.
-<img src="/assets/DynamoDB%20Modelling.png" width=450>
-<figcaption>Pattern E</figcaption>   
-<br/><br/>
+<img src="/assets/2023-03-25_22-17-11.png" width=450>
+<figcaption>DynamoDB Table</figcaption>   
+<br/><br/>  
+<img src="/assets/2023-03-25_22-19-01.png" width=450>
+<figcaption>DynamoDB VPC Endpoint</figcaption>   
+<br/><br/>  
+<img src="/assets/2023-03-25_22-20-19.png" width=450>
+<figcaption>Lambda Table</figcaption>   
+<br/><br/>  
+#### Objective met error free and fully functional.

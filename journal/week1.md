@@ -21,9 +21,9 @@ I essentially updated [docker-compose.yml](https://github.com/kmb40/aws-bootcamp
 
 #### Homework Challenges
 This is an area I'd like to spend more time working. Updates for these challenges will be ongoing.
-- 3/3/23 - Update - Completed "Run the dockerfile CMD as an external script". Reference the [external script](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-2/backend-flask/external_script.sh) which is called from the [Dockerfile](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/main/backend-flask/Dockerfile) in the same directory.
+##### Updated 3/3 - Completed "Run the dockerfile CMD as an external script". Reference the [external script](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-2/backend-flask/external_script.sh) which is called from the [Dockerfile](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/main/backend-flask/Dockerfile) in the same directory.
 
-##### Updated 3/27 - Push and tag a image to DockerHub (they have a free tier)
+##### Updated 3/27 - Completed Push and tag a image to DockerHub (they have a free tier)
 - I completed this task by launching Gitpod, starting the container for the image "/backend-flask".
 - Signed into Dockerhub (account created prior to Bootcamp).
 - In the Gitpod terminal, ran `docker login -u [dockerhub username here]` to log into dockerhub.

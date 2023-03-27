@@ -21,4 +21,4 @@ I essentially updated [docker-compose.yml](https://github.com/kmb40/aws-bootcamp
 
 #### Homework Challenges
 This is an area I'd like to spend more time working. Updates for these challenges will be ongoing.
-- 3/3/23 - Update - Completed "Run the dockerfile CMD as an external script". Reference the [external script](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-2/backend-flask/external_script.sh) which is called from the Dockerfile in the same directory.
+- 3/3/23 - Update - Completed "Run the dockerfile CMD as an external script". Reference the [external script](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-2/backend-flask/external_script.sh) which is called from the [Dockerfile](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/main/backend-flask/Dockerfile) in the same directory.

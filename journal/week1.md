@@ -42,6 +42,7 @@ This is an area I'd like to spend more time working. Updates for these challenge
    <img src="/assets/ec2-docker.png" width=450>  
 - Ran the following commands  
 -   `docker login -u [dockerhub username]`
--   `docker pull [dockerhub path th image and tag]` to pull the image for "backend-flask" from docker hub.
+-   `docker pull [dockerhub path th image and tag]` to pull the image for "backend-flask" from [docker hub](https://hub.docker.com/repository/docker/kmb40/cloudcamp-2023/general).
+  <img src="/assets/ec2-docker-pull.png" width=450>  
 -   `docker image ls` to display images contained in Docker on the EC2 instance.
   <img src="/assets/ec2-docker.png" width=450>  

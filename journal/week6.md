@@ -37,3 +37,20 @@ aws ecs create-cluster \
 <img src="/assets/cruddur-fargate-ecs-cluster.png" width=450>
 <figcaption>Fargate ECS Cluster</figcaption>   
 <br/><br/>  
+
+##### Create three repositories and push three images (Base, Flask Backend, React Frontend)
+1. Create a new **Base** repository using:
+ ```
+ aws ecr create-repository \
+  --repository-name cruddur-python \
+  --image-tag-mutability MUTABLE
+  ```   
+2. Sign into ECR from Gitpod CLI using `aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin "$AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com"`.  
+**Note:** This command contains varibales that should be set in your environment however, the commands with the actual data can be found in the "View Push Commands" section of AWS ECR for your Repo.
+
+3. Set the path to the repo with `export ECR_PYTHON_URL="$AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/cruddur-python"` then `echo $ECR_PYTHON_URL`.  
+4. Pull the slim buster image to your environment (Gitpod in my case) using `docker pull python:3.10-slim-buster`.   
+5. Tag the image using the command `docker tag python:3.10-slim-buster $ECR_PYTHON_URL:3.10-slim-buster`.  
+**Note:** You can confirm that the command worked using `docker images` to view the image and tag.  
+6. Push the image from your envrionement (Gitpod in my case) to your AWS ECR repo using `docker push $ECR_PYTHON_URL:3.10-slim-buster`.  
+7. Confirgure the Flask app to use the pushed image at AWS ECR by changing the first line of `backend-flask/dockerfile` first line to reflect `FROM [your-account-id-here].dkr.ecr.[your-region-here].amazonaws.com/cruddur-python:3.10-slim-buster`

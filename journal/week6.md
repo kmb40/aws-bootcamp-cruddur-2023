@@ -7,7 +7,8 @@ The following information outlines tasks that I've completed for Week 6 of the b
 #### 3. [Watched Week 6 ECS (Part2)](https://www.youtube.com/watch?v=HHmpZ5hqh1I)  
 #### 4. [Watched Ashish's Amazon ECS Security Best Practices](https://www.youtube.com/watch?v=zz2FQAk1I28)
 
-##### DynamoDB Data Modeling for Cruddur
+### Prep Enviroment
+##### Configure Health Checks
 This critical planning step was perforemd and discussed during the video. The outcome - a single table desgin was the model that wiil be used for this application as illustrated in "Fig Data Modeling".  
 <img src="/assets/" width=450>
 <figcaption>Fig Data Modeling</figcaption>   

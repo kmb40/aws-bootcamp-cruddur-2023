@@ -33,3 +33,9 @@ This is an area I'd like to spend more time working. Updates for these challenge
   <img src="/assets/gitpod-pushed-image.png" width=450>  
 - Task completed!  
   <img src="/assets/dockerhub-pushed-image.png" width=450>  
+
+##### Completed - Launch an EC2 instance that has docker installed, and pull a container to demonstrate you can run your own docker processes. 
+- Leveraged an AWS marketplace to find an image that contained docker.
+- Confirgured it with SSH and key pairs.
+- Launched local terminal and connected via SSH.
+- Ran the following commands

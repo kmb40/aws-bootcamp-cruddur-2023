@@ -7,7 +7,7 @@ The following information outlines tasks that I've completed for Week 6 of the b
 #### 3. [Watched Week 6 ECS (Part2)](https://www.youtube.com/watch?v=HHmpZ5hqh1I)  
 #### 4. [Watched Ashish's Amazon ECS Security Best Practices](https://www.youtube.com/watch?v=zz2FQAk1I28)
 
-### Prep Enviroment
+### Prep Environment
 ##### Configure Health Checks for RDS
 Created a new script `backend-flask/bin/db/test`. [Ref](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-6/backend-flask/bin/db/test)   
 

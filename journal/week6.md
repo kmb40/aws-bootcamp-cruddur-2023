@@ -19,18 +19,21 @@ def health_check():
   return {'success': True}, 200
 ```  
 - Created a new script `backend-flask/bin/flask/health-check`. [Ref](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-6/backend-flask/bin/flask/health-check)
-- Create Cloudwatch Log Group named `cruddur/fargate-cluster` using the following code:  
+- Create Cloudwatch Log Group with 1 day (to control cost) retention named `cruddur/fargate-cluster` using the following code:  
 ```
 aws logs create-log-group --log-group-name cruddur/fargate-cluster  
 aws logs put-retention-policy --log-group-name cruddur --retention-in-days 1`  
 ```
+<img src="/assets/cruddur-fargate-cloudwatch-log-group.png" width=450>
+<figcaption>Fargate Cloudwatch Log Group</figcaption>   
+<br/><br/>  
 
-- Created ECS Cluster
-```
+- Created ECS Cluster  
+```   
 aws ecs create-cluster \
 --cluster-name cruddur \
 --service-connect-defaults namespace=cruddur
-```
-<img src="/assets/" width=450>
-<figcaption>Fig Data Modeling</figcaption>   
+```   
+<img src="/assets/cruddur-fargate-ecs-cluster.png" width=450>
+<figcaption>Fargate ECS Cluster</figcaption>   
 <br/><br/>  

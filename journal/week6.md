@@ -8,8 +8,9 @@ The following information outlines tasks that I've completed for Week 6 of the b
 #### 4. [Watched Ashish's Amazon ECS Security Best Practices](https://www.youtube.com/watch?v=zz2FQAk1I28)
 
 ### Prep Enviroment
-##### Configure Health Checks
+##### Configure Health Checks for RDS
 This critical planning step was perforemd and discussed during the video. The outcome - a single table desgin was the model that wiil be used for this application as illustrated in "Fig Data Modeling".  
 <img src="/assets/" width=450>
 <figcaption>Fig Data Modeling</figcaption>   
 <br/><br/>  
+##### Configure Health Checks for the Flask App

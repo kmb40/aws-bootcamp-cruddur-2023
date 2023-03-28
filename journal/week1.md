@@ -36,6 +36,12 @@ This is an area I'd like to spend more time working. Updates for these challenge
 
 ##### Completed - Launch an EC2 instance that has docker installed, and pull a container to demonstrate you can run your own docker processes. 
 - Leveraged an AWS marketplace to find an image that contained docker.
-- Confirgured it with SSH and key pairs.
-- Launched local terminal and connected via SSH.
-- Ran the following commands
+- Confirgured it with SSH and key pairs and launched it.  
+  <img src="/assets/ec2-instance.png" width=450>  
+- Launched local terminal and connected via SSH.  
+   <img src="/assets/ec2-docker.png" width=450>  
+- Ran the following commands  
+-   `docker login -u [dockerhub username]`
+-   `docker pull [dockerhub path th image and tag]` to pull the image for "backend-flask" from docker hub.
+-   `docker image ls` to display images contained in Docker on the EC2 instance.
+  <img src="/assets/ec2-docker.png" width=450>  

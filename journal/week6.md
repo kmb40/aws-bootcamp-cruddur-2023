@@ -34,7 +34,7 @@ aws ecs create-cluster \
 --cluster-name cruddur \
 --service-connect-defaults namespace=cruddur
 ```   
-<img src="/assets/cruddur-fargate-ecs-cluster.png" width=450>
+<img src="/assets/cruddur-fargate-log-group.png" width=450>
 <figcaption>Fargate ECS Cluster</figcaption>   
 <br/><br/>  
 

@@ -39,7 +39,8 @@ aws ecs create-cluster \
 <br/><br/>  
 
 ##### Create three repositories and push three images (Base, Flask Backend, React Frontend)
-1. Create a new **Base** repository using:
+##### Create the **Base** repository  
+1. Create the AWS ECR repo using:
  ```
  aws ecr create-repository \
   --repository-name cruddur-python \
@@ -53,4 +54,8 @@ aws ecs create-cluster \
 5. Tag the image using the command `docker tag python:3.10-slim-buster $ECR_PYTHON_URL:3.10-slim-buster`.  
 **Note:** You can confirm that the command worked using `docker images` to view the image and tag.  
 6. Push the image from your envrionement (Gitpod in my case) to your AWS ECR repo using `docker push $ECR_PYTHON_URL:3.10-slim-buster`.  
-7. Confirgure the Flask app to use the pushed image at AWS ECR by changing the first line of `backend-flask/dockerfile` first line to reflect `FROM [your-account-id-here].dkr.ecr.[your-region-here].amazonaws.com/cruddur-python:3.10-slim-buster`
+7. Confirgure the Flask app to use the pushed image at AWS ECR by changing the first line of `backend-flask/dockerfile` first line to reflect `FROM [your-account-id-here].dkr.ecr.[your-region-here].amazonaws.com/cruddur-python:3.10-slim-buster`.  
+8. Run Docker Compose up.
+**Note:** If you receive an authorization error, be sure that you have logged in as illustrated in step 1.  
+
+##### Create the **Backend-flask** repository  

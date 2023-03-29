@@ -90,6 +90,7 @@ aws ssm put-parameter --type "SecureString" --name "/cruddur/backend-flask/ROLLB
 aws ssm put-parameter --type "SecureString" --name "/cruddur/backend-flask/OTEL_EXPORTER_OTLP_HEADERS" --value "x-honeycomb-team=$HONEYCOMB_API_KEY"
 ```   
 ##### Create IAM Roles CruddurServiceExecutionRole and CruddurTaskRole  
+Created two policy files `service-assume-role-execution-policy.json` and `service-execution-policy.json`.  
 
 #### Set Task Definitions  
 

@@ -78,7 +78,8 @@ echo $ECR_BACKEND_FLASK_URL
 
 #### Create Task Definitions
 Create a new directory and file as follows `aws/task-definitions/backend-flask.json`.  
-**Note:** Be sure to update all variables to match your own.
+**Note:** IAM Roles and Parameters must be setup first.   
+**Note:** Next, be sure to update all variables to match your own.   
 
 #### Set Parameters for AWS Systems Manager Paramter Store 
 

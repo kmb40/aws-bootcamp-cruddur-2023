@@ -76,8 +76,12 @@ echo $ECR_BACKEND_FLASK_URL
 4. Tag the image using `docker tag backend-flask:latest $ECR_BACKEND_FLASK_URL:latest`  
 5. Push the image to AWS ECR using `docker push $ECR_BACKEND_FLASK_URL:latest`  
 
-Attempt to run the backend and base image.   
+#### Create Task Definitions
+Create a new directory and file as follows `aws/task-definitions/backend-flask.json`.  
+**Note:** Be sure to update all variables to match your own.
 
-Register Task Definitions    
+#### Set Parameters for AWS Systems Manager Paramter Store 
 
-Create a service in ECS.   
+#### Set Task Definitions
+
+Attempt to run the backend and base image.  

@@ -21,7 +21,7 @@ def health_check():
 - Created a new script `backend-flask/bin/flask/health-check`. [Ref](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-6/backend-flask/bin/flask/health-check)
 - Create Cloudwatch Log Group with 1 day (to control cost) retention named `cruddur/fargate-cluster` using the following code:  
 ```
-aws logs create-log-group --log-group-name cruddur/fargate-cluster  
+aws logs create-log-group --log-group-name cruddur  
 aws logs put-retention-policy --log-group-name cruddur --retention-in-days 1`  
 ```
 <img src="/assets/cruddur-fargate-cloudwatch-log-group.png" width=450>
@@ -75,3 +75,9 @@ echo $ECR_BACKEND_FLASK_URL
 **Note:** I pulled an existing image for the Base build. Here we are building the image in our environment then pushing it to ECR.  
 4. Tag the image using `docker tag backend-flask:latest $ECR_BACKEND_FLASK_URL:latest`  
 5. Push the image to AWS ECR using `docker push $ECR_BACKEND_FLASK_URL:latest`  
+
+Attempt to run the backend and base image.   
+
+Register Task Definitions    
+
+Create a service in ECS.   

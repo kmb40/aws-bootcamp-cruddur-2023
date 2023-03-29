@@ -66,3 +66,12 @@ aws ecr create-repository \
   --repository-name backend-flask \
   --image-tag-mutability MUTABLE
   ```   
+2. Set the path using:
+```
+export ECR_BACKEND_FLASK_URL="$AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/backend-flask"
+echo $ECR_BACKEND_FLASK_URL
+```  
+3. Build the image using `docker build -t backend-flask .`  
+**Note:** I pulled an existing image for the Base build. Here we are building the image in our environment then pushing it to ECR.  
+4. Tag the image using `docker tag backend-flask:latest $ECR_BACKEND_FLASK_URL:latest`  
+5. Push the image to AWS ECR using `docker push $ECR_BACKEND_FLASK_URL:latest`  

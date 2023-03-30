@@ -170,5 +170,17 @@ export CRUD_SERVICE_SG=$(aws ec2 create-security-group \
   --query "GroupId" --output text)
 echo $CRUD_SERVICE_SG
 ```
+```
+aws ec2 authorize-security-group-ingress \
+  --group-id $CRUD_SERVICE_SG \
+  --protocol tcp \
+  --port 80 \
+  --cidr 0.0.0.0/0
+```
 ### Launch backend container with AWS ECS 
+- Create service for the cruddur cluster in the AWS ECS console.
+<img src="/assets/cruddur-cluster-create-service.png" width=450>
+<figcaption>ECS Cruddur Cluster Create</figcaption>   
+<br/><br/>  
+
 Attempt to run the backend and base image.  

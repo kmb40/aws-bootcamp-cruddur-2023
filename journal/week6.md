@@ -89,7 +89,23 @@ aws ssm put-parameter --type "SecureString" --name "/cruddur/backend-flask/CONNE
 aws ssm put-parameter --type "SecureString" --name "/cruddur/backend-flask/ROLLBAR_ACCESS_TOKEN" --value $ROLLBAR_ACCESS_TOKEN
 aws ssm put-parameter --type "SecureString" --name "/cruddur/backend-flask/OTEL_EXPORTER_OTLP_HEADERS" --value "x-honeycomb-team=$HONEYCOMB_API_KEY"
 ```   
-##### Create IAM Roles CruddurServiceExecutionRole and CruddurTaskRole  
+##### Created IAM Roles CruddurServiceExecutionRole and CruddurTaskRole  
+Created `CruddurServiceExecutionRole` using:
+```
+aws iam create-role \
+    --role-name CruddurServiceExecutionRole \
+    --assume-role-policy-document "{
+  \"Version\":\"2012-10-17\",
+  \"Statement\":[{
+    \"Action\":[\"sts:AssumeRole\"],
+    \"Effect\":\"Allow\",
+    \"Principal\":{
+      \"Service\":[\"ecs-tasks.amazonaws.com\"]
+    }
+  }]
+}"
+```
+
 Created two policy files `aws/policies/service-assume-role-execution-policy.json` and `aws/policies/service-execution-policy.json`.  
 
 #### Set Task Definitions  

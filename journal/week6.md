@@ -89,7 +89,7 @@ aws ssm put-parameter --type "SecureString" --name "/cruddur/backend-flask/CONNE
 aws ssm put-parameter --type "SecureString" --name "/cruddur/backend-flask/ROLLBAR_ACCESS_TOKEN" --value $ROLLBAR_ACCESS_TOKEN
 aws ssm put-parameter --type "SecureString" --name "/cruddur/backend-flask/OTEL_EXPORTER_OTLP_HEADERS" --value "x-honeycomb-team=$HONEYCOMB_API_KEY"
 ```   
-##### Created IAM Roles CruddurServiceExecutionRole and CruddurTaskRole  
+#### Created IAM Roles CruddurServiceExecutionRole and CruddurTaskRole  
 Created `CruddurServiceExecutionRole` using:
 ```
 aws iam create-role \
@@ -109,7 +109,7 @@ aws iam create-role \
 - Created `CruddurServiceExecutionPolicy` using the AWS IAM GUI.   
 - Attached `CruddurServiceExecutionPolicy` to `CruddurServiceExecutionRole` using the AWS IAM GUI.
 
-##### Set Task Definitions  
+#### Set Task Definitions  
 - Created `CruddurTaskRole` role using:
 ```
 aws iam create-role \
@@ -150,10 +150,10 @@ aws iam put-role-policy \
 aws iam attach-role-policy --policy-arn arn:aws:iam::aws:policy/CloudWatchFullAccess --role-name CruddurTaskRole
 aws iam attach-role-policy --policy-arn arn:aws:iam::aws:policy/AWSXRayDaemonWriteAccess --role-name CruddurTaskRole
 ```
-##### Registered tasks definitions using:
+#### Registered tasks definitions using:
 `aws ecs register-task-definition --cli-input-json file://aws/task-definitions/backend-flask.json`
 
-##### Set VPC Default using:
+#### Set VPC Default using:
 ```sh
 export DEFAULT_VPC_ID=$(aws ec2 describe-vpcs \
 --filters "Name=isDefault, Values=true" \
@@ -161,7 +161,7 @@ export DEFAULT_VPC_ID=$(aws ec2 describe-vpcs \
 --output text)
 echo $DEFAULT_VPC_ID
 ```
-##### Create Security Group  
+#### Create Security Group  
 ```sh
 export CRUD_SERVICE_SG=$(aws ec2 create-security-group \
   --group-name "crud-srv-sg" \
@@ -170,5 +170,5 @@ export CRUD_SERVICE_SG=$(aws ec2 create-security-group \
   --query "GroupId" --output text)
 echo $CRUD_SERVICE_SG
 ```
-#### Launch backend container with AWS ECS 
+### Launch backend container with AWS ECS 
 Attempt to run the backend and base image.  

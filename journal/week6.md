@@ -105,15 +105,70 @@ aws iam create-role \
   }]
 }"
 ```
-Created two policy files `aws/policies/service-assume-role-execution-policy.json` and `aws/policies/service-execution-policy.json`.  
 
-Created `CruddurServiceExecutionPolicy` using:
+- Created `CruddurServiceExecutionPolicy` using the AWS IAM GUI.   
+- Attached `CruddurServiceExecutionPolicy` to `CruddurServiceExecutionRole` using the AWS IAM GUI.
+
+##### Set Task Definitions  
+- Created `CruddurTaskRole` role using:
 ```
-aws iam create-role \    
---role-name CruddurServiceExecutionPolicy  \   
---assume-role-policy-document file://aws/policies/service-assume-role-execution-policy.json
+aws iam create-role \
+    --role-name CruddurTaskRole \
+    --assume-role-policy-document "{
+  \"Version\":\"2012-10-17\",
+  \"Statement\":[{
+    \"Action\":[\"sts:AssumeRole\"],
+    \"Effect\":\"Allow\",
+    \"Principal\":{
+      \"Service\":[\"ecs-tasks.amazonaws.com\"]
+    }
+  }]
+}"
 ```
+- Created `SSMAccessPolicy` policy and attached it to the role `CruddurTaskRole` using:
+```
+aws iam put-role-policy \
+  --policy-name SSMAccessPolicy \
+  --role-name CruddurTaskRole \
+  --policy-document "{
+  \"Version\":\"2012-10-17\",
+  \"Statement\":[{
+    \"Action\":[
+      \"ssmmessages:CreateControlChannel\",
+      \"ssmmessages:CreateDataChannel\",
+      \"ssmmessages:OpenControlChannel\",
+      \"ssmmessages:OpenDataChannel\"
+    ],
+    \"Effect\":\"Allow\",
+    \"Resource\":\"*\"
+  }]
+}
+"
+```
+- Attached policies `CloudWatchFullAccess` and `AWSXRayDaemonWriteAccess` to the role `CruddurTaskRole` using:
+```
+aws iam attach-role-policy --policy-arn arn:aws:iam::aws:policy/CloudWatchFullAccess --role-name CruddurTaskRole
+aws iam attach-role-policy --policy-arn arn:aws:iam::aws:policy/AWSXRayDaemonWriteAccess --role-name CruddurTaskRole
+```
+##### Registered tasks definitions using:
+`aws ecs register-task-definition --cli-input-json file://aws/task-definitions/backend-flask.json`
 
-#### Set Task Definitions  
-
+##### Set VPC Default using:
+```sh
+export DEFAULT_VPC_ID=$(aws ec2 describe-vpcs \
+--filters "Name=isDefault, Values=true" \
+--query "Vpcs[0].VpcId" \
+--output text)
+echo $DEFAULT_VPC_ID
+```
+##### Create Security Group  
+```sh
+export CRUD_SERVICE_SG=$(aws ec2 create-security-group \
+  --group-name "crud-srv-sg" \
+  --description "Security group for Cruddur services on ECS" \
+  --vpc-id $DEFAULT_VPC_ID \
+  --query "GroupId" --output text)
+echo $CRUD_SERVICE_SG
+```
+#### Launch backend container with AWS ECS 
 Attempt to run the backend and base image.  

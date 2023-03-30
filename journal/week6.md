@@ -105,8 +105,14 @@ aws iam create-role \
   }]
 }"
 ```
-
 Created two policy files `aws/policies/service-assume-role-execution-policy.json` and `aws/policies/service-execution-policy.json`.  
+
+Created `CruddurServiceExecutionPolicy` using:
+```
+aws iam create-role \    
+--role-name CruddurServiceExecutionPolicy  \   
+--assume-role-policy-document file://aws/policies/service-assume-role-execution-policy.json
+```
 
 #### Set Task Definitions  
 

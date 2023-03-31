@@ -184,9 +184,35 @@ aws ec2 authorize-security-group-ingress \
 <br/><br/>  
 
 **IMPORTANT Note:** Be sure that the CruddurServiceExecutionRole has all of the required policies attached as follows: 
+`CruddurServiceExecutionPolicy` with the following:
 ```
-CruddurServiceExecutionPolicy
-CloudWatchFullAccess
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "ecr:GetAuthorizationToken",
+                "ecr:GetDownloadUrlForLayer",
+                "ecr:BatchGetImage",
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "VisualEditor1",
+            "Effect": "Allow",
+            "Action": [
+                "ssm:GetParameters",
+                "ssm:GetParameter"
+            ],
+            "Resource": "arn:aws:ssm:us-east-1:734732107779:parameter/cruddur/backend-flask/*"
+        }
+    ]
+}
 ```
+And `CloudWatchFullAccess`
 
 Attempt to run the backend and base image.  

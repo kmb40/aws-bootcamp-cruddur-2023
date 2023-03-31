@@ -220,8 +220,8 @@ And `CloudWatchFullAccess`
 Created file `aws/json/service-backend-flask.json` and popuated with security groups and subnets specific to my VPC. I grabbed the subnets from the AWS ECS gui by cicking vpc --> Subnets --> tick the top checkbox to select all subnets and copy them in CSV from the bottom of the screen.   
 
 #### Installed Session Manager Plugin
-`curl "https://s3.amazonaws.com/session-manager-downloads/plugin/latest/ubuntu_64bit/session-manager-plugin.deb" -o "session-manager-plugin.deb"
-sudo dpkg -i session-manager-plugin.deb`
+```curl "https://s3.amazonaws.com/session-manager-downloads/plugin/latest/ubuntu_64bit/session-manager-plugin.deb" -o "session-manager-plugin.deb"
+sudo dpkg -i session-manager-plugin.deb```
 
 #### Connect to container in AWS ECS
 ```

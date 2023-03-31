@@ -183,8 +183,7 @@ aws ec2 authorize-security-group-ingress \
 <figcaption>ECS Cruddur Cluster Create</figcaption>   
 <br/><br/>  
 
-**IMPORTANT Note:** Be sure that the CruddurServiceExecutionRole has all of the required permissions. 
-`CruddurServiceExecutionPolicy` with the following:
+**IMPORTANT Note:** Be sure that the `CruddurServiceExecutionRole` has all of the required permissions in the attached policy `CruddurServiceExecutionPolicy` as follows:
 ```
 {
     "Version": "2012-10-17",
@@ -215,4 +214,5 @@ aws ec2 authorize-security-group-ingress \
 ```
 And `CloudWatchFullAccess`
 
-Attempt to run the backend and base image.  
+### Attempt to run the backend-flask image   
+

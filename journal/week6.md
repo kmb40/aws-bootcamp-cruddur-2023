@@ -183,7 +183,7 @@ aws ec2 authorize-security-group-ingress \
 <figcaption>ECS Cruddur Cluster Create</figcaption>   
 <br/><br/>  
 
-**IMPORTANT Note:** Be sure that the CruddurServiceExecutionRole has all of the required policies attached as follows: 
+**IMPORTANT Note:** Be sure that the CruddurServiceExecutionRole has all of the required permissions. 
 `CruddurServiceExecutionPolicy` with the following:
 ```
 {

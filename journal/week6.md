@@ -220,18 +220,22 @@ And `CloudWatchFullAccess`
 Created file `aws/json/service-backend-flask.json` and popuated with security groups and subnets specific to my VPC. I grabbed the subnets from the AWS ECS gui by cicking vpc --> Subnets --> tick the top checkbox to select all subnets and copy them in CSV from the bottom of the screen.   
 
 #### Installed Session Manager Plugin
-```curl "https://s3.amazonaws.com/session-manager-downloads/plugin/latest/ubuntu_64bit/session-manager-plugin.deb" -o "session-manager-plugin.deb"
-sudo dpkg -i session-manager-plugin.deb```
+```
+curl "https://s3.amazonaws.com/session-manager-downloads/plugin/latest/ubuntu_64bit/session-manager-plugin.deb" -o "session-manager-plugin.deb"
+sudo dpkg -i session-manager-plugin.deb
+```
 
-#### Connect to container in AWS ECS
+#### Connect to container in AWS ECS via CLI  
 ```
 aws ecs execute-command  \
 --region $AWS_DEFAULT_REGION \
 --cluster cruddur \
---task [your aws ecs container arn here] \
+--task [your aws ecs container task arn here] \
 --container backend-flask \
 --command "/bin/bash" \
 --interactive
 ```
-### Attempt to run the backend-flask image   
+Alternatively connect with a script `bin/ecs/connect-to-service` and the command `./bin/ecs/connect-to-service [your aws ecs container task arn here] backend-flask`  
 
+### Attempt to run the backend-flask image 
+Obtain the IP address to the container 

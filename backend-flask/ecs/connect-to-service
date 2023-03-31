@@ -1,3 +1,5 @@
+#! /usr/bin/bash
+
 aws ecs execute-command  \
 --region $AWS_DEFAULT_REGION \
 --cluster cruddur \

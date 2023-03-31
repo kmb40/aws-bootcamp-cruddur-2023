@@ -237,6 +237,9 @@ aws ecs execute-command  \
 ```
 Alternatively connect with a script `bin/ecs/connect-to-service` and the command `./bin/ecs/connect-to-service [your aws ecs container task arn here] backend-flask`  
 
+Test the connection to the ECS container task using `.bin/db/test`
+If it fails, check that the "default" Security Group has a line item for postgres with `crud-srv-sg` security group in the inbound Rules. 
+
 ### Attempt to run the backend-flask image 
 Obtain the IP address to the container task from the "Configuration panel" of the task.
 <img src="/assets/Public%20IP%20ECS%20Task.png" width=450>

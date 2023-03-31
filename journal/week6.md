@@ -212,7 +212,26 @@ aws ec2 authorize-security-group-ingress \
     ]
 }
 ```
-And `CloudWatchFullAccess`
+And `CloudWatchFullAccess`   
 
+#### And after all of that, I deleted the service from the AWS ECS GUI in order to recreate it via AWS CLI.  
+
+#### Installed AWS ECS `execute-command`  
+Created file `aws/json/service-backend-flask.json` and popuated with security groups and subnets specific to my VPC. I grabbed the subnets from the AWS ECS gui by cicking vpc --> Subnets --> tick the top checkbox to select all subnets and copy them in CSV from the bottom of the screen.   
+
+#### Installed Session Manager Plugin
+`curl "https://s3.amazonaws.com/session-manager-downloads/plugin/latest/ubuntu_64bit/session-manager-plugin.deb" -o "session-manager-plugin.deb"
+sudo dpkg -i session-manager-plugin.deb`
+
+#### Connect to container in AWS ECS
+```
+aws ecs execute-command  \
+--region $AWS_DEFAULT_REGION \
+--cluster cruddur \
+--task [your aws ecs container arn here] \
+--container backend-flask \
+--command "/bin/bash" \
+--interactive
+```
 ### Attempt to run the backend-flask image   
 

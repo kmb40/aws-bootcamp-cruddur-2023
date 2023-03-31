@@ -238,4 +238,7 @@ aws ecs execute-command  \
 Alternatively connect with a script `bin/ecs/connect-to-service` and the command `./bin/ecs/connect-to-service [your aws ecs container task arn here] backend-flask`  
 
 ### Attempt to run the backend-flask image 
-Obtain the IP address to the container 
+Obtain the IP address to the container task from the "Configuration panel" of the task.
+<img src="/assets/Public%20IP%20ECS%20Task.png" width=450>
+<figcaption>AWS ECS Container Task IP</figcaption>   
+<br/><br/>  

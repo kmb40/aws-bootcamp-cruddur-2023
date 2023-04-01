@@ -268,4 +268,5 @@ Append :3000 to the DNS name and you should see the following:
 - Created target groups for ports 4567 and 3000.  
 
 ### Configured Custom Domain
-
+- Visit Route53 --> Hosted Zones.
+- Create a hosted zone.

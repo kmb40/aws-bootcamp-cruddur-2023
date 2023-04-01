@@ -253,5 +253,5 @@ Append :4567/api/health-check to the public IP address and you should see the fo
 
 #### Setup Load Balancing
 - Created an Application Load Balancer from the gui. `ec2-->load balancers`
-  - Create a new security group then added that security group to the existing `crud-srv-sg` security group inbound rules.
+  - Create a new security group `cruddur-alb-sg` then added that security group to the existing `crud-srv-sg` security group inbound rules.
 - Created target groups for ports 4567 and 3000.  

@@ -251,7 +251,21 @@ Append :4567/api/health-check to the public IP address and you should see the fo
 <figcaption>Backend-Flask health-check path</figcaption>   
 <br/><br/> 
 
+### Run the frontend-react-js image stored at AWS ECS
+Obtain the DNS name to the container task from the "Configuration panel" of the task using a similar method as the backend.   
+<img src="/assets/frontend-3000-check.png" width=450>
+<figcaption>AWS ECS Container Task DNS Name</figcaption>   
+<br/><br/>  
+
+Append :3000 to the DNS name and you should see the following:   
+<img src="/assets/frontend-ecs-cruddur.png" width=450>
+<figcaption>AWS ECS Container Task DNS Name</figcaption>   
+<br/><br/>  
+
 #### Setup Load Balancing
 - Created an Application Load Balancer from the gui. `ec2-->load balancers`
-  - Create a new security group `cruddur-alb-sg` then added that security group to the existing `crud-srv-sg` security group inbound rules.
+  - Create a new security group `cruddur-alb-sg` then added that security group to the existing `crud-srv-sg` security group inbound rules for TCP ports 3000 and 4567.
 - Created target groups for ports 4567 and 3000.  
+
+### Configured Custom Domain
+

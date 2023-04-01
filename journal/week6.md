@@ -270,3 +270,4 @@ Append :3000 to the DNS name and you should see the following:
 ### Configured Custom Domain
 - Visit Route53 --> Hosted Zones.
 - Create a hosted zone.
+- Create an SSL Certificate.

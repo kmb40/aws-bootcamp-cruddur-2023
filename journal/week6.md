@@ -271,3 +271,12 @@ Append :3000 to the DNS name and you should see the following:
 - Visit Route53 --> Hosted Zones.
 - Create a hosted zone.
 - Create an SSL Certificate.
+- Update ALB listners to include ports 80 and 443.
+  - Remove listners for ports 4567 and 3000.
+- In Route53, create two A records. One for `your-domain` and the second for `api.your-domain`.
+
+### Ran the app in production
+- Visited your-domain.xxx and the app frontend should appear.   
+<img src="/assets/cruddur-net.png" width=450>
+<figcaption>Cruddur.net in production on AWS</figcaption>   
+<br/><br/>  

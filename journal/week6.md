@@ -283,3 +283,5 @@ Append :3000 to the DNS name and you should see the following:
 
 ### Secured Flask
 Ran the app with and without debug mode.
+
+### Moved Bin Directory to top level and refactored multiple files to correlate

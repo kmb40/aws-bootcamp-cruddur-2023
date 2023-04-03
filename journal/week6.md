@@ -280,3 +280,6 @@ Append :3000 to the DNS name and you should see the following:
 <img src="/assets/cruddur-net.png" width=450>
 <figcaption>Cruddur.net in production on AWS</figcaption>   
 <br/><br/>  
+
+### Secured Flask
+Ran the app with and without debug mode.

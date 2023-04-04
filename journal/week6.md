@@ -285,3 +285,5 @@ Append :3000 to the DNS name and you should see the following:
 Ran the app with and without debug mode.
 
 ### Moved Bin Directory to top level and refactored multiple files to correlate
+
+### Fixed Messaging in Production

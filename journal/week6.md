@@ -285,5 +285,8 @@ Append :3000 to the DNS name and you should see the following:
 Ran the app with and without debug mode.
 
 ### Moved Bin Directory to top level and refactored multiple files to correlate
+- Moved Bin Directory to top level and refactored multiple files to correlate  
 
 ### Fixed Messaging in Production
+- Connected to AWS RDS production database.
+- Seeded Bayko data from seed.sql into prodcution cruddur database.

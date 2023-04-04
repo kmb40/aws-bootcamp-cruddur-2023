@@ -9,8 +9,8 @@ printf "${CYAN}==== ${LABEL}${NO_COLOR}\n"
 ABS_PATH=$(readlink -f "$0")
 bin_path=$(dirname $ABS_PATH)
 
-source "$bin_path/db/drop"
-source "$bin_path/db/create"
-source "$bin_path/db/schema-load"
-source "$bin_path/db/seed"
-source "$bin_path/db/update_cognito_user_ids" # previouly used python instead of source. test if fail. 4/3/23 KMB
+source "$bin_path/drop"
+source "$bin_path/create"
+source "$bin_path/schema-load"
+source "$bin_path/seed"
+python "$bin_path/update_cognito_user_ids" # previouly used python instead of source. test if fail. 4/3/23 KMB. 4/4/23 Reverted back to python as before after faulure to run. KMB

@@ -289,4 +289,7 @@ Ran the app with and without debug mode.
 
 ### Fixed Messaging in Production
 - Connected to AWS RDS production database.
+- Updated paths in seed files.
 - Seeded Bayko data from seed.sql into prodcution cruddur database.
+
+### Implemented Refresh Token in Cognito

@@ -297,5 +297,5 @@ Ran the app with and without debug mode.
 - Updated mutiple front end files to reflect changes.
 
 ### Configured for Container Insights
-- Restructured environmental variables. Implemented ruby. Performed troubleshooting
-- Activated Insights
+- Restructured environmental variables. Implemented ruby. Performed troubleshooting.
+- Activated Container Insights on the ECS Cluster.

@@ -4,8 +4,8 @@ import { format_datetime, message_time_ago } from '../lib/DateTimeFormats';
 
 export default function MessageItem(props) {
   return (
-    <Link className='message_item' to={`/messages/@`+props.message.handle}>
-      <div className='message_avatar'></div>
+    <div className='message_item'>
+      <Link className='message_avatar' to={`/messages/@`+props.message.handle}></Link>
       <div className='message_content'>
         <div className='message_meta'>
           <div className='message_identity'>

@@ -293,3 +293,9 @@ Ran the app with and without debug mode.
 - Seeded Bayko data from seed.sql into prodcution cruddur database.
 
 ### Implemented Refresh Token in Cognito
+- Updated CheckAuth.js file for refresh.
+- Updated mutiple front end files to reflect changes.
+
+### Configured for Container Insights
+- Restructured environmental variables. Implemented ruby. Performed troubleshooting
+- Activated Insights

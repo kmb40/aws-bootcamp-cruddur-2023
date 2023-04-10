@@ -1,4 +1,4 @@
-# Week 6 — Deploying Containers
+# Week 6 7 — Deploying Containers
 
 The following information outlines tasks that I've completed for Week 6 of the bootcamp.  
 

@@ -20,8 +20,8 @@ export class ThumbingServerlessCdkStack extends cdk.Stack {
     super(scope, id, props);
 
     // The code that defines your stack goes here
-    const uploadsbucketName: string = process.env.UPLOADS_BUCKET_NAME as string;
-    const assetsbucketName: string = process.env.ASSETS_BUCKET_NAME as string;
+    const uploadsBucketName: string = process.env.UPLOADS_BUCKET_NAME as string;
+    const assetsBucketName: string = process.env.ASSETS_BUCKET_NAME as string;
     const functionPath: string = process.env.THUMBING_FUNCTION_PATH as string;
     const folderInput: string = process.env.THUMBING_S3_FOLDER_INPUT as string;
     const folderOutput: string = process.env.THUMBING_S3_FOLDER_OUTPUT as string;
@@ -35,14 +35,14 @@ export class ThumbingServerlessCdkStack extends cdk.Stack {
  //   console.log('topicName',topicName)
  //   console.log('functionPath',functionPath)    
 
-    const uploadsBucket = this.createBucket(uploadsbucketName);
-    const assetsBucket = this.importBucket(assetsbucketName); 
+    const uploadsBucket = this.createBucket(uploadsBucketName);
+    const assetsBucket = this.importBucket(assetsBucketName);
 
     // create a lambda KMB
     const lambda = this.createLambda(
       functionPath,
-      uploadsbucketName,
-      assetsbucketName,
+      uploadsBucketName,
+      assetsBucketName,
       folderInput,
       folderOutput
       );
@@ -75,22 +75,22 @@ export class ThumbingServerlessCdkStack extends cdk.Stack {
   }
 
   importBucket(bucketName: string): s3.IBucket {
-    const bucket = s3.Bucket.fromBucketName(this, 'AssetsBucket', bucketName);
+    const bucket = s3.Bucket.fromBucketName(this, "AssetsBucket", bucketName);
     return bucket;
   }
 
-  createLambda(functionPath: string, uploadsbucketName: string, assetsbucketName: string, folderIntput: string, folderOutput: string): lambda.IFunction {
+  createLambda(functionPath: string, uploadsBucketName: string, assetsBucketName: string, folderInput: string, folderOutput: string): lambda.IFunction {
     const lambdaFunction = new lambda.Function(this, 'ThumbLambda', {
       runtime: lambda.Runtime.NODEJS_18_X,
       handler: 'index.handler',
       code: lambda.Code.fromAsset(functionPath),
       environment: {
-        DEST_BUCKET_NAME: assetsbucketName,
-        FOLDER_INPUT: folderIntput,
+        DEST_BUCKET_NAME: assetsBucketName,
+        FOLDER_INPUT: folderInput,
         FOLDER_OUTPUT: folderOutput,
         PROCESS_WIDTH: '512',
         PROCESS_HEIGHT: '512'
-        }
+      }
     });
     return lambdaFunction;
   }

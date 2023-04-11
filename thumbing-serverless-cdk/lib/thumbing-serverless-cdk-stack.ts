@@ -1,5 +1,6 @@
 import * as cdk from 'aws-cdk-lib';
 import * as s3 from 'aws-cdk-lib/aws-s3';
+import * as iam from 'aws-cdk-lib/aws-iam';
 import * as lambda from 'aws-cdk-lib/aws-lambda';
 import * as s3n from 'aws-cdk-lib/aws-s3-notifications';
 import { Construct } from 'constructs';
@@ -33,6 +34,8 @@ export class ThumbingServerlessCdkStack extends cdk.Stack {
     const lambda = this.createLambda(folderInput,folderOutput,functionPath,bucketName)
   
     this.createS3NotifyToLambda(folderInput,lambda,bucket)
+    const s3ReadWritePolicy = this.createPolicyBucketAccess(bucket.bucketArn)
+    lambda.addToRolePolicy(s3ReadWritePolicy);
   }
 
   createBucket(bucketName: string): s3.IBucket{
@@ -66,4 +69,17 @@ export class ThumbingServerlessCdkStack extends cdk.Stack {
       {prefix: prefix}
     )
   }
+
+  createPolicyBucketAccess(bucketArn: string){
+    const s3ReadWritePolicy = new iam.PolicyStatement({
+      actions: [
+        's3:GetObject',
+        's3:PutObject',
+      ],
+      resources: [
+        `${bucketArn}/*`,
+      ]
+    });
+    return s3ReadWritePolicy;
+  }  
 }

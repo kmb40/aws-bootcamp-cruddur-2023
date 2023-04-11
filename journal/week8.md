@@ -10,6 +10,8 @@ The following information outlines tasks that I've completed for Week 7 of the b
 
 #### Configured s3
 
+##### Configured s3 Permissions
+
 #### Configured lamda
 
 #### Configured SNS

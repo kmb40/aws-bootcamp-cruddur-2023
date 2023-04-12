@@ -4,5 +4,5 @@ ABS_PATH=$(readlink -f "$0")
 SERVERLESS_PATH=$(dirname $ABS_PATH)
 DATA_FILE_PATH="$SERVERLESS_PATH/files/geordi.jpg"
 
-aws s3 rm "s3://{$UPLOADS_BUCKET_NAME}/avatars/original/geordi.jpg"
-aws s3 rm "s3://{$UPLOADS_BUCKET_NAME}/avatars/processed/geordi.jpg"
+aws s3 rm "s3://${UPLOADS_BUCKET_NAME}/avatars/original/geordi.jpg"
+aws s3 rm "s3://${UPLOADS_BUCKET_NAME}/avatars/processed/geordi.jpg"

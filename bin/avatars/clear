@@ -5,4 +5,4 @@ SERVERLESS_PATH=$(dirname $ABS_PATH)
 DATA_FILE_PATH="$SERVERLESS_PATH/files/geordi.jpg"
 
 aws s3 rm "s3://upload-avatars-cruddur-net/avatars/original/geordi.jpg"
-aws s3 rm "s3://upload-avatars-cruddur-net/avatars/processed/geordi.jpg"
+aws s3 rm "s3://assets.cruddur.net/avatars/processed/geordi.jpg"

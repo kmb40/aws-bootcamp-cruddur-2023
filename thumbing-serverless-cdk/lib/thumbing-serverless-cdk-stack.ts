@@ -63,7 +63,7 @@ export class ThumbingServerlessCdkStack extends cdk.Stack {
     lambda.addToRolePolicy(s3UploadsReadWritePolicy);
     lambda.addToRolePolicy(s3AssetsReadWritePolicy);
   }
-
+   //To create the Uploads Bucket
   createBucket(bucketName: string): s3.IBucket{
     const bucket = new s3.Bucket(this, 'UploadsBucket', {
       bucketName: bucketName,
@@ -71,7 +71,15 @@ export class ThumbingServerlessCdkStack extends cdk.Stack {
     });
     return bucket;
   }
-
+  //To create the Assets Bucket
+  createBucket(bucketName: string): s3.IBucket{
+    const bucket = new s3.Bucket(this, 'AssetsBucket', {
+      bucketName: bucketName,
+      removalPolicy: cdk.RemovalPolicy.DESTROY
+    });
+    return bucket;
+  }  
+  
   importBucket(bucketName: string): s3.IBucket {
     const bucket = s3.Bucket.fromBucketName(this,"AssetsBucket",bucketName);
     return bucket;

@@ -8,6 +8,7 @@ import DesktopNavigation  from '../components/DesktopNavigation';
 import DesktopSidebar     from '../components/DesktopSidebar';
 import ActivityFeed from '../components/ActivityFeed';
 import ActivityForm from '../components/ActivityForm';
+import EditProfileButton from '../components/EditProfileButton';
 
 // [TODO] Authenication
 //import Cookies from 'js-cookie'
@@ -66,8 +67,13 @@ export default function UserFeedPage() {
       <DesktopNavigation user={user} active={'profile'} setPopped={setPopped} />
       <div className='content'>
         <ActivityForm popped={popped} setActivities={setActivities} />
-        <ActivityFeed title={title} activities={activities} />
+        <div className='activity_feed'>
+         <div className='activity_feed_heading'>
+          <div className='title'>{title}</div>
+        </div>  
+        <ActivityFeed activities={activities} />
       </div>
+    </div>
       <DesktopSidebar user={user} />
     </article>
   );

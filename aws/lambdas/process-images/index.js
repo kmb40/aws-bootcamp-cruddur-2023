@@ -22,7 +22,7 @@ exports.handler = async (event) => {
 
   filename = path.parse(srcKey).name
   
-  const dstKey = `${folderOutput}${filename}.jpg`
+  const dstKey = `${folderOutput}/${filename}.jpg`
   console.log('dstBucket',dstBucket)
   console.log('dstKey',dstKey)
 

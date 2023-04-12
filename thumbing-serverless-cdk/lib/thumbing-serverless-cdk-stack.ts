@@ -99,8 +99,8 @@ export class ThumbingServerlessCdkStack extends cdk.Stack {
     const destination = new s3n.LambdaDestination(lambda);
     bucket.addEventNotification(
       s3.EventType.OBJECT_CREATED_PUT,
-      destination,
-      {prefix: prefix}
+      destination//,
+     //{prefix: prefix}
     )
   }
 
@@ -136,8 +136,8 @@ export class ThumbingServerlessCdkStack extends cdk.Stack {
     const destination = new s3n.SnsDestination(snsTopic)
     bucket.addEventNotification(
       s3.EventType.OBJECT_CREATED_PUT, 
-      destination//,
-     // {prefix: prefix}
+      destination,
+      {prefix: prefix}
     );
   }  
 

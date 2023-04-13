@@ -1,5 +1,5 @@
 #! /usr/bin/bash
-# Not functioning properly. Need to execute commands individually. 
+# Not functioning properly. Need to execute commands individually. KMB
 
 set -e # stop if it fails at any point
 

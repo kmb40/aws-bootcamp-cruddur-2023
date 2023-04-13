@@ -15,6 +15,7 @@ from services.message_groups import *
 from services.messages import *
 from services.create_message import *
 from services.show_activity import *
+from services.update_profile import *
 
 from lib.cognito_jwt_token import CognitoJwtToken, extract_access_token, TokenVerifyError
 
@@ -290,6 +291,7 @@ def data_users_short(handle):
   data = UsersShort.run(handle)
   return data, 200
 
+// Added to Implement Migrations Backend Endpoint and Profile Form
 @app.route("/api/profile/update", methods=['POST','OPTIONS'])
 @cross_origin()
 def data_update_profile():

@@ -17,3 +17,7 @@ The following information outlines tasks that I've completed for Week 7 of the b
 #### Configured SNS
 
 ### Setup up CloudFront
+
+### Implemented User Profile Page
+
+### Styled profile page

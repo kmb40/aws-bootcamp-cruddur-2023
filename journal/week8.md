@@ -31,3 +31,5 @@ EditProfileButton.css
 EditProfileButton.js
 ```
 - Styled profile page.
+
+### Implemented Migrations Backend Endpoint and Profile Form

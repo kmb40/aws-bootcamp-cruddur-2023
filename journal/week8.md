@@ -22,12 +22,12 @@ The following information outlines tasks that I've completed for Week 7 of the b
 - Created directory in S3 bucket - via console - named `banner`.  
 - Uploaded background image to `banner`.
 
-### Styled profile page
-- Created new files
+### Implemented profile page
+- Created new files in frontend-react-js
 ```
-profile.css
-profile.js
----.css
-----.js
-etc
+ProfileHeading.css
+ProfileHeading.js
+EditProfileButton.css
+EditProfileButton.js
 ```
+- Styled profile page.

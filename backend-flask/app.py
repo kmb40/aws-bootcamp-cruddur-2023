@@ -291,7 +291,7 @@ def data_users_short(handle):
   data = UsersShort.run(handle)
   return data, 200
 
-// Added to Implement Migrations Backend Endpoint and Profile Form
+# Added to Implement Migrations Backend Endpoint and Profile Form
 @app.route("/api/profile/update", methods=['POST','OPTIONS'])
 @cross_origin()
 def data_update_profile():

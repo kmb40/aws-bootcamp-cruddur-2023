@@ -8,7 +8,7 @@ class AddBioColumnMigration:
     return data
   def rollback_sql():
     data = """
-      ALTER TABLE public.users DROP COLUMN;
+      ALTER TABLE public.users DROP COLUMN bio;
     """
     return data
 

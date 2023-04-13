@@ -14,12 +14,9 @@ from lib.db import db
 
 def get_last_successful_run():
   sql = """
-  SELECT
-      coalesce(
-      (SELECT last_successful_run
-      FROM public.schema_information
-      LIMIT 1),
-      '000000000000000000') as last_succesful_run
+    SELECT last_successful_run
+    FROM public.schema_information
+    LIMIT 1
   """
   return int(db.query_value(sql,{},verbose=False))
 
@@ -46,6 +43,9 @@ for migration_file in migration_files:
     match = re.match(r'^\d+', filename)
     if match:
       file_time = int(match.group())
+      print("==<><>")
+      print(last_successful_run, file_time)
+      print(last_successful_run > file_time)
       if last_successful_run > file_time:
         last_migration_file = module_name
 print(last_migration_file)

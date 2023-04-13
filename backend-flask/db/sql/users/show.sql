@@ -4,6 +4,7 @@ SELECT
       users.uuid,
       users.handle,
       users.display_name,
+      users.bio,
       (
        SELECT 
         count(true) 
@@ -28,4 +29,5 @@ SELECT
   ) array_row) as activities
 FROM public.users
 WHERE
-  users.handle = %(handle)s
+  users.handle = %(handle)s --Can be changed to test user handle in '' to display for testing. example 'kylembrown'
+  -- users.handle = 'kylembrown' --Can be changed to test user handle in '' to display for testing. example 'kylembrown'

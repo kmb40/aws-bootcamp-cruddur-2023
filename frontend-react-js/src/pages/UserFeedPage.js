@@ -8,7 +8,7 @@ import DesktopNavigation  from '../components/DesktopNavigation';
 import DesktopSidebar     from '../components/DesktopSidebar';
 import ActivityFeed from '../components/ActivityFeed';
 import ActivityForm from '../components/ActivityForm';
-import EditProfileButton from '../components/EditProfileButton';
+import ProfileHeading from '../components/ProfileHeading';
 
 // [TODO] Authenication
 //import Cookies from 'js-cookie'
@@ -18,15 +18,16 @@ export default function UserFeedPage() {
   const [activities, setActivities] = React.useState([]);
   const [profile, setProfile] = React.useState([]);  
   const [popped, setPopped] = React.useState([]);
+  const [poppedProfile, setPoppedProfile] = React.useState([]);
   const [user, setUser] = React.useState(null);
   const dataFetchedRef = React.useRef(false);
 
   const params = useParams();
-  const title = `@${params.handle}`;
+  //const title = `@${params.handle}`;
 
   const loadData = async () => {
     try {
-      const backend_url = `${process.env.REACT_APP_BACKEND_URL}/api/activities/${title}`
+      const backend_url = `${process.env.REACT_APP_BACKEND_URL}/api/activities/@${params.handle}`
       await getAccessToken()
       const access_token = localStorage.getItem("access_token")
       const res = await fetch(backend_url, {
@@ -37,7 +38,7 @@ export default function UserFeedPage() {
       });
       let resJson = await res.json();
       if (res.status === 200) {
-        setActivities(resJson.profile)
+        setProfile(resJson.profile)
         setActivities(resJson.activities)
       } else {
         console.log(res)
@@ -72,10 +73,9 @@ export default function UserFeedPage() {
       <DesktopNavigation user={user} active={'profile'} setPopped={setPopped} />
       <div className='content'>
         <ActivityForm popped={popped} setActivities={setActivities} />
+
         <div className='activity_feed'>
-         <div className='activity_feed_heading'>
-          <div className='title'>{title}</div>
-        </div>  
+         <ProfileHeading setPopped={setPoppedProfile} profile={profile} />
         <ActivityFeed activities={activities} />
       </div>
     </div>

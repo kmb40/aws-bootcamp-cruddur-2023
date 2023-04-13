@@ -2,7 +2,7 @@ import './UserFeedPage.css';
 import React from "react";
 import { useParams } from 'react-router-dom';
 
-import checkAuth from '../lib/CheckAuth';
+//import checkAuth from '../lib/CheckAuth';
 //import getAccessToken from '../lib/CheckAuth';
 import DesktopNavigation  from '../components/DesktopNavigation';
 import DesktopSidebar     from '../components/DesktopSidebar';
@@ -12,7 +12,7 @@ import EditProfileButton from '../components/EditProfileButton';
 
 // [TODO] Authenication
 //import Cookies from 'js-cookie'
-//import {checkAuth, getAccessToken} from 'lib/CheckAuth';
+import {checkAuth, getAccessToken} from '../lib/CheckAuth';
 
 export default function UserFeedPage() {
   const [activities, setActivities] = React.useState([]);
@@ -27,7 +27,12 @@ export default function UserFeedPage() {
   const loadData = async () => {
     try {
       const backend_url = `${process.env.REACT_APP_BACKEND_URL}/api/activities/${title}`
+      await getAccessToken()
+      const access_token = localStorage.getItem("access_token")
       const res = await fetch(backend_url, {
+        headers: {
+          Authorization: `Bearer ${access_token}`
+        },        
         method: "GET"
       });
       let resJson = await res.json();
@@ -41,7 +46,7 @@ export default function UserFeedPage() {
       console.log(err);
     }
   };
-
+/*
   const checkAuth = async () => {
     console.log('checkAuth')
     // [TODO] Authenication
@@ -52,14 +57,14 @@ export default function UserFeedPage() {
       })
     }
   };
-
+*/
   React.useEffect(()=>{
     //prevents double call
     if (dataFetchedRef.current) return;
     dataFetchedRef.current = true;
 
     loadData();
-    checkAuth();
+    checkAuth(setUser);
   }, [])
 
   return (

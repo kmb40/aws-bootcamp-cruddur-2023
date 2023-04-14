@@ -32,4 +32,9 @@ EditProfileButton.js
 ```
 - Styled profile page.
 
-### Implemented Migrations Backend Endpoint and Profile Form
+### Implemented Migrations Backend Endpoint and Profile Form  
+- Configured migration and rollback database funtions.
+- Setup popup form for capturing bio information.
+
+### Implemented Avatar Uploading
+- Implement client side upload for S3.

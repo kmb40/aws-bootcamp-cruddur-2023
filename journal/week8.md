@@ -40,3 +40,4 @@ EditProfileButton.js
 ### Implemented Avatar Uploading
 - Implement client side upload for S3.
 - Leveraged API gateway
+- Installed aws jwt verify using `npm install aws-jwt-verify --save`

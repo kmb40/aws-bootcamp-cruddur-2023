@@ -14,7 +14,7 @@ def handler(event:, context:)
   { 
     headers:{
       "Access-Control-Allow_Headers": "*, Authorization",
-      "Access-Control-Allow_Origin": "",
+      "Access-Control-Allow_Origin": "https://3000-kmb40-awsbootcampcrudd-b9h7d85sbfc.ws-us94.gitpod.io",
       "Access-Control-Allow_Methods": "*, OPTIONS,GET,POST"
     },
     statusCode: 200, 

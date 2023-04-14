@@ -35,6 +35,8 @@ EditProfileButton.js
 ### Implemented Migrations Backend Endpoint and Profile Form  
 - Configured migration and rollback database funtions.
 - Setup popup form for capturing bio information.
+    - Note: Be sure to call your own @handle when viewing profile.
 
 ### Implemented Avatar Uploading
 - Implement client side upload for S3.
+- Leveraged API gateway

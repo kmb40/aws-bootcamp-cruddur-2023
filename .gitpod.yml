@@ -44,6 +44,7 @@ vscode:
   extensions:
     - 42Crunch.vscode-openapi
     - cweijan.vscode-postgresql-client2
+    - rangav.vscode-thunder-client
 
 # Automate public ports   
 ports:

@@ -1,6 +1,8 @@
 import './ProfileHeading.css';
 import EditProfileButton from '../components/EditProfileButton';
 
+import ProfileAvatar from 'components/ProfileAvatar'
+
 export default function ProfileHeading(props) {
   const backgroundImage = 'url("https://assets.cruddur.net/banners/SOLUSD_2021-11-06_06-14-51.png")';
   const styles = {

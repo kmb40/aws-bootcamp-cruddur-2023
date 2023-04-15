@@ -1,5 +1,6 @@
 import './ProfileInfo.css';
 import {ReactComponent as ElipsesIcon} from './svg/elipses.svg';
+import ProfileAvatar from 'components/ProfileAvatar'
 import React from "react";
 
 // [TODO] Authenication

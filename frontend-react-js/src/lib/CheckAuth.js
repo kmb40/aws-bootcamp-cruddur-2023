@@ -1,5 +1,5 @@
 import { Auth } from 'aws-amplify';
-import { resolvePath } from 'react-router-dom';
+//import { resolvePath } from 'react-router-dom';
 
 export async function getAccessToken(){
   Auth.currentSession()
@@ -18,14 +18,15 @@ export async function checkAuth(setUser){
     bypassCache: false 
   })
   .then((cognito_user) => {
-    console.log('cognito_user',cognito_user);
+ //   console.log('cognito_user',cognito_user);
     setUser({
+      cognito_user_uuid: cognito_user.attributes.sub,
       display_name: cognito_user.attributes.name,
       handle: cognito_user.attributes.preferred_username
     })
     return Auth.currentSession()
   }).then((cognito_user_session) => {
-      console.log('cognito_user_session',cognito_user_session);
+//      console.log('cognito_user_session',cognito_user_session);
       localStorage.setItem("access_token", cognito_user_session.accessToken.jwtToken)
   })
   .catch((err) => console.log(err));

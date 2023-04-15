@@ -15,7 +15,7 @@ export default function ProfileForm(props) {
 
   const s3uploadkey = async (event)=> {
     try {
-      console.log('s3uploadkey')
+      console.log('s3upload')
       const backend_url = "https://08gphvs9gf.execute-api.us-east-1.amazonaws.com/avatars/key_upload"
       await getAccessToken()
       const access_token = localStorage.getItem("access_token")
@@ -26,11 +26,11 @@ export default function ProfileForm(props) {
           'Authorization': `Bearer ${access_token}`,
           'Accept': 'application/json',
           'Content-Type': 'application/json'
-        }})
+      }})
       let data = await res.json();
       if (res.status === 200) {
-       console.log('presigned url',data)
-       return data.url
+        console.log('presigned url',data)
+        return data.url
       } else {
         console.log(res)
       }
@@ -48,7 +48,7 @@ export default function ProfileForm(props) {
     const preview_image_url = URL.createObjectURL(file)
     console.log(filename,size,type)
     const presignedurl = await s3uploadkey()
-    console.log(presignedurl)
+    console.log('pp',presignedurl)
     try {
       console.log('s3upload')
       const res = await fetch(presignedurl, {
@@ -56,10 +56,10 @@ export default function ProfileForm(props) {
         body: file,
         headers: {
           'Content-Type': type
-        }})
+      }})
       let data = await res.json();
       if (res.status === 200) {
-       setPresignedurl(data.url) 
+        setPresignedurl(data.url) 
       } else {
         console.log(res)
       }
@@ -67,6 +67,7 @@ export default function ProfileForm(props) {
       console.log(err);
     }
   }
+
   const onsubmit = async (event) => {
     event.preventDefault();
     try {
@@ -127,6 +128,9 @@ export default function ProfileForm(props) {
           </div>
           <div className="popup_content">
 
+          <div className="upload" onClick={s3uploadkey}>
+              Upload Avatar
+            </div>
             <input type ="file" name="avatarupload" onChange={s3upload} />
             
            <div className="upload" onClick={s3upload}>

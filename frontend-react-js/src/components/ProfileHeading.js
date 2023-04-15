@@ -13,9 +13,7 @@ export default function ProfileHeading(props) {
     <div className='title'>{props.profile.display_name}</div>
     <div className="cruds_count">{props.profile.cruds_count} Cruds</div>
     <div className="banner" style={styles} >
-      <div className="avatar">
-        <img src="https://assets.cruddur.net/avatars/geordi.jpg"></img>
-      </div>
+      <ProfileAvatar id={props.profile.cognito_user_uuid} />
     </div>
     <div className="info">
       <div className='id'>

@@ -29,18 +29,6 @@ env:
     CONTAINER_NAME: backend-flask
     IMAGE_URL: 734732107779.dkr.ecr.us-east-1.amazonaws.com/backend-flask:latest
     REPO_NAME: backend-flask:latest
-    AWS_COGNITO_USER_POOL_CLIENT_ID: us-east-1_Pzbe5SksT
-    AWS_DEFAULT_REGION: us-east-1
-    BACKEND_URL: *
-    FRONTEND_URL: https://cruddur.net
-    OTEL_EXPORTER_OTLP_ENDPOINT: https://api.honeycomb.io
-    OTEL_SERVICE_NAME: backend-flask
-  paramter-store:
-    AWS_ACCESS_KEY_ID: "arn:aws:ssm:us-east-1:734732107779:parameter/cruddur/backend-flask/AWS_ACCESS_KEY_ID"
-    AWS_SECRET_ACCESS_KEY: "arn:aws:ssm:us-east-1:734732107779:parameter/cruddur/backend-flask/AWS_SECRET_ACCESS_KEY"
-    CONNECTION_URL: "arn:aws:ssm:us-east-1:734732107779:parameter/cruddur/backend-flask/CONNECTION_URL"
-    OTEL_EXPORTER_OTLP_HEADERS: "arn:aws:ssm:us-east-1:734732107779:parameter/cruddur/backend-flask/OTEL_EXPORTER_OTLP_HEADERS"
-    ROLLBAR_ACCESS_TOKEN: "arn:aws:ssm:us-east-1:734732107779:parameter/cruddur/backend-flask/ROLLBAR_ACCESS_TOKEN"
 artifacts:
   files:
     - imagedefinitions.json

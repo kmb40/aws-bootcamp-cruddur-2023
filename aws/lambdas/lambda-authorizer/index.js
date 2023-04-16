@@ -5,7 +5,7 @@ const { CognitoJwtVerifier } = require("aws-jwt-verify");
 const jwtVerifier = CognitoJwtVerifier.create({
   userPoolId: process.env.USER_POOL_ID,
   tokenUse: "access",
-  clientId: process.env.CLIENT_ID//,
+  clientId: process.env.CLIENT_ID,
   //customJwtCheck: ({ payload }) => {
   //  assertStringEquals("e-mail", payload["email"], process.env.USER_EMAIL);
   //},

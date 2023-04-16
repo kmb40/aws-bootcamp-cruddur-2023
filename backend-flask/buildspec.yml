@@ -4,7 +4,7 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      docker: 20
+      docker: 19
     commands:
       - echo "cd into $CODEBUILD_SRC_DIR"
       - cd $CODEBUILD_SRC_DIR
@@ -22,7 +22,6 @@ phases:
       - "docker push $IMAGE_URL/$REPO_NAME"
       - echo "imagedefinitions.json > [{\"name\":\"$CONTAINER_NAME\",\"imageUri\":\"$IMAGE_URL/$REPO_NAME\"}]" > imagedefinitions.json
       - printf "[{\"name\":\"$CONTAINER_NAME\",\"imageUri\":\"$IMAGE_URL/$REPO_NAME\"}]" > imagedefinitions.json
-
 env:
   variables:
     AWS_ACCOUNT_ID: 734732107779

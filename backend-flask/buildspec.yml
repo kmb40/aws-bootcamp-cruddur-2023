@@ -29,6 +29,7 @@ env:
     CONTAINER_NAME: backend-flask
     IMAGE_URL: 734732107779.dkr.ecr.us-east-1.amazonaws.com/backend-flask:latest
     REPO_NAME: backend-flask:latest
+    #removed env variables
 artifacts:
   files:
     - imagedefinitions.json

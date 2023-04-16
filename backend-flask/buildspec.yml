@@ -27,7 +27,7 @@ env:
     AWS_ACCOUNT_ID: 734732107779
     CONTAINER_NAME: backend-flask
     AWS_DEFAULT_REGION: us-east-1
-    IMAGE_URL: 734732107779.dkr.ecr.us-east-1.amazonaws.com/backend-flask:latest
+    IMAGE_URL: 734732107779.dkr.ecr.us-east-1.amazonaws.com/backend-flask
     REPO_NAME: backend-flask:latest
     #removed env variables
 artifacts:

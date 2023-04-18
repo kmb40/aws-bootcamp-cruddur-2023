@@ -16,7 +16,7 @@ export default function ProfileHeading(props) {
     <div className="cruds_count">{props.profile.cruds_count} Cruds</div>
     <div className="banner" style={styles} >
     {props.profile.cognito_user_uuid}
-    <ProfileAvatar id={props.profile.cognito_user_uuid} />
+       <ProfileAvatar id={props.profile.cognito_user_uuid} />
     </div>
     <div className="info">
       <div className='id'>

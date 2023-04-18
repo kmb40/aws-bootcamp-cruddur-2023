@@ -5,6 +5,12 @@ The following information outlines tasks that I've completed for Week 7 of the b
 ### 1. [Attended - Live Stream](https://www.youtube.com/watch?v=YiSNlK4bk90&list=PLBfufR7vyJJ7k25byhRXJldB5AiwgNnWv)  
 ### 2. [Watched - Severeless CDK](https://www.youtube.com/watch?v=jyUpZP2knBI)  
 ### 3. [Watched - Serving Avatars via CloudFront](https://www.youtube.com/watch?v=Hl5XVb7dL6I&t)
+### 4. [Watched - Implement Users Profile Page](https://www.youtube.com/watch?v=WdVPx-LLjQ8)
+### 5. [Watched - Implement Migrations Backend Endpoint and Profile Form](https://www.youtube.com/watch?v=PTafksks528&t)
+### 6. [Watched - Implement Avatar Uploading (Part 1)](https://www.youtube.com/watch?v=Bk2tq4pliy8)
+### 7. [Watched - Fix CORS for API Gateway](https://www.youtube.com/watch?v=eO7bw6_nOIc)
+### 8. [Watched - Fix CORS Final AWS Lambda Layers](https://www.youtube.com/watch?v=uWhdz5unipA)
+### 9. [Watched - Render Avatar from CloudFront](https://www.youtube.com/watch?v=xrFo3QLoBp8)
 
 #### Configured envs
 

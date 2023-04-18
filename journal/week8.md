@@ -42,4 +42,12 @@ EditProfileButton.js
 - Leveraged API gateway
 - Installed aws jwt verify using `npm install aws-jwt-verify --save`
 
-### Attempted Fix for CORS API Gateway Issue
+### Fixed CORS API Gateway Issue
+- Conducted extensive troubleshooting to resovled CORS issues during avatar upload.
+    - Assessed API Gateway
+    - Assessed LambdaAuthorizer function
+    - Assessed LambdaUpload function
+    - Assessed Frontend Code
+
+### Rendered Avatar from Cloudfront
+- 

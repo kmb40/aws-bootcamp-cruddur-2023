@@ -15,14 +15,14 @@ export async function checkAuth(setUser){
     // Optional, By default is false. 
     // If set to true, this call will send a 
     // request to Cognito to get the latest user data
-    bypassCache: false 
+    bypassCache: false, 
   })
   .then((cognito_user) => {
  //   console.log('cognito_user',cognito_user);
     setUser({
       cognito_user_uuid: cognito_user.attributes.sub,
       display_name: cognito_user.attributes.name,
-      handle: cognito_user.attributes.preferred_username
+      handle: cognito_user.attributes.preferred_username,
     })
     return Auth.currentSession()
   }).then((cognito_user_session) => {

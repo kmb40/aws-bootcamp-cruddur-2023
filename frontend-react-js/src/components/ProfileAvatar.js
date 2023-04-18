@@ -1,7 +1,7 @@
 import './ProfileAvatar.css';
 
 export default function ProfileAvatar(props) {
-  const backgroundImage = `url("https://assets.cruddur.net/avatars/geordi.jpg")`;
+  const backgroundImage = `url("https://assets.cruddur.net/avatars/${props.id}.jpg")`;
   const styles = {
     backgroundImage: backgroundImage,
     backgroundSize: 'cover',
@@ -15,7 +15,7 @@ export default function ProfileAvatar(props) {
     ></div>
   );
 }
-
+/*
 import './ProfileAvatar.css';
 
 export default function ProfileAvatar(props) {
@@ -33,3 +33,4 @@ export default function ProfileAvatar(props) {
     ></div>
   );
 }
+*/

@@ -62,7 +62,7 @@ export default function ProfileForm(props) {
           'Content-Type': type
       }})
       if (res.status === 200) {
-        console.log('presigned url',data)  
+        //console.log('presigned url',data)  
       } else {
         console.log(res)
       }

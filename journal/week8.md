@@ -48,6 +48,7 @@ EditProfileButton.js
     - Assessed LambdaAuthorizer function
     - Assessed LambdaUpload function
     - Assessed Frontend Code
+- Implemented Lamda layer
 
 ### Rendered Avatar from Cloudfront
-- 
+- Configured avatar to leverage Cloudfront

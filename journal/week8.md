@@ -14,11 +14,30 @@ The **objective** was to allow end users of the application to upload their own 
 ### 8. [Watched - Fix CORS Final AWS Lambda Layers](https://www.youtube.com/watch?v=uWhdz5unipA)
 ### 9. [Watched - Render Avatar from CloudFront](https://www.youtube.com/watch?v=xrFo3QLoBp8)
 
-#### Configured envs
+### Prep Environment 
+
+### Installed the AWS Cloud Development Kit (CDK)
+Essentially the CDK is used for creating, managing, and deleting infrastructure (services, VMs, DBs, etc) using a progaming language. CDK accomplishes this by producing CloudFormation templates, which are what is used to build your AWS infrastructure. [Reference - AWS Docs on CDK](https://docs.aws.amazon.com/cdk/v2/guide/home.html)
+
+#### Bootstraped environment
+The purpose of bootstrapping is to create a deployment environment in an AWS account that can be used to store and manage the resources required to deploy and manage CDK applications.  
+- Run `cdk bootstrap "aws://$AWS_ACCOUNT_ID/$AWS_DEFAULT_REGION"`
+
+#### Created directory for Cloud Development Kit(CDK) Pipeline
+- Created a new directory named `thumbing-serverless-cdk`  
+```
+cd /workspace/aws-bootcamp-cruddur-2023
+mkdir thumbing-serverless-cdk
+```  
+- [Ref - thumbing-serverless-cdk](https://github.com/kmb40/aws-bootcamp-cruddur-2023/tree/main/thumbing-serverless-cdk)
+- Installed the AWS CDK using `npm install aws-cdk -g`.  
 
 #### Configured s3
 
 ##### Configured s3 Permissions
+
+##### Configured API Gateway
+- **Note:** Activating access logging for the "default" stage caused noticable daily spend.  
 
 #### Configured lamda
 

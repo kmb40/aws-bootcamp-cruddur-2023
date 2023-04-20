@@ -298,5 +298,8 @@ Ran the app with and without debug mode.
 - Updated mutiple frontend files to reflect changes.
 
 ### Configured for Container Insights
-- Restructured environmental variables. Implemented ruby. Performed troubleshooting.
-- Activated Container Insights on the ECS Cluster.
+- Restructured environmental variables. Implemented ruby. Performed troubleshooting.  
+- Activated Container Insights on the ECS Cluster.  
+<img src="/assets/container-insights-map.png" width=450>
+<figcaption>CloudWatch Container Insights</figcaption>   
+<br/><br/>  

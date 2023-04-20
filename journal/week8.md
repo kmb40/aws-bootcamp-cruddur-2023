@@ -16,7 +16,7 @@ The **objective** was to allow end users of the application to upload their own 
 
 ### Prep Environment 
 
-### Installed the AWS Cloud Development Kit (CDK)
+#### Installed the AWS Cloud Development Kit (CDK)
 Essentially the CDK is used for creating, managing, and deleting infrastructure (services, VMs, DBs, etc) using a progaming language. CDK accomplishes this by producing CloudFormation templates, which are what is used to build your AWS infrastructure. [Reference - AWS Docs on CDK](https://docs.aws.amazon.com/cdk/v2/guide/home.html)
 
 #### Bootstraped environment

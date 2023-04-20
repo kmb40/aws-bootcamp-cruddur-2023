@@ -2,6 +2,9 @@
 # Week 7 - Solving CORS with a Load Balancer and Custom Domain
 
 The following information outlines tasks that I've completed for Week 6 and 7 of the bootcamp.  
+<img src="/assets/custom-domain-elb.png" width=450>
+<figcaption>Custom Domain - Load Balancer</figcaption>   
+<br/><br/> 
 
 ### 1. [Attended Week 6 Live Stream - Deploying Containers](https://www.youtube.com/watch?v=FklBsHWYvWY)  
 ### 2. [Watched Week 6-7 - ECS Fargate (Part 1)](https://www.youtube.com/watch?v=QIZx2NhdCMI)  

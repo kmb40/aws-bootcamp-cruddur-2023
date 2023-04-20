@@ -2,7 +2,10 @@
 
 The following information outlines tasks that I've completed for Week 8 of the bootcamp.  
 
-The **objective** was to allow end users of the application to upload their own profile avatar. To accomplish this, I developed and deployed a serverless functionality with object storage and event-bus actions.
+The **objective** was to allow end users of the application to upload their own profile avatar. To accomplish this, I developed and deployed a serverless functionality with object storage and event-bus actions.  
+<img src="/assets/image-processing.png" width=450>
+<figcaption>Serverless Image Process</figcaption>   
+<br/><br/>  
 
 #### 1. [Attended - Live Stream](https://www.youtube.com/watch?v=YiSNlK4bk90&list=PLBfufR7vyJJ7k25byhRXJldB5AiwgNnWv)
 #### 2. [Watched - Severeless CDK](https://www.youtube.com/watch?v=jyUpZP2knBI)

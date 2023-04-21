@@ -93,3 +93,6 @@ EditProfileButton.js
 
 ### Rendered Avatar from Cloudfront
 - Configured avatar to leverage Cloudfront
+<img src="/assets/profile-avatar.png" width=450>
+<figcaption>Avatar Uploaded</figcaption>   
+<br/><br/>  

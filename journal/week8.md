@@ -37,11 +37,18 @@ mkdir thumbing-serverless-cdk
 - Installed the AWS CDK using `npm install aws-cdk -g`.  
 - Installed typescript which is the langauge that we will be using. Command: `cdk init app --language typescript`.  
 - The [core of our code](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/main/thumbing-serverless-cdk/lib/thumbing-serverless-cdk-stack.ts) - built with typescript - used to build our infrastructure is `thumbing-serverless-cdk-stack.ts`. In this case we are creating an S3 bucket, Lambda functionality, SNS Topics, SNS Subscriptions, and attaching required policies.
-- To view the composed code prior to deploying it, use the command - `cdk synth` - which produces YAML in the terminal that outlines what your code will produce in the CFN once deployed.
+- To view the composed code prior to deploying it, use the command - `cdk synth` - which produces YAML in the terminal that outlines what your code will produce in the CloudFormation (CFN) once deployed.
+- To deploy use the composed `cdk deploy`.  
+<img src="/assets/thumbing-cfn-bucket.png" width=450>
+<figcaption>Outcome of deployment - S3 bucket</figcaption>   
+<br/><br/>  
 
-#### Configured s3
+##### Configured s3
 
 ##### Configured s3 Permissions
+
+#### Develop Lambda function
+- 
 
 ##### Configured API Gateway
 - **Note:** Activating access logging for the "default" stage caused noticable daily spend.  

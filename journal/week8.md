@@ -47,13 +47,12 @@ mkdir thumbing-serverless-cdk
 
 ##### Configured s3 Permissions
 
-#### Develop Lambda function
-- 
+#### Develop Lambda functions
+- One for Authorizing [Ref](https://github.com/kmb40/aws-bootcamp-cruddur-2023/tree/main/aws/lambdas/lambda-authorizer)
+- One for Uploading [Ref](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/main/aws/lambdas/cruddur-upload-avatar/function.rb)
 
 ##### Configured API Gateway
 - **Note:** Activating access logging for the "default" stage caused noticable daily spend.  
-
-#### Configured lamda
 
 #### Configured SNS
 

@@ -24,16 +24,20 @@ Essentially the CDK is used for creating, managing, and deleting infrastructure 
 
 #### Bootstraped environment
 The purpose of bootstrapping is to create a deployment environment in an AWS account that can be used to store and manage the resources required to deploy and manage CDK applications.  
-- Run `cdk bootstrap "aws://$AWS_ACCOUNT_ID/$AWS_DEFAULT_REGION"`
+- Run `cdk bootstrap "aws://$AWS_ACCOUNT_ID/$AWS_DEFAULT_REGION"`  
+**Note:** Boostrapping is only required once per region.
 
 #### Created directory for Cloud Development Kit(CDK) Pipeline
-- Created a new directory named `thumbing-serverless-cdk`  
+- Created a new directory named `thumbing-serverless-cdk`   
+    - [Ref - thumbing-serverless-cdk](https://github.com/kmb40/aws-bootcamp-cruddur-2023/tree/main/thumbing-serverless-cdk)
 ```
 cd /workspace/aws-bootcamp-cruddur-2023
-mkdir thumbing-serverless-cdk
-```  
-- [Ref - thumbing-serverless-cdk](https://github.com/kmb40/aws-bootcamp-cruddur-2023/tree/main/thumbing-serverless-cdk)
+mkdir thumbing-serverless-cdk   
+```   
 - Installed the AWS CDK using `npm install aws-cdk -g`.  
+- Installed typescript which is the langauge that we will be using. Command: `cdk init app --language typescript`.  
+- The [core of our code](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/main/thumbing-serverless-cdk/lib/thumbing-serverless-cdk-stack.ts) - built with typescript - used to build our infrastructure is `thumbing-serverless-cdk-stack.ts`. In this case we are creating an S3 bucket, Lambda functionality, SNS Topics, SNS Subscriptions, and attaching required policies.
+- To view the composed code prior to deploying it, use the command - `cdk synth` - which produces YAML in the terminal that outlines what your code will produce in the CFN once deployed.
 
 #### Configured s3
 

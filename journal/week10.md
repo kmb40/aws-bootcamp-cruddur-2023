@@ -6,8 +6,18 @@ The objective is to create and deploy a CloudFormation (CFN) Template for our cl
 
 ### 1. [Attended - Live Stream](https://www.youtube.com/watch?v=BRmEG4zicM0)  
 
-#### Place stuff here  
-- Launched CodeBuild  
+#### Envrionment Prep  
+- Created a new folder `CFN`.
+- Created template file in `aws/cfn/template.yaml`.
+- Created deploy file in `bin/cfn/deploy`.
+- Run `/bin/cfn/deploy`.
+- Installed ` pip install cfn-lint`.
+-   Add to gitpod.yml
+- Created `task-definition.guard` at `/aws/cfn/
+- Installed `cfn-guard` using `cargo install cfn-guard`
+-   Add to gitpod.yml
+-
+
 **Note:**
 ```
 #

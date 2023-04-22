@@ -8,7 +8,7 @@ cfn-lint $CFN_Path
 
 aws cloudformation deploy \
   --stack-name "my-cluster-kmb" \
-  --s3bucket "cfn-artifacts-kmb" \
+  --s3-bucket "cfn-artifacts-kmb" \
   --template-file $CFN_Path \
   --no-execute-changeset \
   --capabilities CAPABILITY_NAMED_IAM

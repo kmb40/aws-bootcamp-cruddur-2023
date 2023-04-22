@@ -16,7 +16,9 @@ The objective is to create and deploy a CloudFormation (CFN) Template for our cl
 - Created `task-definition.guard` at `/aws/cfn/
 - Installed `cfn-guard` using `cargo install cfn-guard`
 -   Add to gitpod.yml
--
+- Paused cfn-guard implementation to keep focused on CFN
+- Created s3 bucket named `cfn-artifiacts` to hold template file.
+-   Updated `deploy` file to send template file to s3 bucket.
 
 **Note:**
 ```

@@ -265,3 +265,10 @@ Outputs:
 - Installed `cfn-guard` using `cargo install cfn-guard`
 -   Add to gitpod.yml
 - Paused cfn-guard implementation to keep focused on CFN
+
+### Diagramming the CloudFormation Network Layer
+<img src="/assets/#" width=450>
+<figcaption>Custom tag integration with existing code in Gitpod settings</figcaption>   
+<br/><br/>  
+
+[Lucid Source Version](https://lucid.app/lucidchart/d6001220-63ae-4bc7-afe6-215c53ae4aba/edit?viewport_loc=-390%2C-18%2C2588%2C1414%2CucYRXwJQHIRK&invitationId=inv_4664376a-d244-4bde-9003-d7d1e637cfd3)

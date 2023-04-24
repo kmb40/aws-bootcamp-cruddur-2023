@@ -5,8 +5,8 @@ all of our artifacts for CloudFormation.
 
 ```
 aws s3 mk s3://cfn-artifacts
-export CFN_BUCKET="cfn-artifacts"
-gp env CFN_BUCKET="cfn-artifacts"
+export CFN_BUCKET="cfn-artifacts-kmb"
+gp env CFN_BUCKET="cfn-artifacts-kmb"
 ```
 
 > remember bucket names are unique to the provide code example you may need to adjust

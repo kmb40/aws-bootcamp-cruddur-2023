@@ -28,7 +28,3 @@ The objective is to create and deploy a CloudFormation (CFN) Template for our cl
 <img src="/assets/cfn-artifacts.png" width=450>
 <figcaption>CFN Artifacts S3 Bucket</figcaption>   
 <br/><br/>  
-**Note:**
-```
-#
-```

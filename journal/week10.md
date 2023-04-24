@@ -6,11 +6,10 @@ The objective is to create and deploy a CloudFormation (CFN) Template for our cl
 
 ### 1. [Attended - Live Stream](https://www.youtube.com/watch?v=BRmEG4zicM0)  
 
-#### Envrionment Prep  
+#### Envrionment Prep
 - Created a new folder `CFN`.
 - Created template file in [`aws/cfn/template.yaml`](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-10/aws/cfn/template.yaml).
-- Created deploy file in [`bin/cfn/deploy`](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-10/bin/cfn/deploy).
-- Execute the deployment using - `/bin/cfn/deploy`.
+- Created deploy file in [`bin/cfn/deploy`](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/400553cb18f17459683e12f014f9416f0de95a3a/bin/cfn/networking-deploy).
 - CloudFormation Linter (cfn-lint) is an open-source tool that you can use to perform detailed validation on your AWS CloudFormation templates. Installed using ` pip install cfn-lint`.
 -   Added to gitpod.yml using:
 ```
@@ -18,22 +17,251 @@ The objective is to create and deploy a CloudFormation (CFN) Template for our cl
     before: |
       pip install cfn-lint
 ```
-- Created `task-definition.guard` at `/aws/cfn/
-- Installed `cfn-guard` using `cargo install cfn-guard`
--   Add to gitpod.yml
-- Paused cfn-guard implementation to keep focused on CFN
+
+ #### Created an S3 bucket and uploaded a template file using CFN
 - Created s3 bucket named `cfn-artifiacts` to hold template file.
--   Updated `deploy` file to send template file to s3 bucket.
+- Deployed the code which sent the template file to s3 bucket.
 
 <img src="/assets/cfn-artifacts.png" width=450>
 <figcaption>CFN Artifacts S3 Bucket</figcaption>   
 <br/><br/>  
 
-#### Problems Solved
-- Encountered a large number of problems in Gitpod labled "Unreslved Tag: !Ref"
-<img src="/assets/cfn-artifacts.png" width=450>
-<figcaption>CFN Artifacts S3 Bucket</figcaption>   
+#### 
+- Updated CloudFormation Template file [`/aws/cfn/networking/template.yaml`](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-10/aws/cfn/networking/template.yaml) as follows:
+
+**Note:** Be sure to use you own region.    
+
+```
+AWSTemplateFormatVersion: 2010-09-09
+
+Parameters:
+  VpcCidrBlock:
+    Type: String
+    Default: 10.0.0.0/16
+  Az1:
+    Type: AWS::EC2::AvailabilityZone::Name
+    Default: us-east-1a
+  SubnetCidrBlocks: 
+    Description: "Comma-delimited list of CIDR blocks for our private public subnets"
+    Type: CommaDelimitedList
+    Default: >
+      10.0.0.0/24, 
+      10.0.4.0/24, 
+      10.0.8.0/24, 
+      10.0.12.0/24,
+      10.0.16.0/24,
+      10.0.20.0/24
+  Az2:
+    Type: AWS::EC2::AvailabilityZone::Name
+    Default: us-east-1b
+  Az3:
+    Type: AWS::EC2::AvailabilityZone::Name
+    Default: us-east-1c
+Resources:
+  VPC:
+    # https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc.html
+    Type: AWS::EC2::VPC
+    Properties:
+      CidrBlock: !Ref VpcCidrBlock
+      EnableDnsHostnames: true
+      EnableDnsSupport: true
+      InstanceTenancy: default
+      Tags:
+        - Key: Name
+          Value: !Sub "${AWS::StackName}VPC"
+  IGW:
+    # https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-internetgateway.html
+    Type: AWS::EC2::InternetGateway
+    Properties:
+      Tags:
+        - Key: Name
+          Value: !Sub "${AWS::StackName}IGW"
+  AttachIGW:
+    Type: AWS::EC2::VPCGatewayAttachment
+    Properties:
+      VpcId: !Ref VPC
+      InternetGatewayId: !Ref IGW
+  RouteTable:
+    # https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-routetable.html
+    Type: AWS::EC2::RouteTable
+    Properties:
+      VpcId:  !Ref VPC
+      Tags:
+        - Key: Name
+          Value: !Sub "${AWS::StackName}RT"
+  RouteToIGW:
+    # https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-route.html
+    Type: AWS::EC2::Route
+    DependsOn: AttachIGW
+    Properties:
+      RouteTableId: !Ref RouteTable
+      GatewayId: !Ref IGW
+      DestinationCidrBlock: 0.0.0.0/0
+  SubnetPub1:
+    # https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet.html
+    Type: AWS::EC2::Subnet
+    Properties:
+      AvailabilityZone: !Ref Az1
+      CidrBlock: !Select [0, !Ref SubnetCidrBlocks]
+      EnableDns64: false
+      MapPublicIpOnLaunch: true #public subnet
+      VpcId: !Ref VPC
+      Tags:
+        - Key: Name
+          Value: !Sub "${AWS::StackName}SubnetPub1"
+  SubnetPub2:
+    # https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet.html
+    Type: AWS::EC2::Subnet
+    Properties:
+      AvailabilityZone: !Ref Az2
+      CidrBlock: !Select [1, !Ref SubnetCidrBlocks]
+      EnableDns64: false
+      MapPublicIpOnLaunch: true #public subnet
+      VpcId: !Ref VPC
+      Tags:
+        - Key: Name
+          Value: !Sub "${AWS::StackName}SubnetPub2"
+  SubnetPub3:
+    # https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet.html
+    Type: AWS::EC2::Subnet
+    Properties:
+      AvailabilityZone: !Ref Az3
+      CidrBlock: !Select [2, !Ref SubnetCidrBlocks]
+      EnableDns64: false
+      MapPublicIpOnLaunch: true #public subnet
+      VpcId: !Ref VPC
+      Tags:
+        - Key: Name
+          Value: !Sub "${AWS::StackName}SubnetPub3"
+  SubnetPriv1:
+    # https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet.html
+    Type: AWS::EC2::Subnet
+    Properties:
+      AvailabilityZone: !Ref Az1
+      CidrBlock: !Select [3, !Ref SubnetCidrBlocks]
+      EnableDns64: false
+      MapPublicIpOnLaunch: false #public subnet
+      VpcId: !Ref VPC
+      Tags:
+        - Key: Name
+          Value: !Sub "${AWS::StackName}SubnetPriv1"
+  SubnetPriv2:
+    # https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet.html
+    Type: AWS::EC2::Subnet
+    Properties:
+      AvailabilityZone: !Ref Az2
+      CidrBlock: !Select [4, !Ref SubnetCidrBlocks]
+      EnableDns64: false
+      MapPublicIpOnLaunch: false #public subnet
+      VpcId: !Ref VPC
+      Tags:
+        - Key: Name
+          Value: !Sub "${AWS::StackName}SubnetPriv2"
+  SubnetPriv3:
+    # https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet.html
+    Type: AWS::EC2::Subnet
+    Properties:
+      AvailabilityZone: !Ref Az3
+      CidrBlock: !Select [5, !Ref SubnetCidrBlocks]
+      EnableDns64: false
+      MapPublicIpOnLaunch: false #public subnet
+      VpcId: !Ref VPC
+      Tags:
+        - Key: Name
+          Value: !Sub "${AWS::StackName}SubnetPriv3"
+  SubnetPub1RTAssociation:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      SubnetId: !Ref SubnetPub1
+      RouteTableId: !Ref RouteTable
+  SubnetPub2RTAssociation:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      SubnetId: !Ref SubnetPub2
+      RouteTableId: !Ref RouteTable
+  SubnetPub3RTAssociation:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      SubnetId: !Ref SubnetPub3
+      RouteTableId: !Ref RouteTable
+  SubnetPriv1RTAssociation:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      SubnetId: !Ref SubnetPriv1
+      RouteTableId: !Ref RouteTable
+  SubnetPriv2RTAssociation:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      SubnetId: !Ref SubnetPriv2
+      RouteTableId: !Ref RouteTable
+  SubnetPriv3RTAssociation:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      SubnetId: !Ref SubnetPriv3
+      RouteTableId: !Ref RouteTable
+Outputs:
+  VpcId:
+    Value: !Ref VPC
+    Export:
+      Name: VpcId
+  VpcCidrBlock:
+    Value: !GetAtt VPC.CidrBlock
+    Export:
+      Name: VpcCidrBlock
+  SubnetCidrBlocks:
+    Value: !Join [",", !Ref SubnetCidrBlocks]
+    Export:
+      Name: SubnetCidrBlocks
+  SubnetIds:
+    Value: !Join 
+      - ","
+      - - !Ref SubnetPub1
+        - !Ref SubnetPub2
+        - !Ref SubnetPub3
+        - !Ref SubnetPriv1
+        - !Ref SubnetPriv2
+        - !Ref SubnetPriv3
+    Export:
+      Name: SubnetIds
+  AvailabilityZones:
+    Value: !Join 
+      - ","
+      - - !Ref Az1
+        - !Ref Az2
+        - !Ref Az3
+    Export:
+      Name: AvailabilityZones
+```
+- Deploy the CloudFormation Template using the command `./bin/cfn/networking-deploy`
+
+### Problems Solved
+- Encountered a large number of problems in Gitpod labled "Unresolved Tag: !Ref"
+<img src="/assets/unresolved tag- !Ref.png" width=450>
+<figcaption>Unresolved Tag Errors in Gitpod</figcaption>   
 <br/><br/>
-- Resolved by adding extentions to the settings for YAML in Gitpod.
+
+- Resolved by adding custom tags to the settings for YAML in Gitpod.   
 ```
+    "yaml.customTags": [
+  "!Equals sequence",
+  "!FindInMap sequence",
+  "!GetAtt",
+  "!GetAZs",
+  "!ImportValue",
+  "!Join sequence",
+  "!Ref",
+  "!Select sequence",
+  "!Split sequence",
+  "!Sub"
+    ]
 ```
+- If there is existing code in the settings, integrate as follows:
+<img src="/assets/gitpod-setting-ref-error-fix.png" width=450>
+<figcaption>Custom tag integration with existing code in Gitpod settings</figcaption>   
+<br/><br/>  
+
+### CFN Guard to be visited at a later time
+- Created `task-definition.guard` at `/aws/cfn/
+- Installed `cfn-guard` using `cargo install cfn-guard`
+-   Add to gitpod.yml
+- Paused cfn-guard implementation to keep focused on CFN

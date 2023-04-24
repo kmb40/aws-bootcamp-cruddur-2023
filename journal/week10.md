@@ -28,3 +28,12 @@ The objective is to create and deploy a CloudFormation (CFN) Template for our cl
 <img src="/assets/cfn-artifacts.png" width=450>
 <figcaption>CFN Artifacts S3 Bucket</figcaption>   
 <br/><br/>  
+
+#### Problems Solved
+- Encountered a large number of problems in Gitpod labled "Unreslved Tag: !Ref"
+<img src="/assets/cfn-artifacts.png" width=450>
+<figcaption>CFN Artifacts S3 Bucket</figcaption>   
+<br/><br/>
+- Resolved by adding extentions to the settings for YAML in Gitpod.
+```
+```

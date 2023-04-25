@@ -7,9 +7,10 @@ The objective is to create and deploy a CloudFormation (CFN) Template for our cl
 ### 1. [Attended - Live Stream](https://www.youtube.com/watch?v=BRmEG4zicM0)  
 
 #### Envrionment Prep
-- Created a new folder `CFN`.
-- Created template file in [`aws/cfn/template.yaml`](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-10/aws/cfn/template.yaml).
-- Created deploy file in [`bin/cfn/deploy`](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/400553cb18f17459683e12f014f9416f0de95a3a/bin/cfn/networking-deploy).
+- Created a new Directory at `AWS/CFN`.
+- Created a new Directory at `BIN/CFN`.
+- Created template file in [`aws/cfn/networking/template.yaml`](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-10/aws/cfn/template.yaml).
+- Created deploy file in [`bin/cfn/networking-deploy`](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/400553cb18f17459683e12f014f9416f0de95a3a/bin/cfn/networking-deploy).
 - CloudFormation Linter (cfn-lint) is an open-source tool that you can use to perform detailed validation on your AWS CloudFormation templates. Installed using ` pip install cfn-lint`.
 -   Added to gitpod.yml using:
 ```
@@ -26,7 +27,7 @@ The objective is to create and deploy a CloudFormation (CFN) Template for our cl
 <figcaption>CFN Artifacts S3 Bucket</figcaption>   
 <br/><br/>  
 
-#### 
+#### Updated Network Layer CloudFromation Template
 - Updated CloudFormation Template file [`/aws/cfn/networking/template.yaml`](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-10/aws/cfn/networking/template.yaml) as follows:
 
 **Note:** Be sure to use you own region.    
@@ -272,3 +273,10 @@ Outputs:
 <br/><br/>  
 
 [Lucid Source Version](https://lucid.app/lucidchart/d6001220-63ae-4bc7-afe6-215c53ae4aba/edit?viewport_loc=-390%2C-18%2C2588%2C1414%2CucYRXwJQHIRK&invitationId=inv_4664376a-d244-4bde-9003-d7d1e637cfd3)
+
+### Setup the CloudFormation Cluster Layer
+- Created template file in [`aws/cfn/cluster/template.yaml`](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-10/aws/cfn/cluster/template.yaml).  
+- Created deploy file in [`bin/cfn/cluster-deploy`](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-10/bin/cfn/cluster-deploy).  
+
+### Deployed the CloudFormation Network Layer
+### Deployed the CloudFormation Cluster Layer

@@ -233,7 +233,7 @@ Outputs:
     Export:
       Name: AvailabilityZones
 ```
-- Deploy the CloudFormation Template using the command `./bin/cfn/networking-deploy`
+- Deployed the CloudFormation Template using the command `./bin/cfn/networking-deploy`
 
 ### Problems Solved
 - Encountered a large number of problems in Gitpod labled "Unresolved Tag: !Ref"
@@ -268,7 +268,7 @@ Outputs:
 - Paused cfn-guard implementation to keep focused on CFN
 
 ### Diagramming the CloudFormation Network Layer
-<img src="/assets/#" width=450>
+<img src="/assets/Cruddur%20-%20Diagrams%20-%20CFN.png" width=450>
 <figcaption>Custom tag integration with existing code in Gitpod settings</figcaption>   
 <br/><br/>  
 
@@ -279,4 +279,9 @@ Outputs:
 - Created deploy file in [`bin/cfn/cluster-deploy`](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-10/bin/cfn/cluster-deploy).  
 
 ### Deployed the CloudFormation Network Layer
+- Deployed the CloudFormation Networking Layer Template using the command `./bin/cfn/networking-deploy`.  
+<img src="/assets/CrdNet.png" width=450>
+<figcaption>Custom tag integration with existing code in Gitpod settings</figcaption>   
+<br/><br/>  
+
 ### Deployed the CloudFormation Cluster Layer

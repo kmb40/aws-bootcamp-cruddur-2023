@@ -274,14 +274,14 @@ Outputs:
 
 [Lucid Source Version](https://lucid.app/lucidchart/d6001220-63ae-4bc7-afe6-215c53ae4aba/edit?viewport_loc=-390%2C-18%2C2588%2C1414%2CucYRXwJQHIRK&invitationId=inv_4664376a-d244-4bde-9003-d7d1e637cfd3)
 
-### Setup the CloudFormation Cluster Layer
-- Created template file in [`aws/cfn/cluster/template.yaml`](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-10/aws/cfn/cluster/template.yaml).  
-- Created deploy file in [`bin/cfn/cluster-deploy`](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-10/bin/cfn/cluster-deploy).  
-
 ### Deployed the CloudFormation Network Layer
 - Deployed the CloudFormation Networking Layer Template using the command `./bin/cfn/networking-deploy`.  
 <img src="/assets/CrdNet.png" width=450>
 <figcaption>Custom tag integration with existing code in Gitpod settings</figcaption>   
 <br/><br/>  
+
+### Setup the CloudFormation Cluster Layer
+- Created template file in [`aws/cfn/cluster/template.yaml`](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-10/aws/cfn/cluster/template.yaml).  
+- Created deploy file in [`bin/cfn/cluster-deploy`](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-10/bin/cfn/cluster-deploy).  
 
 ### Deployed the CloudFormation Cluster Layer

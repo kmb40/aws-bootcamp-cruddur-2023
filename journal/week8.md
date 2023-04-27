@@ -44,15 +44,24 @@ mkdir thumbing-serverless-cdk
 <br/><br/>  
 
 ##### Configured s3
+- The ThumbingCDK created the upload bucket.
+- I manually created the assets bucket.
 
 ##### Configured s3 Permissions
+- Added a CORS policy for the uploads s3 bucket.[Ref](https://github.com/kmb40/aws-bootcamp-cruddur-2023/edit/main/aws/policies/uploads-cors.json)
+- Added a bucket policy for the assets s3 bucket.[Ref](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/main/aws/policies/assets-folder.json)
 
 #### Develop Lambda functions
-- One for Authorizing [Ref](https://github.com/kmb40/aws-bootcamp-cruddur-2023/tree/main/aws/lambdas/lambda-authorizer)
-- One for Uploading [Ref](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/main/aws/lambdas/cruddur-upload-avatar/function.rb)
+- One for Uploading. Obtains presigned url for s3 bucket and uploads/puts the image in the s3 bucket at that url. [Ref](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/main/aws/lambdas/cruddur-upload-avatar/function.rb)
+- One for Authorizing. Verify that the uploader has the authority to perform uploads (is signed in via cognito) [Ref](https://github.com/kmb40/aws-bootcamp-cruddur-2023/tree/main/aws/lambdas/lambda-authorizer)
+- One for Image Processing. Faciliate image processing when a file has been succesfully uplodaed to the uploads S3 bucket. [Ref](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/main/aws/lambdas/process-images/index.js)
 
 ##### Configured API Gateway
-- **Note:** Activating access logging for the "default" stage caused noticable daily spend.  
+- Configured HTTP API Gateway.  
+- Created a POST routed to `avatar/uploads`.  
+- Attached [Authorizer](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/main/aws/lambdas/lambda-authorizer/index.js) to the route.  
+- Integrate [upload lambda function](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/main/aws/lambdas/cruddur-upload-avatar/function.rb) to the route.  
+**Note:** Activating access logging for the "default" stage caused noticable daily spend.  
 
 #### Configured SNS
 

@@ -6,7 +6,7 @@ The objective is to create and deploy a CloudFormation (CFN) Template for our cl
 
 ### 1. [Attended - Live Stream](https://www.youtube.com/watch?v=BRmEG4zicM0)  
 ### 2. [Watched Week 10-11 CFN for Networking layer](https://www.youtube.com/watch?v=jPdm0uLyFLM)
-### 3. [Watched Week 10-11 Diagramming the NEtworking layer](https://www.youtube.com/watch?v=lb3aKVVMn7U)
+### 3. [Watched Week 10-11 Diagramming the Networking layer](https://www.youtube.com/watch?v=lb3aKVVMn7U)
 ### 4. [Watched Week 10-11 CFN Cluster layer](https://www.youtube.com/watch?v=sdqWoOaeD2M)
 ### 5. [Watched Week 10-11 CFN Toml Part 1](https://www.youtube.com/watch?v=ATv1Z-T0LKI)
 ### 6. [Watched Week 10-11 CFN Toml Part 2](https://www.youtube.com/watch?v=cYoNAadSYM8)
@@ -292,4 +292,5 @@ Outputs:
 
 ### Deployed the CloudFormation Cluster Layer
 
-#### Deployed the CloudFormation Cluster Layer
+#### Deployed Toml
+-

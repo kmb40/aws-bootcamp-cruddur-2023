@@ -5,6 +5,12 @@ The following information outlines tasks that I've completed for Week 10 of the 
 The objective is to create and deploy a CloudFormation (CFN) Template for our cluster and load balancer.
 
 ### 1. [Attended - Live Stream](https://www.youtube.com/watch?v=BRmEG4zicM0)  
+### 2. [Watched Week 10-11 CFN for Networking layer](https://www.youtube.com/watch?v=jPdm0uLyFLM)
+### 3. [Watched Week 10-11 Diagramming the NEtworking layer](https://www.youtube.com/watch?v=lb3aKVVMn7U)
+### 4. [Watched Week 10-11 CFN Cluster layer](https://www.youtube.com/watch?v=sdqWoOaeD2M)
+### 5. [Watched Week 10-11 CFN Toml Part 1](https://www.youtube.com/watch?v=ATv1Z-T0LKI)
+### 6. [Watched Week 10-11 CFN Toml Part 2](https://www.youtube.com/watch?v=cYoNAadSYM8)
+### 7. [Watched Week 10-11 CFN Cluster Layer Finish](https://www.youtube.com/watch?v=RITT94dfhOM)
 
 #### Envrionment Prep
 - Created a new Directory at `AWS/CFN`.
@@ -285,3 +291,5 @@ Outputs:
 - Created deploy file in [`bin/cfn/cluster-deploy`](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-10/bin/cfn/cluster-deploy).  
 
 ### Deployed the CloudFormation Cluster Layer
+
+#### Deployed the CloudFormation Cluster Layer

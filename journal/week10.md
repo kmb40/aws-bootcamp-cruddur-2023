@@ -292,9 +292,14 @@ Outputs:
 
 ### Deployed the CloudFormation Cluster Layer
 
-#### Deployed Toml
+#### Deployed Toml in order to pass parameters to CloudFormation
 [Reference Teachers Seat Github Repo](https://github.com/teacherseat/cfn-toml)
+
 cfn-toml reads a toml file - [a file format for configuration files](https://en.wikipedia.org/wiki/TOML#:~:text=TOML%20is%20a%20file%20format,map%20unambiguously%20to%20a%20dictionary.) - that is designed to be used with CloudFormation CLI commands within a bash script.
 - Installed cfn-toml using `gem install cfn-toml`
 - Added to the gitpod.yml file to automate installation during future workspace startups.
-- Created a new file `config.toml.example` at [`aws/cfn/cluster`](#)
+#### Toml for Cluster Layer
+- Created a new file `config.toml` at [`aws/cfn/cluster/`](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-10/aws/cfn/cluster/config.toml)   
+
+#### Toml for Network Layer
+- Created a new file `config.toml` at [`aws/cfn/networking/`](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-10/aws/cfn/networking/config.toml)   

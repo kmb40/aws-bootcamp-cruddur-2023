@@ -303,3 +303,10 @@ cfn-toml reads a toml file - [a file format for configuration files](https://en.
 
 #### Toml for Network Layer
 - Created a new file `config.toml` at [`aws/cfn/networking/`](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-10/aws/cfn/networking/config.toml)   
+
+**Note:** There were a few issues encountered during deployments that were resolved as follows:
+- Separated Public and Private Subnets in the networking template at [See lines around 193 `aws/cfn/networking`](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-10/aws/cfn/networking/template.yaml).
+- Added code to all security group using `GetAtt` instead of `Ref`. [See around line 103 at `aws/cfn/cluster`](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-10/aws/cfn/cluster/template.yaml)
+
+- Deployed the CloudFormation Networking layer succesfully.
+- Deployed the CloudFormation Cluster layer succesfully.

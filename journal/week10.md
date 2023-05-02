@@ -309,4 +309,11 @@ cfn-toml reads a toml file - [a file format for configuration files](https://en.
 - Added code to all security group using `GetAtt` instead of `Ref`. [See around line 103 at `aws/cfn/cluster`](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-10/aws/cfn/cluster/template.yaml)
 
 - Deployed the CloudFormation Networking layer succesfully.
-- Deployed the CloudFormation Cluster layer succesfully.
+<img src="/assets/CrdNet.png" width=450>
+<figcaption>Networking Layer Deployed</figcaption>   
+<br/><br/>  
+
+- Deployed the CloudFormation Cluster layer succesfully.  
+<img src="/assets/cf-cluster-deploy.png" width=450>
+<figcaption>Cluster Layer Deployed</figcaption>   
+<br/><br/>  

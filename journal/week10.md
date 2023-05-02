@@ -11,6 +11,7 @@ The objective is to create and deploy a CloudFormation (CFN) Template for our cl
 ### 5. [Watched Week 10-11 CFN Toml Part 1](https://www.youtube.com/watch?v=ATv1Z-T0LKI)
 ### 6. [Watched Week 10-11 CFN Toml Part 2](https://www.youtube.com/watch?v=cYoNAadSYM8)
 ### 7. [Watched Week 10-11 CFN Cluster Layer Finish](https://www.youtube.com/watch?v=RITT94dfhOM)
+### 8. [Watched Week 10-11 CFN Service Layer](https://www.youtube.com/watch?v=yj8QK8YULCQ)
 
 #### Envrionment Prep
 - Created a new Directory at `AWS/CFN`.
@@ -278,7 +279,7 @@ Outputs:
 <figcaption>Custom tag integration with existing code in Gitpod settings</figcaption>   
 <br/><br/>  
 
-[Lucid Source Version](https://lucid.app/lucidchart/d6001220-63ae-4bc7-afe6-215c53ae4aba/edit?viewport_loc=-390%2C-18%2C2588%2C1414%2CucYRXwJQHIRK&invitationId=inv_4664376a-d244-4bde-9003-d7d1e637cfd3)
+[Lucid Source Version (Updated versions](https://lucid.app/lucidchart/d6001220-63ae-4bc7-afe6-215c53ae4aba/edit?viewport_loc=-390%2C-18%2C2588%2C1414%2CucYRXwJQHIRK&invitationId=inv_4664376a-d244-4bde-9003-d7d1e637cfd3)
 
 ### Deployed the CloudFormation Network Layer
 - Deployed the CloudFormation Networking Layer Template using the command `./bin/cfn/networking-deploy`.  
@@ -317,3 +318,6 @@ cfn-toml reads a toml file - [a file format for configuration files](https://en.
 <img src="/assets/cf-cluster-deploy.png" width=450>
 <figcaption>Cluster Layer Deployed</figcaption>   
 <br/><br/>  
+
+### Deployed the Service Layer
+- Created a new file `config.toml` at `aws/cfn/service`

@@ -320,4 +320,9 @@ cfn-toml reads a toml file - [a file format for configuration files](https://en.
 <br/><br/>  
 
 ### Deployed the Service Layer
-- Created a new file `config.toml` at `aws/cfn/service`
+- Created a new files:
+-  `config.toml` at [`aws/cfn/service`](/aws/cfn/service/config.toml)
+-  `config.toml.example` at [`aws/cfn/service`](/aws/cfn/service/config.toml.example)
+-  `service-deploy` at [`bin/cfn/`](/bin/cfn/service-deploy)
+
+#### Deployed Service Layer

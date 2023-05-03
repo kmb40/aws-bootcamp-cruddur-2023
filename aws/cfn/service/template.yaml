@@ -35,7 +35,7 @@ Parameters:
     Default: backend-flask
   EcrImage:
     Type: String
-    Default: '734732107779.dkr.ecr.ca-central-1.amazonaws.com/backend-flask'
+    Default: '734732107779.dkr.ecr.us-east-1.amazonaws.com/backend-flask'
   EnvOtelServiceName:
     Type: String
     Default: backend-flask
@@ -44,10 +44,10 @@ Parameters:
     Default: https://api.honeycomb.io
   EnvAWSCognitoUserPoolId:
     Type: String
-    Default: ca-central-1_CQ4wDfnwc
+    Default: us-east-1_Pzbe5SksT
   EnvCognitoUserPoolClientId:
     Type: String
-    Default: 5b6ro31g97urk767adrbrdj1g5
+    Default: 3fh1vt9f05kih07blqk4if3oqb
   EnvFrontendUrl:
     Type: String
     Default: "*"
@@ -56,19 +56,19 @@ Parameters:
     Default: "*"
   SecretsAWSAccessKeyId:
     Type: String
-    Default: 'arn:aws:ssm:ca-central-1:734732107779:parameter/cruddur/backend-flask/AWS_ACCESS_KEY_ID'
+    Default: 'arn:aws:ssm:us-east-1:734732107779:parameter/cruddur/backend-flask/AWS_ACCESS_KEY_ID'
   SecretsSecretAccessKey:
     Type: String
-    Default: 'arn:aws:ssm:ca-central-1:734732107779:parameter/cruddur/backend-flask/AWS_SECRET_ACCESS_KEY'
+    Default: 'arn:aws:ssm:us-east-1:734732107779:parameter/cruddur/backend-flask/AWS_SECRET_ACCESS_KEY'
   SecretsConnectionUrl:
     Type: String
-    Default: 'arn:aws:ssm:ca-central-1:734732107779:parameter/cruddur/backend-flask/CONNECTION_URL'
+    Default: 'arn:aws:ssm:us-east-1:734732107779:parameter/cruddur/backend-flask/CONNECTION_URL'
   SecretsRollbarAccessToken:
     Type: String
-    Default: 'arn:aws:ssm:ca-central-1:734732107779:parameter/cruddur/backend-flask/ROLLBAR_ACCESS_TOKEN'
+    Default: 'arn:aws:ssm:us-east-1:734732107779:parameter/cruddur/backend-flask/ROLLBAR_ACCESS_TOKEN'
   SecretsOtelExporterOltpHeaders:
     Type: String
-    Default: 'arn:aws:ssm:ca-central-1:734732107779:parameter/cruddur/backend-flask/OTEL_EXPORTER_OTLP_HEADERS'
+    Default: 'arn:aws:ssm:us-east-1:734732107779:parameter/cruddur/backend-flask/OTEL_EXPORTER_OTLP_HEADERS'
   
 Resources:
   ServiceSG:
@@ -104,7 +104,7 @@ Resources:
       LaunchType: FARGATE
       LoadBalancers:
       # TODO - UPDATE THIS
-        - TargetGroupArn: 'arn:aws:elasticloadbalancing:ca-central-1:734732107779:targetgroup/cruddur-backend-flask-tg/87ed2a3daf2d2b1d'
+        - TargetGroupArn: 'arn:aws:elasticloadbalancing:us-east-1:734732107779:targetgroup/cruddur-backend-flask-tg/87ed2a3daf2d2b1d'
           ContainerName: 'backend-flask'
           ContainerPort: !Ref ContainerPort
       NetworkConfiguration:

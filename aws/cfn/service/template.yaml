@@ -200,7 +200,7 @@ Resources:
     # https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html
     Type: AWS::IAM::Role
     Properties:
-      RoleName: CruddurServiceExecutionRole
+      RoleName: CruddurServiceExecutionRoleCF
       AssumeRolePolicyDocument:
         Version: '2012-10-17'
         Statement:
@@ -235,7 +235,7 @@ Resources:
     # https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html
     Type: AWS::IAM::Role
     Properties:
-      RoleName: CruddurServiceTaskRole
+      RoleName: CruddurServiceTaskRoleCF
       AssumeRolePolicyDocument:
         Version: '2012-10-17'
         Statement:

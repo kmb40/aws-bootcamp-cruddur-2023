@@ -243,3 +243,11 @@ Outputs:
     Value: !GetAtt ALBSG.GroupId
     Export:
       Name: !Sub "${AWS::StackName}ALBSecurityGroupId"
+  FrontendTGArn:
+    Value: !Ref FrontendTG
+    Export:
+      Name: !Sub "${AWS::StackName}FrontendTGArn"
+  BackendTGArn:
+    Value: !Ref BackendTG
+    Export:
+      Name: !Sub "${AWS::StackName}BackendTGArn"

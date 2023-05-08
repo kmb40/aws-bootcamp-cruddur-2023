@@ -325,4 +325,8 @@ cfn-toml reads a toml file - [a file format for configuration files](https://en.
   - `config.toml.example` at [`aws/cfn/service`](/aws/cfn/service/config.toml.example)
   - `service-deploy` at [`bin/cfn/`](/bin/cfn/service-deploy)
 
-#### Deployed Service Layer
+#### Deployed RDS Layer
+- Created a new files:
+  - `config.toml` at [`aws/cfn/db`](/aws/cfn/db/config.toml)
+  - `config.toml.example` at [`aws/cfn/db`](/aws/cfn/service/config.toml.example)
+  - `db-deploy` at [`bin/cfn/`](/bin/cfn/db-deploy)

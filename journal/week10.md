@@ -326,6 +326,7 @@ cfn-toml reads a toml file - [a file format for configuration files](https://en.
   - `service-deploy` at [`bin/cfn/`](/bin/cfn/service-deploy)
 
 #### Deployed RDS Layer
+**NOTE** The database was required in the same VPC in order to add the Security Group.
 - Created a new files:
   - `config.toml` at [`aws/cfn/db`](/aws/cfn/db/config.toml)
   - `config.toml.example` at [`aws/cfn/db`](/aws/cfn/db/config.toml.example)

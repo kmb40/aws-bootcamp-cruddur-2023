@@ -112,8 +112,8 @@ Resources:
         AwsvpcConfiguration:
           AssignPublicIp: ENABLED
           SecurityGroups:
-	          - Fn::ImportValue:
-                !Sub "${ClusterStack}ServiceSecurityGroupId"      
+            - Fn::ImportValue:
+                !Sub "${ClusterStack}ServiceSecurityGroupId"
           Subnets:
             Fn::Split:
               - ","

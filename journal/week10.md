@@ -338,8 +338,8 @@ cfn-toml reads a toml file - [a file format for configuration files](https://en.
 <figcaption>Service Layer Deployed</figcaption>   
 <br/><br/>
 
-**Troubleshooting Service Layer** An unknown health check status was consitently being returned for the Backend Service and in addition, the CF Servirce Layer was in an endlless loop which ultimately would fail and rollback. 
-**Resolution** What ulitamtly resoleved the issue was setting a check of the following:
+**Troubleshooting Service Layer** An unknown health check status was consistently being returned for the Backend Service and in addition, the CF Servirce Layer was in an endlless loop which ultimately would fail and rollback.   
+**Resolution** What ultimately resolved the issue was setting a check of the following:
 When you have this issue. Here are some things to check (CF = CloudFormation):
 1. Parameter Store set to correct CF DB.
 2. CF DbRDS running.

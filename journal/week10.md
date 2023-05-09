@@ -331,3 +331,13 @@ cfn-toml reads a toml file - [a file format for configuration files](https://en.
   - `config.toml` at [`aws/cfn/db`](/aws/cfn/db/config.toml)
   - `config.toml.example` at [`aws/cfn/db`](/aws/cfn/db/config.toml.example)
   - `db-deploy` at [`bin/cfn/`](/bin/cfn/db-deploy)
+**Troubleshhoting** An unknown health check status was consitently being returned for the Backend Service and in addition, the CF Servirce Layer was in an endlless loop which ultimately would fail and rollback. 
+**Resolution** What ulitamtly resoleved the issue was setting a check of the following:
+When you have this issue. Here are some things to check (CF = CloudFormation):
+1. Parameter Store set to correct CF DB.
+2. CF DbRDS running.
+3. CF DbSG set to port 5432, Source CF ClusterServiceSG
+4. ClusterServiceSG set to port 4567, Source CF ALBSG
+5. CF ALGSB set to allow all HTTPS,HTTP traffic.
+6. Although this was not the case when we built the services without CF, Target Group/Health checks settings should be set to Override Port 4567.
+**NOTE:** The optimal Happy Path is; Internet → ALB → ClusterService(ECS) → DB

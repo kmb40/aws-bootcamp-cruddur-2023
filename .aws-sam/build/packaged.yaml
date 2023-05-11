@@ -60,7 +60,7 @@ Resources:
   ProcessDynamoDBStream:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: s3://cfn-artifacts-kmb/ddb/d41d8cd98f00b204e9800998ecf8427e
+      CodeUri: s3://cfn-artifacts-kmb/ddb/ca83525f37a8c4489108ec812c41970c
       PackageType: Zip
       Handler: lambda_handler
       Runtime:

@@ -362,10 +362,11 @@ cfn-toml reads a toml file - [a file format for configuration files](https://en.
   - `packages` at [`ddb/`](ddb/package)
   -   This command creates a .zip file of your code and dependencies, and uploads the file to Amazon Simple Storage Service (Amazon S3).
   - `deploy` at [`ddb/`](ddb/deploy)
+  -   This command executes the CloudFormation template and creates the stack execution set. Which is then executed manually from the AWS Console.
 
-<img src="/assets/#" width=450>
+<img src="/assets/CF-ddb-2.png" width=450>
 <figcaption>DynamoDB Layer Deployed</figcaption>   
 <br/><br/>
-<img src="/assets/#" width=450>
+<img src="/assets/CF-ddb.png" width=450>
 <figcaption>DynamoDB Layer Deployed</figcaption>   
 <br/><br/>

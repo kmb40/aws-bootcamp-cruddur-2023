@@ -358,7 +358,9 @@ cfn-toml reads a toml file - [a file format for configuration files](https://en.
   - `config.toml` at [`ddb/`](/aws/cfn/service/config.toml)
   - `config.toml.example` at [`ddb/`](/aws/cfn/service/config.toml.example)
   - `build` at [`ddb/`](ddb/build)
+  -   Creates the .aws-sam directory and template.yaml file.
   - `packages` at [`ddb/`](ddb/package)
+  -   This command creates a .zip file of your code and dependencies, and uploads the file to Amazon Simple Storage Service (Amazon S3).
   - `deploy` at [`ddb/`](ddb/deploy)
 
 <img src="/assets/#" width=450>

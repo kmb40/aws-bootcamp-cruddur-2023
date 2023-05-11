@@ -353,6 +353,7 @@ cfn-toml reads a toml file - [a file format for configuration files](https://en.
 <br/><br/>
 
 ### Deployed the DynamoDB Layer
+- Installed the AWS Service Application Model (SAM) - an open-source framework for building serverless applications with shorthand syntax for functions, APIs, databases, and event source mappings.
 - Created a new files and structure:
   - `config.toml` at [`ddb/`](/aws/cfn/service/config.toml)
   - `config.toml.example` at [`ddb/`](/aws/cfn/service/config.toml.example)

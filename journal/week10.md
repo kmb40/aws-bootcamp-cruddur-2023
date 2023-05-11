@@ -351,3 +351,15 @@ cfn-toml reads a toml file - [a file format for configuration files](https://en.
 <img src="/assets/health-check-true.png" width=450>
 <figcaption>Health Check Success</figcaption>   
 <br/><br/>
+
+### Deployed the DynamoDB Layer
+- Created a new files and structure:
+  - `config.toml` at [`ddb/`](/aws/cfn/service/config.toml)
+  - `config.toml.example` at [`ddb/`](/aws/cfn/service/config.toml.example)
+  - `deploy` at [`ddb/`](/bin/cfn/service-deploy)
+<img src="/assets/CFSrvc.png" width=450>
+<figcaption>DynamoDB Layer Deployed</figcaption>   
+<br/><br/>
+<img src="/assets/#" width=450>
+<figcaption>DynamoDB Layer Deployed</figcaption>   
+<br/><br/>

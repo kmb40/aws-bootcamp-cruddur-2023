@@ -355,13 +355,13 @@ cfn-toml reads a toml file - [a file format for configuration files](https://en.
 ### Deployed the DynamoDB Layer
 - Installed the AWS Service Application Model (SAM) - an open-source framework for building serverless applications with shorthand syntax for functions, APIs, databases, and event source mappings.
 - Created a new files and structure:
-  - `config.toml` at [`ddb/`](ddb/config.toml)
-  - `config.toml.example` at [`ddb/`](ddb/config.toml.example)
-  - `build` at [`ddb/`](ddb/build)
+  - `config.toml` at [`ddb/`](/ddb/config.toml)
+  - `config.toml.example` at [`ddb/`](/ddb/config.toml.example)
+  - `build` at [`ddb/`](/ddb/build)
   -   Creates the .aws-sam directory and template.yaml file.
-  - `packages` at [`ddb/`](ddb/package)
+  - `packages` at [`ddb/`](/ddb/package)
   -   This command creates a .zip file of your code and dependencies, and uploads the file to Amazon Simple Storage Service (Amazon S3).
-  - `deploy` at [`ddb/`](ddb/deploy)
+  - `deploy` at [`ddb/`](/ddb/deploy)
   -   This command executes the CloudFormation template and creates the stack execution set. Which is then executed manually from the AWS Console.
 
 <img src="/assets/CF-ddb-2.png" width=450>

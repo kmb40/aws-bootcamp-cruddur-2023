@@ -369,4 +369,10 @@ cfn-toml reads a toml file - [a file format for configuration files](https://en.
 <br/><br/>
 <img src="/assets/CF-ddb.png" width=450>
 <figcaption>DynamoDB Layer Deployed</figcaption>   
-<br/><br/>
+<br/><br/>    
+
+### Deployed the CICD Layer
+- Created a new files:
+  - `config.toml` at [`aws/cfn/cicd`](/aws/cfn/cicd/config.toml)
+  - `config.toml.example` at [`aws/cfn/cicd`](/aws/cfn/cicd/config.toml.example)
+  - `cicd` at [`bin/cfn/`](/bin/cfn/cicd)

@@ -381,3 +381,6 @@ cfn-toml reads a toml file - [a file format for configuration files](https://en.
   - `config.toml.example` at [`aws/cfn/cicd`](/aws/cfn/cicd/config.toml.example)
   - `cicd` at [`bin/cfn/`](/bin/cfn/cicd)
   - Updated `service-deploy` with servicename. 
+  **NOTE / Troubleshooting:** 
+  - The `ArtifactBucketName` needs to contain the value of an acutal existing S3 bucket.
+  - Codestar error may need to be addressed by visiting connections and selecting an existing app.

@@ -6,7 +6,7 @@ Description: |
 Parameters:
   GitHubBranch:
     Type: String
-    Default: prod
+    Default: week-9-prod
   GithubRepo:
     Type: String
     Default: 'kmb40/aws-bootcamp-cruddur-2023'

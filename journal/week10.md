@@ -380,3 +380,4 @@ cfn-toml reads a toml file - [a file format for configuration files](https://en.
   - `config.toml` at [`aws/cfn/cicd`](/aws/cfn/cicd/config.toml)
   - `config.toml.example` at [`aws/cfn/cicd`](/aws/cfn/cicd/config.toml.example)
   - `cicd` at [`bin/cfn/`](/bin/cfn/cicd)
+  - Updated `service-deploy` with servicename. 

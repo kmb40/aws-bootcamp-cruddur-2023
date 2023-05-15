@@ -38,7 +38,9 @@ The objective is to create and deploy a CloudFormation (CFN) Template for our cl
 - Updated CloudFormation Template file [`/aws/cfn/networking/template.yaml`](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-10/aws/cfn/networking/template.yaml) as follows:
 
 **Note:** Be sure to use you own region.    
-
+<details>
+  <summary>Click To expand code</summary>
+  
 ```
 AWSTemplateFormatVersion: 2010-09-09
 
@@ -240,6 +242,8 @@ Outputs:
     Export:
       Name: AvailabilityZones
 ```
+</details>    
+
 - Deployed the CloudFormation Template using the command `./bin/cfn/networking-deploy`
 
 ### Problems Solved

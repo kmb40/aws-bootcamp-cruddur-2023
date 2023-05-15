@@ -6,6 +6,6 @@ stack_name = 'CrdCicd'
 [parameters]
 ServiceStack = 'CrdSrvBackendFlask'
 ClusterStack = 'CrdCluster'
-GitHubBranch = 'prod'
-GithubRepo = 'aws-bootcamp-cruddur-2023'
+GitHubBranch = 'week-9-prod'
+GithubRepo = 'kmb40/aws-bootcamp-cruddur-2023'
 ArtifactBucketName = "cfn-artifacts-kmb"

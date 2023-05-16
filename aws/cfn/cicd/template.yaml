@@ -52,7 +52,7 @@ Resources:
                 ConnectionArn: !Ref CodeStarConnection
                 FullRepositoryId: !Ref GithubRepo
                 BranchName: !Ref GitHubBranch
-                OutputArtifactFormat: "CODE_ZIP"
+                #OutputArtifactFormat: "CODE_ZIP"
         - Name: Build
           Actions:
             - Name: BuildContainerImage
@@ -65,7 +65,7 @@ Resources:
               InputArtifacts:
                 - Name: Source
               OutputArtifacts:
-                - Name: ImageDefinition
+                - Name: ImageDefinitions
               Configuration:
                 ProjectName: !GetAtt CodeBuildBakeImageStack.Outputs.CodeBuildProjectName
                 BatchEnabled: false
@@ -80,7 +80,7 @@ Resources:
                 Owner: AWS
                 Version: '1'
               InputArtifacts:
-                - Name: ImageDefinition
+                - Name: ImageDefinitions
               Configuration:
                 # In Minutes
                 DeploymentTimeout: "10"
@@ -113,6 +113,7 @@ Resources:
                 - ecs:ListTasks
                 - ecs:RegisterTaskDefinition
                 - ecs:UpdateService
+                - ecr:PutImage
                 Effect: Allow
                 Resource: "*"
         - PolicyName: !Sub ${AWS::StackName}CodeStarPolicy
@@ -153,6 +154,9 @@ Resources:
                 - codebuild:StartBuild
                 - codebuild:StopBuild
                 - codebuild:RetryBuild
+                - codebuild:BatchGetBuilds
+                - codebuild:UpdateProject
+                - codebuild:CreateProject
                 Effect: Allow
                 Resource: !Join
                   - ''

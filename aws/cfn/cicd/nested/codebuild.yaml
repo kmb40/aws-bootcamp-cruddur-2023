@@ -107,6 +107,23 @@ Resources:
                 Resource:
                   - !Sub arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:${LogGroupPath}*
                   - !Sub arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:${LogGroupPath}:*
+        - PolicyName: !Sub ${AWS::StackName}S3Policy
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Action:
+                  - s3:GetObject
+                  - s3:ListBucket
+                  - s3:DeleteObject
+                  - s3:PutObject
+                Effect: Allow
+                #Resource: !Sub "arn:aws:s3:::${ArtifactBucketName}/*"
+                Resource: "arn:aws:s3:::codepipeline-us-east-1-165581666920/*"          
+              - Action:
+                  - s3:ListBucket
+                Effect: Allow
+                #Resource: !Sub "arn:aws:s3:::${ArtifactBucketName}"
+                Resource: "arn:aws:s3:::codepipeline-us-east-1-165581666920"                    
 Outputs:
   CodeBuildProjectName:
     Description: "CodeBuildProjectName"

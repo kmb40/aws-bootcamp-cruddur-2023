@@ -24,16 +24,7 @@ Parameters:
     Default: 5
   BuildSpec:
     Type: String
-    Default: 'backend-flask/buildspec.yaml'
-  GitHubBranch:
-    Type: String
-    Default: prod
-  GithubRepo:
-    Type: String
-    Default: 'https://github.com/kmb40/aws-bootcamp-cruddur-2023.git'  
-  ArtifactBucketName:
-    Type: String
-    Default: cfn-artifacts-kmb    
+    Default: 'buildspec.yaml'
 Resources:
   CodeBuild:
     # https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html
@@ -44,34 +35,20 @@ Resources:
       # PrivilegedMode is needed to build Docker images
       # even though we have No Artifacts, CodePipeline Demands both to be set as CODEPIPLINE
       Artifacts:
-        Type: NO_ARTIFACTS
+        Type: CODEPIPELINE
       Environment:
         ComputeType: !Ref CodeBuildComputeType
         Image: !Ref CodeBuildImage
         Type: LINUX_CONTAINER
         PrivilegedMode: true
-      TimeoutInMinutes: 20  
       LogsConfig:
         CloudWatchLogs:
           GroupName: !Ref LogGroupPath
           Status: ENABLED
           StreamName: !Ref LogStreamName
       Source:
-        Type: GITHUB
-        Location: !Ref GithubRepo
-        GitCloneDepth: 1
-        ReportBuildStatus: true
+        Type: CODEPIPELINE
         BuildSpec: !Ref BuildSpec
-        Auth:
-          Type: OAUTH
-      Triggers:
-        BuildType: BUILD
-        Webhook: true
-        FilterGroups:
-          - - Type: EVENT
-              Pattern: PULL_REQUEST_MERGED
-      SourceVersion: !Ref GithubBranch
-
   CodeBuildRole:
     # https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html
     Type: AWS::IAM::Role
@@ -130,25 +107,7 @@ Resources:
                 Resource:
                   - !Sub arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:${LogGroupPath}*
                   - !Sub arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:${LogGroupPath}:*
-
-        - PolicyName: !Sub ${AWS::StackName}S3Policy
-          PolicyDocument:
-            Version: "2012-10-17"
-            Statement:
-              - Action:
-                  - s3:GetObject
-                  - s3:ListBucket
-                  - s3:DeleteObject
-                  - s3:PutObject
-                Effect: Allow
-                #Resource: !Sub "arn:aws:s3:::${ArtifactBucketName}/*"
-                Resource: "arn:aws:s3:::cfn-artifacts-kmb/*"          
-              - Action:
-                  - s3:ListBucket
-                Effect: Allow
-                #Resource: !Sub "arn:aws:s3:::${ArtifactBucketName}"
-                Resource: "arn:aws:s3:::cfn-artifacts-kmb" 
 Outputs:
   CodeBuildProjectName:
     Description: "CodeBuildProjectName"
-    Value: !Ref CodeBuild
+    Value: !Sub ${AWS::StackName}Project

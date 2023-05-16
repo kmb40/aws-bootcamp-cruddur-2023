@@ -385,3 +385,9 @@ cfn-toml reads a toml file - [a file format for configuration files](https://en.
   - The `ArtifactBucketName` needs to contain the value of an acutal existing S3 bucket.
   - Codestar error may need to be addressed by visiting connections and selecting an existing app.
   - `config.toml` needed to be updated to reflect the `GithubRepo` path precedded with the username. E.g. `myusername\aws-bootcamp-cruddur-2023`
+
+### Deployed the Frontend Layer
+- Created a new files:
+  - `config.toml` at [`aws/cfn/frontend`](/aws/cfn/frontend/config.toml)
+  - `config.toml.example` at [`aws/cfn/frontend`](/aws/cfn/frontend/config.toml.example)
+  - `cicd` at [`bin/cfn/`](/bin/cfn/frontend-deploy)

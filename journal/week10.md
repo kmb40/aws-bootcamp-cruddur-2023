@@ -380,7 +380,7 @@ cfn-toml reads a toml file - [a file format for configuration files](https://en.
   - `config.toml` at [`aws/cfn/cicd`](/aws/cfn/cicd/config.toml)
   - `config.toml.example` at [`aws/cfn/cicd`](/aws/cfn/cicd/config.toml.example)
   - `cicd` at [`bin/cfn/`](/bin/cfn/cicd)
-  - Updated `service-deploy` with servicename. 
+  - Updated `service-deploy` with servicename.  
   **NOTE / Troubleshooting:** 
   - The `ArtifactBucketName` needs to contain the value of an acutal existing S3 bucket.
   - Codestar error may need to be addressed by visiting connections and selecting an existing app.
@@ -392,7 +392,7 @@ cfn-toml reads a toml file - [a file format for configuration files](https://en.
   - `config.toml.example` at [`aws/cfn/frontend`](/aws/cfn/frontend/config.toml.example)
   - `cicd` at [`bin/cfn/`](/bin/cfn/frontend-deploy)   
  **NOTE / Troubleshooting:** 
-  - The `HostedZoneId:` needs to contain the value `Z2FDTNDATAQYW2` to be used for serving websites with CloudFront.
+  - The `HostedZoneId:` needs to contain the value `Z2FDTNDATAQYW2` when serving websites with CloudFront.
 <img src="/assets/frontend-cf.png" width=450>
 <figcaption>Frontend Layer Deployed</figcaption>   
 <br/><br/>

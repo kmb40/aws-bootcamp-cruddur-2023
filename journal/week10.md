@@ -393,9 +393,9 @@ cfn-toml reads a toml file - [a file format for configuration files](https://en.
   - `cicd` at [`bin/cfn/`](/bin/cfn/frontend-deploy)   
  **NOTE / Troubleshooting:** 
   - The `HostedZoneId:` needs to contain the value `Z2FDTNDATAQYW2` to be used for serving websites with CloudFront.
-<img src="/assets/CF-ddb-2.png" width=450>
-<figcaption>DynamoDB Layer Deployed</figcaption>   
+<img src="/assets/frontend-cf.png" width=450>
+<figcaption>Frontend Layer Deployed</figcaption>   
 <br/><br/>
-<img src="/assets/CF-ddb.png" width=450>
-<figcaption>DynamoDB Layer Deployed</figcaption>   
+<img src="/assets/frontend-cf-2.png" width=450>
+<figcaption>Frontend Layer Deployed</figcaption>   
 <br/><br/>   

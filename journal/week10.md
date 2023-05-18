@@ -12,6 +12,21 @@ The objective is to create and deploy a CloudFormation (CFN) Template for our cl
 ### 6. [Watched Week 10-11 CFN Toml Part 2](https://www.youtube.com/watch?v=cYoNAadSYM8)
 ### 7. [Watched Week 10-11 CFN Cluster Layer Finish](https://www.youtube.com/watch?v=RITT94dfhOM)
 ### 8. [Watched Week 10-11 CFN Service Layer](https://www.youtube.com/watch?v=yj8QK8YULCQ)
+### 8a. [Watched Week 10-11 Service attempt again](https://youtu.be/hCGIbMOtkIc)
+### 8b. [Watched Week 10-11 Service Fixed](https://youtu.be/ozzL2Hqn3Ms)
+### 8c. [Watched Week 10-11 Service Confirmed Fixed](https://youtu.be/GbhSmuTpRtE)
+### 9. [Watched Week 10-11 CFN ECS Faragate Service Debugging Further](https://youtu.be/FgCKWtVm8mE)
+### 10. [Watched Week 10-11 CFN ECS Fargate Service Debugging](https://youtu.be/ERfSZy2Mpw4)
+### 11. [Watched Week 10-11 CFN RDS](https://youtu.be/BNZfYl_82ZU)
+### 12. [Watched Week 10-11 CFN RDS Finish](https://youtu.be/kBR9tlwbiyA)
+### 13a. [Watched Week 10-11 SAM CFN for Dynamodb Dynamdb Streams Lambda](https://youtu.be/8UGa4q-zRJ8)
+### 13b. [Watched Week 10-11 SAM CFN Fix SAM Lambda Code Artifact](https://youtu.be/XUUpoBGgNQI)
+### 13c. [Watched Week 10-11 CFN CICD Part 1](https://youtu.be/8EY4UwON7y8)
+### 13d. [Watched Week 10-11 CFN CICD Part 2](https://youtu.be/P_QbQV0JyJc)
+### 13e. [Watched Week 10-11 CFN Frontend](https://youtu.be/Qc96g_blibA)
+
+### NOTE: There were multiple diagraming videos created randomly to reflect each added service. Look for "Diagramming" at the playlist can be found at https://www.youtube.com/watch?v=8b8SvQHc4Pk&list=PLBfufR7vyJJ7k25byhRXJldB5AiwgNnWv
+
 
 #### Envrionment Prep
 - Created a new Directory at `AWS/CFN`.

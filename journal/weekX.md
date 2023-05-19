@@ -402,3 +402,41 @@ cfn-toml reads a toml file - [a file format for configuration files](https://en.
 <img src="/assets/frontend-cf-2.png" width=450>
 <figcaption>Frontend Layer Deployed</figcaption>   
 <br/><br/>   
+
+### Integrated Sync Tool for static webhosting
+- Created a new files:
+  - `config.toml` at [`aws/cfn/sync`](/aws/cfn/sync/config.toml)
+  - `config.toml.example` at [`aws/cfn/sync`](/aws/cfn/frontend/config.toml.example)
+  - `template.yaml` at [`aws/cfn/sync`](/aws/cfn/sync/template.yaml)
+  - `cicd` at [`bin/cfn/`](/bin/cfn/sync-deploy)   
+
+#### Created Sync Role with CFN
+<img src="/assets/#" width=450>
+<figcaption>Frontend Layer Deployed</figcaption>   
+<br/><br/>   
+
+- Attached an inline policy to the new role.   
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "s3:PutObject",
+                "s3:GetObject",
+                "s3:ListBucket",
+                "s3:DeleteBucket"
+            ],
+            "Resource": [
+                "arn:aws:s3:::cruddur.net/*",
+                "arn:aws:s3:::cruddur.net"
+            ]
+        }
+    ]
+}
+```
+
+**NOTE / Troubleshooting:** 
+- The `HostedZoneId:` needs to contain the value `Z2FDTNDATAQYW2` when serving websites with CloudFront.

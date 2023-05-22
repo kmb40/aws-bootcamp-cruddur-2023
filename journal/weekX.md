@@ -25,7 +25,6 @@ npm run build
 - Created [`bin/frontend/static-build`](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/706ed44662ad2fa556817ec20b2ae917ff72bcd6/bin/frontend/static-build).
 - Compressed `frontend-react-js/build` into zip.
 - Download the zip and extract the contents.
-- Upload the contents to S3 bucket named `cruddur.net`.    
 
 #### Enter Sync Tool 
 - [Teacherseat Github](https://github.com/teacherseat/aws-s3-website-sync)
@@ -33,6 +32,15 @@ npm run build
 - Install `gem install aws_s3_website_sync`.
 - Install `gem install dotenv`.
 
-<img src="/assets/" width=450>
+<img src="/assets/frontend-cf.png" width=450>
+<figcaption>CFN Frontend</figcaption>   
+<br/><br/>  
+
+<img src="/assets/frontend-cf-2.png" width=450>
+<figcaption>CFN Frontend</figcaption>   
+<br/><br/>  
+
+- Upload the contents to S3 bucket named `cruddur.net`.    
+<img src="/assets/static-frontend-bucket.png" width=450>
 <figcaption>Frontend S3 Bucket</figcaption>   
 <br/><br/>  

@@ -29,7 +29,7 @@ npm run build
 
 #### Enter Sync Tool 
 - [Teacherseat Github](https://github.com/teacherseat/aws-s3-website-sync)
-- Create [`bin/frontend/sync`](#).
+- Create [`bin/frontend/sync`](/bin/frontend/sync).
 - Install `gem install aws_s3_website_sync`.
 - Install `gem install dotenv`.
 

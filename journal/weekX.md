@@ -44,3 +44,14 @@ npm run build
 <img src="/assets/static-frontend-bucket.png" width=450>
 <figcaption>Frontend S3 Bucket</figcaption>   
 <br/><br/>  
+
+### Reconnect Database and Post Confirmation Lambda
+#### Prep
+- Stablized the app to make sure backend and frontent images are current. 
+- Run:
+- `bin\backend\build` - builds the image
+- `bin\backend\push` - pushes the image to ECR
+- `bin\backend\register`- registers a new task definition
+- In the CF Fargate Service - Update the backend container with latest task definiton created in the previous step.   
+
+#### Connect to Prod Postgres Database

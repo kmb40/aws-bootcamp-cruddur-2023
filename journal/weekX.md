@@ -52,6 +52,9 @@ npm run build
 - `bin\backend\build` - builds the image
 - `bin\backend\push` - pushes the image to ECR
 - `bin\backend\register`- registers a new task definition
-- In the CF Fargate Service - Update the backend container with latest task definiton created in the previous step.   
+- In the CF Fargate Service - Update the backend container with latest task definiton created in the previous step.  
+- Update env varibles for with `export DB_SG_RULE_ID="NEW CFN Security Group Rule ID"` AND `gp env DB_SG_RULE_ID="NEW CFN Security Group Rule ID"`
+- Update env varibles for with `export DB_SG_ID="NEW CFN Security Group ID"` AND `gp env DB_SG_ID="NEW CFN Security Group ID"`
 
 #### Connect to Prod Postgres Database
+- 

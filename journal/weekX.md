@@ -45,7 +45,7 @@ npm run build
 <figcaption>Frontend S3 Bucket</figcaption>   
 <br/><br/>  
 
-### Reconnect Database and Post Confirmation Lambda
+### Reconnect Database and Post Confirmation Lambda to Application
 #### Prep
 - Stablized the app to make sure backend and frontent images are current. 
 - Run:
@@ -55,6 +55,5 @@ npm run build
 - In the CF Fargate Service - Update the backend container with latest task definiton created in the previous step.  
 - Update env varibles for with `export DB_SG_RULE_ID="NEW CFN Security Group Rule ID"` AND `gp env DB_SG_RULE_ID="NEW CFN Security Group Rule ID"`
 - Update env varibles for with `export DB_SG_ID="NEW CFN Security Group ID"` AND `gp env DB_SG_ID="NEW CFN Security Group ID"`
-
-#### Connect to Prod Postgres Database
-- 
+- Connect to production (AWS RDS) Postgres db.  
+**NOTE:** Be sure that the enviroment variables are pointing to the production database.

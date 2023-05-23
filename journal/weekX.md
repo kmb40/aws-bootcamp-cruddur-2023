@@ -56,4 +56,12 @@ npm run build
 - Update env varibles for with `export DB_SG_RULE_ID="NEW CFN Security Group Rule ID"` AND `gp env DB_SG_RULE_ID="NEW CFN Security Group Rule ID"`
 - Update env varibles for with `export DB_SG_ID="NEW CFN Security Group ID"` AND `gp env DB_SG_ID="NEW CFN Security Group ID"`
 - Connect to production (AWS RDS) Postgres db.  
-**NOTE:** Be sure that the enviroment variables are pointing to the production database.
+**NOTE:** Be sure that the enviroment variables are pointing to the production database.   
+**NOTE:** The site frontend failed to show and actitvies results so we pivoted to setting up a new conginto user by signing up again (and deleting the existing account).    
+  - We then pivoted to creating an error message to show instead of a blank page.
+  - Updated [`bin\cfn\frontend\template.yaml`](#) to include custom error page code.   
+**NOTE:** Be sure that Lambda for post comfirmation has the correct env varibles set in the configuration section.   
+**NOTE:** There may be a timeout error displayed after new signup on cruddur and following the confirmation verification. 
+  - Updated Lambda for post confirmation to reflect the correct Cruddur (CFN) VPC and not the default VPC.
+  - Create a new security group
+  - Updated the Lambda for post confirmation to reflect the correct Cruddur (CFN) public subnets.

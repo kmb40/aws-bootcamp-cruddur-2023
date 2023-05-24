@@ -78,4 +78,4 @@ npm run build
 <figcaption>Frontend S3 Bucket</figcaption>   
 <br/><br/>  
 
-### CICD Pipeline and Post Create Activity
+### CI/CD Pipeline and Post Create Activity

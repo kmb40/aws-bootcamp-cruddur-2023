@@ -68,6 +68,7 @@ npm run build
   - Updated [`bin\cfn\frontend\template.yaml`](#) to include custom error page code.   
 **NOTE:** Be sure that Lambda for post comfirmation has the correct env varibles set in the configuration section.   
 **NOTE:** There may be a timeout error displayed after new signup on cruddur and following the confirmation verification. 
-  - Updated Lambda for post confirmation to reflect the correct Cruddur (CFN) VPC and not the default VPC.
-  - Create a new security group `CognitoLambdaSG` for Lambda
-  - Updated the Lambda for post confirmation to reflect the correct Cruddur (CFN) public subnets.
+- In the AWS Console - Updated Lambda for post confirmation to reflect the correct Cruddur (CFN) VPC and not the default VPC.
+- In the AWS Console - Create a new security group `CognitoLambdaSG` for Lambda
+- In the AWS Console - Updated the Lambda for post confirmation to reflect the correct Cruddur (CFN) public subnets.
+- In the AWS Console - Updated Lambda for post confirmation [`aws/lambdas/cruddur-post-confirrmation.py`](https://github.com/kmb40/aws-bootcamp-cruddur-2023/commit/92d392e1a85aa8b825ff66847909395c423296ab)

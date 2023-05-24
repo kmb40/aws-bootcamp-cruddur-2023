@@ -10,6 +10,12 @@ The objective is to clean up the application and validate functionality as any n
 ### 4. [Watched Week X Use CORS for Service](https://youtu.be/f0aLm0EpzaE)
 ### 5. [Watched Week-X CICD Pipeline and Create Activity](https://youtu.be/H9-9gR604L4)
 ### 6. [Watched Week-X Refactor JWT to use a decorator](https://youtu.be/4lHRwJ0yzpo)
+### 7. [Watched Week-X Refactor AppPy](https://www.youtube.com/watch?v=VSVb_-6zYaY)
+### 8. [Watched Week-X Refactor Flask Routes](https://www.youtube.com/watch?v=INkTj-Ark7k&t=19s)
+### 9. [Watched Week-X Replies Work In Progress](https://www.youtube.com/watch?v=qXxYF4y0gJ8&t)
+### 10. [Watched Week-X Refactor Error Handling and Fetch Requests](https://www.youtube.com/watch?v=rFcPG6e_kGs&t)
+### 11. [Watched Week-X Activity Show Page](https://www.youtube.com/watch?v=FBpQtN497QA&t)
+### 12. [Watched Week-X Cleanup](https://www.youtube.com/watch?v=E89RBvZ_BaY)
 
 ### Created Frontend Files
 - Deployed the following code:

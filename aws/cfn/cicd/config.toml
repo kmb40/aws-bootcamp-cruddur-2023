@@ -9,4 +9,4 @@ ClusterStack = 'CrdCluster'
 GitHubBranch = 'week-9-prod'
 GithubRepo = 'kmb40/aws-bootcamp-cruddur-2023'
 ArtifactBucketName = "cfn-artifacts-kmb"
-BuildSpec = 'backend-flask/buildspec.yaml'
+BuildSpec = 'backend-flask/buildspec.yml'

@@ -25,6 +25,8 @@ Parameters:
   BuildSpec:
     Type: String
     Default: 'buildspec.yaml'
+  ArtifactBucketName:
+    Type: String
 Resources:
   CodeBuild:
     # https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html

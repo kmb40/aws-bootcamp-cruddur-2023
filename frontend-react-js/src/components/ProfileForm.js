@@ -48,7 +48,7 @@ export default function ProfileForm(props) {
     const filename = file.name
     const size = file.size
     const type = file.type
-    const preview_image_url = URL.createObjectURL(file)
+   // const preview_image_url = URL.createObjectURL(file) //commented out because unused
     console.log(filename,size,type)
     const fileparts = filename.split('.')
     const extension = fileparts[fileparts.length-1]
@@ -62,7 +62,7 @@ export default function ProfileForm(props) {
           'Content-Type': type
       }})
       if (res.status === 200) {
-        console.log('presigned url',data)  
+        //console.log('presigned url',data)  
       } else {
         console.log(res)
       }
@@ -89,7 +89,7 @@ export default function ProfileForm(props) {
           display_name: displayName
         }),
       });
-      let data = await res.json();
+      //let data = await res.json(); //unused
       if (res.status === 200) {
         setBio(null)
         setDisplayName(null)
@@ -130,7 +130,7 @@ export default function ProfileForm(props) {
             </div>
           </div>
           <div className="popup_content">
-            
+    
           <input type="file" name="avatarupload" onChange={s3upload} />
 
             <div className="field display_name">

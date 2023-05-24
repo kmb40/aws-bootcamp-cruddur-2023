@@ -1,0 +1,9 @@
+# Toml file - contains paramters for CFN
+[deploy]
+bucket = 'cfn-artifacts-kmb'
+region = 'us-east-1'
+stack_name = 'CrdSrvBackendFlask'
+
+[parameters]
+EnvFrontendUrl = 'https://cruddur.net'
+EnvBackendUrl = 'https://api.cruddur.net'

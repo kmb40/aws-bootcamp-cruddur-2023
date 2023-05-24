@@ -1,5 +1,7 @@
 # FREE AWS Cloud Project Bootcamp
 
+<img src="https://codefactory-us-east-1-prod-default-build-badges.s3.amazonaws.com/unknown.svg"/>
+
 - Application: Cruddur
 - Cohort: 2023-A1
 

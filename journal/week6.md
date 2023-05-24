@@ -1,6 +1,10 @@
 # Week 6 — Deploying Containers
+# Week 7 - Solving CORS with a Load Balancer and Custom Domain
 
-The following information outlines tasks that I've completed for Week 6 of the bootcamp.  
+The following information outlines tasks that I've completed for Week 6 and 7 of the bootcamp.  
+<img src="/assets/custom-domain-elb.png" width=450>
+<figcaption>Custom Domain - Load Balancer</figcaption>   
+<br/><br/> 
 
 ### 1. [Attended Week 6 Live Stream - Deploying Containers](https://www.youtube.com/watch?v=FklBsHWYvWY)  
 ### 2. [Watched Week 6-7 - ECS Fargate (Part 1)](https://www.youtube.com/watch?v=QIZx2NhdCMI)  
@@ -297,5 +301,8 @@ Ran the app with and without debug mode.
 - Updated mutiple frontend files to reflect changes.
 
 ### Configured for Container Insights
-- Restructured environmental variables. Implemented ruby. Performed troubleshooting.
-- Activated Container Insights on the ECS Cluster.
+- Restructured environmental variables. Implemented ruby. Performed troubleshooting.  
+- Activated Container Insights on the ECS Cluster.  
+<img src="/assets/container-insights-map.png" width=450>
+<figcaption>CloudWatch Container Insights</figcaption>   
+<br/><br/>  

@@ -3,3 +3,7 @@
 bucket = 'cfn-artifacts-kmb'
 region = 'us-east-1'
 stack_name = 'CrdSrvBackendFlask'
+
+[parameters]
+EnvFrontendUrl = 'cruddur.net'
+EnvBackendUrl = 'api.cruddur.net'

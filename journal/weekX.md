@@ -63,5 +63,5 @@ npm run build
 **NOTE:** Be sure that Lambda for post comfirmation has the correct env varibles set in the configuration section.   
 **NOTE:** There may be a timeout error displayed after new signup on cruddur and following the confirmation verification. 
   - Updated Lambda for post confirmation to reflect the correct Cruddur (CFN) VPC and not the default VPC.
-  - Create a new security group
+  - Create a new security group `CognitoLambdaSG` for Lambda
   - Updated the Lambda for post confirmation to reflect the correct Cruddur (CFN) public subnets.

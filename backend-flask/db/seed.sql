@@ -2,6 +2,7 @@
 INSERT INTO public.users (display_name, email, handle, cognito_user_id)
 VALUES
   ('Andrew Brown','andrew@exampro.co' , 'andrewbrown' ,'MOCK'),
+  ('Alt Brown','mayvik+altcloudcamp@gmail.com' , 'altkylembrown' ,'MOCK'), --inserting to test hardcode removal fix
   ('Kyle Brown','mayvik+cloudcamp@gmail.com' , 'kylembrown' ,'MOCK'), --inserting to match query with prod cognito user
   ('Andrew Bayko','bayko@exampro.co' , 'bayko' ,'MOCK'),
   ('Londo Mollari','lmollari@centari.com' ,'londo' ,'MOCK');

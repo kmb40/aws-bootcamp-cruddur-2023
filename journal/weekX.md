@@ -16,6 +16,7 @@ The objective is to clean up the application and validate functionality as any n
 ### 10. [Watched Week-X Refactor Error Handling and Fetch Requests](https://www.youtube.com/watch?v=rFcPG6e_kGs&t)
 ### 11. [Watched Week-X Activity Show Page](https://www.youtube.com/watch?v=FBpQtN497QA&t)
 ### 12. [Watched Week-X Cleanup](https://www.youtube.com/watch?v=E89RBvZ_BaY)
+### 12. [Watched Week-X Cleanup Part 2](https://youtu.be/53_3TmZ1hrs)
 
 ### Created Frontend Files
 - Deployed the following code:

@@ -80,6 +80,6 @@ npm run build
 <br/><br/>  
 
 ### CI/CD Pipeline and Post Create Activity
-- Corrected several misconfigured options in [`template.yaml`](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-x/aws/cfn/cicd/template.yaml) and [`nested`]() yaml.     
+- Corrected several misconfigured options in [`template.yaml`](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-x/aws/cfn/cicd/template.yaml) and [`nested\codebuild.yaml`](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-x/aws/cfn/cicd/nested/codebuild.yaml).     
 
 ### Refactor JWT to use a decorator

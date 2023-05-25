@@ -73,9 +73,12 @@ npm run build
 - In the AWS Console - Updated the Lambda for post confirmation to reflect the correct Cruddur (CFN) public subnets.
 - In the AWS Console - Updated Lambda for post confirmation [`aws/lambdas/cruddur-post-confirrmation.py`](https://github.com/kmb40/aws-bootcamp-cruddur-2023/commit/92d392e1a85aa8b825ff66847909395c423296ab)   
 
-**Conclusion** Succefully reconnected the AWS RDS postgres db to the application and configured the confirmation lambda into the production enviroment.   
+**Conclusion** Successfully reconnected the AWS RDS postgres db to the application and configured the confirmation lambda into the production enviroment.   
 <img src="/assets/cruddur.net-postgres-success.png" width=450>
 <figcaption>Frontend S3 Bucket</figcaption>   
 <br/><br/>  
 
 ### CI/CD Pipeline and Post Create Activity
+- Corrected several misconfigured options in template.yaml and nested yaml    
+
+### Refactor JWT to use a decorator

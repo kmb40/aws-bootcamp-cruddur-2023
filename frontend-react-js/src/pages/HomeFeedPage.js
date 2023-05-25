@@ -54,7 +54,7 @@ export default function HomeFeedPage() {
       <DesktopNavigation user={user} active={'home'} setPopped={setPopped} />
       <div className='content'>
         <ActivityForm  
-          user_handle={user} //added for dynamic handle tweak KMB
+          //user_handle={user} //added for dynamic handle tweak KMB
           popped={popped}
           setPopped={setPopped} 
           setActivities={setActivities} 

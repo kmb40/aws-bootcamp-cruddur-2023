@@ -259,7 +259,7 @@ def data_search():
 @app.route("/api/activities", methods=['POST','OPTIONS'])
 @cross_origin()
 def data_activities():
-  user_handle  = request.json["user_handle"] # changed from hard-coded user handle 'kylembrown' for dynamic handle tweak KMB 
+  user_handle  = 'kylembrown' #request.json["user_handle"] # changed from hard-coded user handle 'kylembrown' for dynamic handle tweak KMB 
   message = request.json['message']
   ttl = request.json['ttl']
   model = CreateActivity.run(message, user_handle, ttl)

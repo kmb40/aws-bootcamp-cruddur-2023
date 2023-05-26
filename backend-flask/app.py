@@ -124,6 +124,12 @@ with app.app_context(): # Added to address Issue raised in Discord
     # send exceptions from `app` to rollbar, using flask's signal system.
     got_request_exception.connect(rollbar.contrib.flask.report_exception, app)
 
+def return_model(model):
+  if model['errors'] is not None:
+    return model['errors'], 422
+  else:
+    return model['data'], 200
+
 @app.route('/api/health-check')
 def health_check():
   return {'success': True, 'ver':1}, 200
@@ -144,10 +150,8 @@ def data_message_groups():
 #   app.logger.debug(claims)
 #   cognito_user_id = claims['sub']
     model = MessageGroups.run(cognito_user_id=g.cognito_user_id)
-    if model['errors'] is not None:
-      return model['errors'], 422
-    else:
-      return model['data'], 200
+    return model_json(model)
+
 #  except TokenVerifyError as e:
 #    # unauthenicatied request
 #    app.logger.debug(e)
@@ -247,10 +251,7 @@ def data_notifications():
 #@xray_recorder.capture('activities_users')
 def data_handle(handle):
   model = UserActivities.run(handle)
-  if model['errors'] is not None:
-    return model['errors'], 422
-  else:
-    return model['data'], 200
+  return return_model(model)
 
 @app.route("/api/activities/search", methods=['GET'])
 def data_search():

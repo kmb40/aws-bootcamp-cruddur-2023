@@ -124,7 +124,7 @@ with app.app_context(): # Added to address Issue raised in Discord
     # send exceptions from `app` to rollbar, using flask's signal system.
     got_request_exception.connect(rollbar.contrib.flask.report_exception, app)
 
-def return_model(model):
+def model_json(model):
   if model['errors'] is not None:
     return model['errors'], 422
   else:
@@ -168,10 +168,8 @@ def data_messages(message_group_uuid):
 #    app.logger.debug(claims)
 #    cognito_user_id = claims['sub']
   model = Messages.run(cognito_user_id=g.cognito_user_id, message_group_uuid=message_group_uuid)
-  if model['errors'] is not None:
-      return model['errors'], 422
-  else:
-      return model['data'], 200
+  return model_json(model)
+
 #  except TokenVerifyError as e:
 #    # unauthenicatied request
 #    app.logger.debug(e)
@@ -207,10 +205,8 @@ def data_create_message():
       message_group_uuid=message_group_uuid,
       cognito_user_id=g.cognito_user_id
     )
-  if model['errors'] is not None:
-    return model['errors'], 422
-  else:
-    return model['data'], 200
+  return model_json(model)  
+
 #  except TokenVerifyError as e:
 #    # unauthenicatied request
 #    app.logger.debug(e)
@@ -257,11 +253,7 @@ def data_handle(handle):
 def data_search():
   term = request.args.get('term')
   model = SearchActivities.run(term)
-  if model['errors'] is not None:
-    return model['errors'], 422
-  else:
-    return model['data'], 200
-  return
+  return model_json(model)
 
 @app.route("/api/activities", methods=['POST','OPTIONS'])
 @cross_origin()
@@ -276,10 +268,8 @@ def data_activities():
   message = request.json['message']
   ttl = request.json['ttl']
   model = CreateActivity.run(message, g.cognito_user_id, ttl)
-  if model['errors'] is not None:
-    return model['errors'], 422
-  else:
-    return model['data'], 200
+  return model_json(model)
+
 #  except TokenVerifyError as e:
 #    # unauthenicatied request
 #    app.logger.debug(e)
@@ -297,11 +287,7 @@ def data_activities_reply(activity_uuid):
   user_handle  = 'andrewbrown'
   message = request.json['message']
   model = CreateReply.run(message, user_handle, activity_uuid)
-  if model['errors'] is not None:
-    return model['errors'], 422
-  else:
-    return model['data'], 200
-  return
+  return model_json(model)
 
 @app.route("/api/users/@<string:handle>/short", methods=['GET'])
 def data_users_short(handle):
@@ -324,10 +310,8 @@ def data_update_profile():
     bio=bio,
     display_name=display_name
   )
-  if model['errors'] is not None:
-    return model['errors'], 422
-  else:
-    return model['data'], 200
+  return model_json(model)
+
 #  except TokenVerifyError as e:
 #    # unauthenicatied request
 #    app.logger.debug(e)

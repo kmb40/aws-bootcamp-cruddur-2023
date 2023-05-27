@@ -1,8 +1,16 @@
 from flask import Flask
 from flask import request, g
-from flask_cors import CORS, cross_origin
+from flask_cors import cross_origin
 import os
 import sys
+
+from aws_xray_sdk.core import xray_recorder
+from lib.rollbar import init_rollbar
+from lib.xray import init_xray
+from lib.cors import init_cors
+from lib.cloudwatch import init_cloudwatch
+from lib.honeycomb import init_honeycomb
+from lib.cognito_jwt_token import jwt_required
 
 from services.users_short import *
 from services.home_activities import *
@@ -17,31 +25,38 @@ from services.create_message import *
 from services.show_activity import *
 from services.update_profile import *
 
-from lib.cognito_jwt_token import jwt_required
-
 # HoneyComb ---------
-from opentelemetry import trace
-from opentelemetry.instrumentation.flask import FlaskInstrumentor
-from opentelemetry.instrumentation.requests import RequestsInstrumentor
-from opentelemetry.exporter.otlp.proto.http.trace_exporter import OTLPSpanExporter
-from opentelemetry.sdk.trace import TracerProvider
-from opentelemetry.sdk.trace.export import BatchSpanProcessor
-from opentelemetry.sdk.trace.export import ConsoleSpanExporter, SimpleSpanProcessor
+#from opentelemetry import trace
+#from opentelemetry.instrumentation.flask import FlaskInstrumentor
+#from opentelemetry.instrumentation.requests import RequestsInstrumentor
+#from opentelemetry.exporter.otlp.proto.http.trace_exporter import OTLPSpanExporter
+#from opentelemetry.sdk.trace import TracerProvider
+#from opentelemetry.sdk.trace.export import BatchSpanProcessor
+#from opentelemetry.sdk.trace.export import ConsoleSpanExporter, SimpleSpanProcessor
+
+app = Flask(__name__)
+
+## initalization --------
+init_xray(app)
+with app.app_context():
+  rollbar = init_rollbar()
+init_honeycomb(app)
+init_cors(app)
 
 # X-RAY ----------
-from aws_xray_sdk.core import xray_recorder
-from aws_xray_sdk.ext.flask.middleware import XRayMiddleware
+#from aws_xray_sdk.core import xray_recorder
+#from aws_xray_sdk.ext.flask.middleware import XRayMiddleware
 
 # CloudWatch Logs ----
-import watchtower
-import logging
+#import watchtower
+#import logging
 
 # Rollbar ------
-from time import strftime
-import os
-import rollbar
-import rollbar.contrib.flask
-from flask import got_request_exception
+#from time import strftime
+#import os
+#import rollbar
+#import rollbar.contrib.flask
+#from flask import got_request_exception
 
 # Configuring Logger to Use CloudWatch
 # LOGGER = logging.getLogger(__name__)
@@ -54,9 +69,9 @@ from flask import got_request_exception
 
 # HoneyComb ---------
 # Initialize tracing and an exporter that can send data to Honeycomb
-provider = TracerProvider()
-processor = BatchSpanProcessor(OTLPSpanExporter())
-provider.add_span_processor(processor)
+#provider = TracerProvider()
+#processor = BatchSpanProcessor(OTLPSpanExporter())
+#provider.add_span_processor(processor)
 
 # X-RAY ----------
 #xray_url = osgetenv("AWS_XRAY_URL")
@@ -67,10 +82,8 @@ provider.add_span_processor(processor)
 #simple_processor = SimpleSpanProcessor(ConsoleSpanExporter())
 #provider.add_span_processor(simple_processor)
 
-trace.set_tracer_provider(provider)
-tracer = trace.get_tracer(__name__)
-
-app = Flask(__name__)
+#trace.set_tracer_provider(provider)
+#tracer = trace.get_tracer(__name__)
 
 #cognito_jwt_token = CognitoJwtToken(
 #  user_pool_id=os.getenv("AWS_COGNITO_USER_POOL_ID"), 
@@ -83,20 +96,20 @@ app = Flask(__name__)
 
 # HoneyComb ---------
 # Initialize automatic instrumentation with Flask
-FlaskInstrumentor().instrument_app(app)
-RequestsInstrumentor().instrument()
+#FlaskInstrumentor().instrument_app(app)
+#RequestsInstrumentor().instrument()
 
 
-frontend = os.getenv('FRONTEND_URL')
-backend = os.getenv('BACKEND_URL')
-origins = [frontend, backend]
-cors = CORS(
-  app, 
-  resources={r"/api/*": {"origins": origins}},
-  headers=['Content-Type', 'Authorization'], 
-  expose_headers='Authorization',
-  methods="OPTIONS,GET,HEAD,POST"
-)
+#frontend = os.getenv('FRONTEND_URL')
+#backend = os.getenv('BACKEND_URL')
+#origins = [frontend, backend]
+#cors = CORS(
+#  app, 
+#  resources={r"/api/*": {"origins": origins}},
+#  headers=['Content-Type', 'Authorization'], 
+#  expose_headers='Authorization',
+#  methods="OPTIONS,GET,HEAD,POST"
+#)
 
 # CloudWatch Logs -----
 #@app.after_request

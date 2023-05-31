@@ -89,4 +89,9 @@ npm run build
 - Made substantial changes to `backend-flask\app.py`.
 
 ### Refactor Flask Routes
-- Created `routes` directory.
+- Created [`routes`](#) directory.
+
+### Refactor Error Handling and Fetch Requests
+- Most features (Profile, messages) work accept the replies and activities display on the home page screen shows blank.
+- The logs for the backend shows error “LINE 27: replies.reply_to_activity_uuid = activities.uuid” and the dev console shows a 500 error.
+- Updated [`ActivityFeed.js`](#) and [`Activity.css`](#) to display message when there is no content to display instead of a blank screen.

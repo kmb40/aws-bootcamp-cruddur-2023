@@ -35,6 +35,7 @@ export default function ActivityForm(props) {
         }),
       });
       let data = await res.json();
+      console.log('data-create-post',data)
       if (res.status === 200) {
         // add activity to the feed
         props.setActivities(current => [data,...current]);

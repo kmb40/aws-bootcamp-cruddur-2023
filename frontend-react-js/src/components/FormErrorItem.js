@@ -38,7 +38,7 @@ export default function FormErrorItem(props) {
         return "The display name cannot be blank"
         break;
       default:
-        // In the case for errror return from cognito they 
+        // In the case for error return from cognito they 
         // directly return the error so we just display it.
         return props.err_code
         break;

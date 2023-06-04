@@ -82,16 +82,25 @@ npm run build
 ### CI/CD Pipeline and Post Create Activity
 - Corrected several misconfigured options in [`template.yaml`](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-x/aws/cfn/cicd/template.yaml) and [`nested\codebuild.yaml`](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-x/aws/cfn/cicd/nested/codebuild.yaml).     
 
-### Refactor JWT to use a decorator
+### Refactor 
+- A series of changes to refactor the code base and resolve defects new and old.
+
+#### Refactor JWT to use a decorator
 - Made substantial changes to implement a decorator. Primarily [`backend-flask/lib/cognito_jwt_token.py`](https://github.com/kmb40/aws-bootcamp-cruddur-2023/commit/f0e687796ccff97ab608fd8ac00cc66a219d11f2#diff-c4205e0c1fabfa8932a580cf9b109f3af4c9fe9c738868a9c7f8d83212db9c24) and [`backend-flask/app.py`](https://github.com/kmb40/aws-bootcamp-cruddur-2023/commit/6bc499cd9f426750930c4ede9bd21c075be52a43?diff=unified).
 
-### Refactor `backend-flask/app.py`
+#### Refactor `backend-flask/app.py`
 - Made substantial changes to `backend-flask\app.py`.
 
-### Refactor Flask Routes
+#### Refactor Flask Routes
 - Created [`routes`](#) directory.
 
-### Refactor Error Handling and Fetch Requests
+#### Refactor Error Handling and Fetch Requests
 - Most features (Profile, messages) work accept the replies and activities display on the home page screen shows blank.
 - The logs for the backend shows error “LINE 27: replies.reply_to_activity_uuid = activities.uuid” and the dev console shows a 500 error.
 - Updated [`ActivityFeed.js`](#) and [`Activity.css`](#) to display message when there is no content to display instead of a blank screen.
+
+#### Refactor Activity Show Page
+- Made substantial changes to `backend-flask\app.py`.
+
+#### Clean Up
+- Made substantial changes to 

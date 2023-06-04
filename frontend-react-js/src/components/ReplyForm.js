@@ -2,8 +2,7 @@ import './ReplyForm.css';
 import React from "react";
 import process from 'process';
 import {post} from 'lib/Requests';
-//import {ReactComponent as BombIcon} from './svg/bomb.svg'; //commented out because unused
-//import {getAccessToken} from '../lib/CheckAuth';
+
 import ActivityContent  from 'components/ActivityContent';
 import FormErrors from 'components/FormErrors';
 
@@ -25,35 +24,23 @@ export default function ReplyForm(props) {
       activity_uuid: props.activity.uuid,
       message: message
     }
+    post(url,payload_data,{
+      auth: true,
+      setErrors: setErrors,
+      success: function(data){
+        // add activity to the feed
+        //let activities_deep_copy = JSON.parse(JSON.stringify(props.activities))
+        //let found_activity = activities_deep_copy.find(function (element) {
+        //  return element.uuid ===  props.activity.uuid;
+        //});
+        //found_activity.replies.push(data)
+        //props.setActivities(activities_deep_copy);
 
-  //  post(url,payload_data,{
-  //    auth: true,
-  //    setErrors: setErrors,
-  //    success: function(data){
-  //      if (props.setReplies) {
-  //        props.setReplies(current => [data,...current]);
-  //      }
-  //      // reset and close the form
-  //      setCount(0)
-  //      setMessage('')
-  //      props.setPopped(false)
-  //    }
-  //  })
-  //}
-
-    post(url,payload_data,setErrors,function(data){
-      // add activity to the feed
-      //let activities_deep_copy = JSON.parse(JSON.stringify(props.activities))
-      //let found_activity = activities_deep_copy.find(function (element) {
-      //  return element.uuid ===  props.activity.uuid;
-      //});
-      //found_activity.replies.push(data)
-//
-      //props.setActivities(activities_deep_copy);
-      // reset and close the form
-      setCount(0)
-      setMessage('')
-      props.setPopped(false)
+        // reset and close the form
+        setCount(0)
+        setMessage('')
+        props.setPopped(false)
+      }
     })
   }
 

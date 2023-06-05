@@ -5,7 +5,8 @@
   border-bottom: solid 1px rgb(31,36,49);
   padding: 16px;
 }
-.messsage_item .avatar{
+
+.message_item .avatar {
   cursor: pointer;
   text-decoration: none;
 }

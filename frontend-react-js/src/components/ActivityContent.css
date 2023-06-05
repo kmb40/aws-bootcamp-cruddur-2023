@@ -15,7 +15,7 @@
   width: 60px;
   border-radius: 999px;
   flex-shrink: 0;
-  display: block;
+  display: block; 
 }
 
 .activity_content .activity_meta {

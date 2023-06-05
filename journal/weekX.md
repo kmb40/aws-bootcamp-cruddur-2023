@@ -102,5 +102,11 @@ npm run build
 #### Refactor Activity Show Page
 - Made substantial changes to `backend-flask\app.py`.
 
-#### Clean Up
-- Made substantial changes to 
+#### Clean Up Part 1
+- The purpose of this effort was to reach a state where the application was stable although not all functionality was addressed.
+- Made substantial changes to multiples files.
+
+#### Clean Up Part 2
+- Continued to reach a state where the application was stable although not all functionality was addressed.
+- Made substantial changes to multiples files.
+- Move files from the development enviroment into the AWS production environment. 

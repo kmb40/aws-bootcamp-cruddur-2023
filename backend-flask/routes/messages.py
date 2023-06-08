@@ -53,4 +53,4 @@ def load(app):
                 message_group_uuid=message_group_uuid,
                 cognito_user_id=g.cognito_user_id,
             )
-        return model_json(model)
+            return model_json(model)

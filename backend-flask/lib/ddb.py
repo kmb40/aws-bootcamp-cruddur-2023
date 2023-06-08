@@ -161,5 +161,5 @@ class Ddb:
         'message_group_uuid': message_group_uuid
       }
     except botocore.exceptions.ClientError as e:
-      print('== create_message_group.error')
+      #print('== create_message_group.error')
       print(e)

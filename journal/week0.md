@@ -16,7 +16,7 @@ The following information outlines tasks that I've completed for Week 0 of the b
 #### Logical Diagram (<a href="https://lucid.app/lucidchart/d6001220-63ae-4bc7-afe6-215c53ae4aba/edit?viewport_loc=-175%2C29%2C2219%2C1151%2CqOXwPx8sbkf~&invitationId=inv_4664376a-d244-4bde-9003-d7d1e637cfd3" target="_blank">Lucid Charts</a>)     
 
 **Note:**  Amazon provides a useful style guide and digital assets at https://aws.amazon.com/architecture/icons/.   
-<img width="450" alt="Screenshot 2023-02-14 at 6 36 04 PM" src="https://user-images.githubusercontent.com/1646055/218887221-9b29456e-0f36-4969-b058-b81f13499d43.png">
+<img width="450" alt="Screenshot 2023-02-14 at 6 36 04 PM" src="https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/main/assets/Cruddur%20-%20Diagrams%20-%20Logical.png">
 #### Creating an admin account
 My objectives here were to create an admin account and enabled multi-factor authentication (MFA). I have an existing account prior to this project so I decided to use AWS organizations https://aws.amazon.com/organizations/ to make account management easier. As such, I created an new orgination and within the organizations, I added a new AWS account for this project.  
 

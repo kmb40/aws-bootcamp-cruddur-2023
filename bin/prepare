@@ -17,5 +17,6 @@ source "$DB_PATH/create"
 source "$DB_PATH/schema-load"
 source "$DB_PATH/seed"
 python "$DB_PATH/update_cognito_user_ids" # previouly used python instead of source. test if fail. 4/3/23 KMB. 4/4/23 Reverted back to python as before after faulure to run. KMB
+python "$DB_PATH/migrate"
 python "$DDB_PATH/schema-load"
 python "$DDB_PATH/seed"

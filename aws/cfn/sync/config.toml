@@ -1,0 +1,9 @@
+[deploy]
+bucket = 'cfn-artifacts-kmb'
+region = 'us-east-1'
+stack_name = 'CrdSyncRole'
+
+[parameters]
+GitHubOrg = 'kmb40'
+RepositoryName = 'aws-bootcamp-cruddur-2023'
+OIDCProviderArn = ''

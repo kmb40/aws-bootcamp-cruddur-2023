@@ -109,4 +109,6 @@ npm run build
 #### Clean Up Part 2
 - Continued to reach a state where the application was stable although not all functionality was addressed.
 - Made substantial changes to multiples files.
-- Move files from the development enviroment into the AWS production environment. 
+- Moved files from the development enviroment into the AWS production environment using Cloudformation for the backend and the sync tool for the frontend.
+
+### BootCamp Complete

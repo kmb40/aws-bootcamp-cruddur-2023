@@ -12,11 +12,12 @@ This repository contains my notes, details, insights, and a version of the [orig
 
 ### Bootcamp Official Source
 | Cloud Bootcamp 2023 |
-|------------------------------|
+|----|
 | https://aws.cloudprojectbootcamp.com/  |
 
 ### Target Audience
 The goal of this bootcamp is to help students who have acquired associate-level knowledge and are at a point where they realize they need a cloud project on their resume, to progress their career goals.   
+<img src="/assets/tech-gap.png" width=450>   
 https://docs.google.com/document/d/19XMyd5zCk7S9QT2q1_Cg-wvbnBwOge7EgzgvtVCgcz0
 
 ### Install 

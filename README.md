@@ -8,7 +8,7 @@
 ### Introduction
 The [FREE AWS Cloud Project Bootcamp 2023](https://aws.cloudprojectbootcamp.com/) is a comprehensive training program that aims to equip individuals with the necessary skills and knowledge to sucessfully design, build, and implement a cloud project. Through hands-on experience, participants will learn how to apply their cloud expertise in a practical setting and showcase their abilities to potential employers or organizations.
 
-This repository contains my notes, details, insights, and a version of the [original codebase](https://github.com/omenking/aws-bootcamp-cruddur-2023) that has been re-configured and updated to meet the goals and objectives of the bootcamp outliined in the ["Journaling"](https://github.com/kmb40/aws-bootcamp-cruddur-2023/edit/main/README.md#journaling) section below. 
+This repository contains my notes, details, insights, and a version of the [original codebase](https://github.com/omenking/aws-bootcamp-cruddur-2023) that has been re-configured and updated to meet the goals and objectives of the bootcamp outliined in the ["Journaling"](README.md#journaling) section below. 
 
 #### Cruddur.net Home   
 <img src="/assets/2023-06-12_11-22-03.png" width="600" alt="Cruddur Home">

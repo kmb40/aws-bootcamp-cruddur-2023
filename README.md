@@ -10,7 +10,26 @@ The [FREE AWS Cloud Project Bootcamp 2023](https://aws.cloudprojectbootcamp.com/
 
 This repository contains my notes, details, insights, and a version of the [original codebase](https://github.com/omenking/aws-bootcamp-cruddur-2023) that has been re-configured and updated to meet the goals and objectives of the bootcamp outliined in the ["Journaling"](README.md#journaling) section below. 
 
-#### Cruddur.net Home   
+### Bootcamp Official Source
+| Cloud Bootcamp 2023 |
+|------------------------------|
+| https://aws.cloudprojectbootcamp.com/  |
+
+### Target Audience
+The goal of this bootcamp is to help students who have acquired associate-level knowledge and are at a point where they realize they need a cloud project on their resume, to progress their career goals.   
+https://docs.google.com/document/d/19XMyd5zCk7S9QT2q1_Cg-wvbnBwOge7EgzgvtVCgcz0
+
+### Install 
+This Bootcamp can be attempted following the videos, levergaging the journal and the cloud documentation around the web.  
+**NOTE:** There was a Discord and frequent Office hours with the Intructor which likely wont be able to leverage.
+
+### Prerequsite Knowledge   
+https://docs.google.com/document/d/19XMyd5zCk7S9QT2q1_Cg-wvbnBwOge7EgzgvtVCgcz0/edit#heading=h.uky4go531gtq   
+
+### Prerequsite Technologies   
+https://docs.google.com/document/d/19XMyd5zCk7S9QT2q1_Cg-wvbnBwOge7EgzgvtVCgcz0/edit#heading=h.msn4ccevl799
+
+#### [Cruddur.net Home](http://cruddur.net)   
 <img src="/assets/2023-06-12_11-22-03.png" width="600" alt="Cruddur Home">
 
 #### Cruddur.net Post   
@@ -22,14 +41,14 @@ This repository contains my notes, details, insights, and a version of the [orig
 #### Cruddur.net Messaging      
 <img src="/assets/logged-in.png" width="600" alt="Cruddur Home">
 
-## Journaling
-The `/journal` directory contains steps taken, lessons learned throught out the Bootcamp.
+## Journaling / Coursework / Labs
+The `/journal` directory contains steps taken and lessons learned throught out the Bootcamp.
 
 - [X] [Week 0 - Architecture and Billing](/journal/week0.md)
 - [X] [Week 1 - App Containerization](/journal/week1.md)
 - [X] [Week 2 - Distributed Tracing](/journal/week2.md)
 - [X] [Week 3 - Decentralized Authentication](/journal/week3.md)
-- [X] [Week 4 - Relational Databases - Postgres and RDS](/journal/week4.md)
+- [X] [Week 4 - Relational Databases - Postgres and AWS RDS](/journal/week4.md)
 - [X] [Week 5 - DynamoDB and Serverless Caching](/journal/week5.md)
 - [X] [Week 6 - 7 - Deploying “Serverless” Containers & Solving CORS with a Load Balancer and Custom Domain](/journal/week6.md)
 - [X] [Week 8 - Serverless Image Processing](/journal/week8.md)

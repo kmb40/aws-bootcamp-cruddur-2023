@@ -21,7 +21,7 @@ https://docs.google.com/document/d/19XMyd5zCk7S9QT2q1_Cg-wvbnBwOge7EgzgvtVCgcz0
 
 ### Install 
 This Bootcamp can be attempted following the videos, levergaging the journal and the cloud documentation around the web.  
-**NOTE:** There was a Discord and frequent Office hours with the Intructor which likely wont be able to leverage.
+**NOTE:** There was a Discord and frequent Office hours with the Intructor which you likely wont be able leverage.
 
 ### Prerequsite Knowledge   
 https://docs.google.com/document/d/19XMyd5zCk7S9QT2q1_Cg-wvbnBwOge7EgzgvtVCgcz0/edit#heading=h.uky4go531gtq   

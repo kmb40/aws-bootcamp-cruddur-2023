@@ -6,9 +6,18 @@
 - Cohort: 2023-A1  
 
 ### Introduction
-The [FREE AWS Cloud Project Bootcamp 2023](https://aws.cloudprojectbootcamp.com/) is a comprehensive training program that aims to equip individuals with the necessary skills and knowledge to sucessfully design, build, and implement a cloud project. Through hands-on experience, participants will learn how to apply their cloud expertise in a practical setting and showcase their abilities to potential employers or organizations.
+The [FREE AWS Cloud Project Bootcamp 2023](https://aws.cloudprojectbootcamp.com/) is a comprehensive training program that aims to equip individuals with the necessary skills and knowledge to successfully design, build, and implement a cloud project. Through hands-on experience, participants will learn how to apply their cloud expertise in a practical setting and showcase their abilities to potential employers or organizations.
 
-This repository contains my notes, details, insights, and a version of the [original codebase](https://github.com/omenking/aws-bootcamp-cruddur-2023) that has been re-configured and updated to meet the goals and objectives of the bootcamp outliined in the ["Journaling"](README.md#journaling) section below. 
+This repository contains my notes, details, insights, and a version of the [original codebase](https://github.com/omenking/aws-bootcamp-cruddur-2023) that has been re-configured and updated to meet the goals and objectives of the boot camp outlined in the ["Journaling"](README.md#journaling) section below.  
+
+### Architectural Diagrams
+<img src="/assets/Cruddur%20-%20Diagrams%20-%20Napkin.pdf" width=450>   
+
+#### Napkin  
+
+#### Conceptual   
+
+#### FINAL End State Diagram
 
 ### Bootcamp Official Source
 | Cloud Bootcamp 2023 |
@@ -16,18 +25,18 @@ This repository contains my notes, details, insights, and a version of the [orig
 | https://aws.cloudprojectbootcamp.com/  |
 
 ### Target Audience
-The goal of this bootcamp is to help students who have acquired associate-level knowledge and are at a point where they realize they need a cloud project on their resume, to progress their career goals.   
+The goal of this boot camp is to help students who have acquired associate-level knowledge and are at a point where they realize they need a cloud project on their resume, to progress their career goals.   
 <img src="/assets/tech-gap.png" width=450>   
 https://docs.google.com/document/d/19XMyd5zCk7S9QT2q1_Cg-wvbnBwOge7EgzgvtVCgcz0
 
 ### Install 
-This Bootcamp can be attempted following the videos, levergaging the journal and the cloud documentation around the web.  
-**NOTE:** There was a Discord and frequent Office hours with the Intructor which you likely wont be able leverage.
+This Bootcamp can be attempted following the videos, leveraging the journal and the cloud documentation around the web.  
+**NOTE:** There was a Discord and frequent Office hours with the instructor which you likely won't be able to leverage.
 
-### Prerequsite Knowledge   
+### Prerequisite Knowledge   
 https://docs.google.com/document/d/19XMyd5zCk7S9QT2q1_Cg-wvbnBwOge7EgzgvtVCgcz0/edit#heading=h.uky4go531gtq   
 
-### Prerequsite Technologies   
+### Prerequisite Technologies   
 https://docs.google.com/document/d/19XMyd5zCk7S9QT2q1_Cg-wvbnBwOge7EgzgvtVCgcz0/edit#heading=h.msn4ccevl799
 
 #### [Cruddur.net Home](http://cruddur.net)   
@@ -43,7 +52,7 @@ https://docs.google.com/document/d/19XMyd5zCk7S9QT2q1_Cg-wvbnBwOge7EgzgvtVCgcz0/
 <img src="/assets/logged-in.png" width="600" alt="Cruddur Home">
 
 ## Journaling / Coursework / Labs
-The `/journal` directory contains steps taken and lessons learned throught out the Bootcamp.
+The `/journal` directory contains steps taken and lessons learned throughout the Bootcamp.
 
 - [X] [Week 0 - Architecture and Billing](/journal/week0.md)
 - [X] [Week 1 - App Containerization](/journal/week1.md)

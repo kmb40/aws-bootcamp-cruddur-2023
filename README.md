@@ -20,7 +20,7 @@ This repository contains my notes, details, insights, and a version of the [orig
 #### Logical   
 <img src="/assets/Cruddur-Diagrams-Logical.png" width=450>
 
-#### FINAL End State Diagram
+#### FINAL (Actual) End State Diagram
 <img src="/assets/Cruddur-Diagrams-CFN.png" width=450>   
 
 ### Bootcamp Official Source

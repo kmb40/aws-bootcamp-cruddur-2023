@@ -11,13 +11,17 @@ The [FREE AWS Cloud Project Bootcamp 2023](https://aws.cloudprojectbootcamp.com/
 This repository contains my notes, details, insights, and a version of the [original codebase](https://github.com/omenking/aws-bootcamp-cruddur-2023) that has been re-configured and updated to meet the goals and objectives of the boot camp outlined in the ["Journaling"](README.md#journaling) section below.  
 
 ### Architectural Diagrams
-<img src="/assets/Cruddur%20-%20Diagrams%20-%20Napkin.pdf" width=450>   
-
 #### Napkin  
+<img src="/assets/Cruddur-Diagrams-Napkin.png" width=450>   
 
 #### Conceptual   
+<img src="/assets/Cruddur-Diagrams-Conceptual.png" width=450>   
+
+#### Logical   
+<img src="/assets/Cruddur-Diagrams-Logical.png" width=450>
 
 #### FINAL End State Diagram
+<img src="/assets/Cruddur-Diagrams-CFN.png" width=450>   
 
 ### Bootcamp Official Source
 | Cloud Bootcamp 2023 |

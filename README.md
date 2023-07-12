@@ -23,6 +23,9 @@ This repository contains my notes, details, insights, and a version of the [orig
 #### FINAL (Actual) End State Diagram
 <img src="/assets/Cruddur-Diagrams-CFN.png" width=450>   
 
+##### FINAL (Actual) Slides
+<a href="https://docs.google.com/presentation/d/1Ela2gPqVx_jVDIKNEy2ZlmZmZgLG9BCwljhKga5FIc4/edit?usp=sharing"><img src="/assets/Cruddur-Diagrams-CFN.png" width=450></a>  
+
 ### Bootcamp Official Source
 | Cloud Bootcamp 2023 |
 |----|

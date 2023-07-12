@@ -24,7 +24,7 @@ This repository contains my notes, details, insights, and a version of the [orig
 <img src="/assets/Cruddur-Diagrams-CFN.png" width=450>   
 
 ##### FINAL (Actual) Slides
-<a href="https://docs.google.com/presentation/d/1-mzaS342jwnlFquBMsKBcpNZJ2xC6JOg4ukMHtkYz40/edit?usp=sharing"><img src="/assets/Cruddur-Diagrams-CFN.png" width=250></a>  
+<a href="https://docs.google.com/presentation/d/e/2PACX-1vTPSenXB8KpLXUJYnSA9ZYlI7xXBSDC0wIt-fI3ul0OxwP0oTQeqGiZbiOwn5gHRXdfz7Sj0v6288Jv/pub?start=true&loop=false&delayms=3000"><img src="/assets/Cruddur-Diagrams-CFN.png" width=250></a>  
 
 ### Bootcamp Official Source
 | Cloud Bootcamp 2023 |

@@ -1,6 +1,7 @@
 # Week 9 — CI/CD with CodePipeline, CodeBuild and CodeDeploy
 
-The following information outlines tasks that I've completed for Week 9 of the bootcamp. 
+The following information outlines tasks that I've completed for Week 9 of the BootCamp.   
+<img src="/assets/cicd-codebuild.png" width="650">   
 
 The objective is to automate code deployment whenever a pull request is made on the repo.
 

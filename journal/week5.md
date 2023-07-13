@@ -1,6 +1,7 @@
 # Week 5 — DynamoDB and Serverless Caching (HELL WEEK)
 
 The following information outlines tasks that I've completed for Week 5 of the bootcamp.  
+<img src="/assets/dynamodb.png" width="450">   
 
 Due to the complexity of this weeks challenge it should be understood that a combination of conusming video content, reading this journal and having access to an environement for practical application and testing are essential to completing these tasks.
 

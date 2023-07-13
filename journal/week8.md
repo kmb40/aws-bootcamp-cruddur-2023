@@ -3,7 +3,7 @@
 The following information outlines tasks that I've completed for Week 8 of the bootcamp.  
 
 The **objective** was to allow end users of the application to upload their own profile avatar. To accomplish this, I developed and deployed a serverless functionality with object storage and event-bus actions.  
-<img src="/assets/image-processing.png" width=450>
+<img src="/assets/serverless.png" width=650> 
 <figcaption>Serverless Image Process</figcaption>   
 <br/><br/>  
 
@@ -20,7 +20,7 @@ The **objective** was to allow end users of the application to upload their own 
 ### Prep Environment 
 
 #### Installed the AWS Cloud Development Kit (CDK)
-Essentially the CDK is used for creating, managing, and deleting infrastructure (services, VMs, DBs, etc) using a progaming language. CDK accomplishes this by producing CloudFormation templates, which are what is used to build your AWS infrastructure. [Reference - AWS Docs on CDK](https://docs.aws.amazon.com/cdk/v2/guide/home.html)
+Essentially the CDK is used for creating, managing, and deleting infrastructure (services, VMs, DBs, etc) using a programming language. CDK accomplishes this by producing CloudFormation templates, which are what is used to build your AWS infrastructure. [Reference - AWS Docs on CDK](https://docs.aws.amazon.com/cdk/v2/guide/home.html)
 
 #### Bootstraped environment
 The purpose of bootstrapping is to create a deployment environment in an AWS account that can be used to store and manage the resources required to deploy and manage CDK applications.  
@@ -35,7 +35,7 @@ cd /workspace/aws-bootcamp-cruddur-2023
 mkdir thumbing-serverless-cdk   
 ```   
 - Installed the AWS CDK using `npm install aws-cdk -g`.  
-- Installed typescript which is the langauge that we will be using. Command: `cdk init app --language typescript`.  
+- Installed typescript which is the language that we will be using. Command: `cdk init app --language typescript`.  
 - The [core of our code](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/main/thumbing-serverless-cdk/lib/thumbing-serverless-cdk-stack.ts) - built with typescript - used to build our infrastructure is `thumbing-serverless-cdk-stack.ts`. In this case we are creating an S3 bucket, Lambda functionality, SNS Topics, SNS Subscriptions, and attaching required policies.
 - To view the composed code prior to deploying it, use the command - `cdk synth` - which produces YAML in the terminal that outlines what your code will produce in the CloudFormation (CFN) once deployed.
 - To deploy use the composed `cdk deploy`.  
@@ -52,16 +52,16 @@ mkdir thumbing-serverless-cdk
 - Added a bucket policy for the assets s3 bucket.[Ref](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/main/aws/policies/assets-folder.json)
 
 #### Develop Lambda functions
-- One for Uploading. Obtains presigned url for s3 bucket and uploads/puts the image in the s3 bucket at that url. [Ref](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/main/aws/lambdas/cruddur-upload-avatar/function.rb)
+- One for Uploading. Obtains pre-signed url for s3 bucket and uploads/puts the image in the s3 bucket at that url. [Ref](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/main/aws/lambdas/cruddur-upload-avatar/function.rb)
 - One for Authorizing. Verify that the uploader has the authority to perform uploads (is signed in via cognito) [Ref](https://github.com/kmb40/aws-bootcamp-cruddur-2023/tree/main/aws/lambdas/lambda-authorizer)
-- One for Image Processing. Faciliate image processing when a file has been succesfully uplodaed to the uploads S3 bucket. [Ref](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/main/aws/lambdas/process-images/index.js)
+- One for Image Processing. Facilitate image processing when a file has been successfully uploaded to the uploads S3 bucket. [Ref](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/main/aws/lambdas/process-images/index.js)
 
 ##### Configured API Gateway
 - Configured HTTP API Gateway.  
 - Created a POST routed to `avatar/uploads`.  
 - Attached [Authorizer](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/main/aws/lambdas/lambda-authorizer/index.js) to the route.  
 - Integrate [upload lambda function](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/main/aws/lambdas/cruddur-upload-avatar/function.rb) to the route.  
-**Note:** Activating access logging for the "default" stage caused noticable daily spend.  
+**Note:** Activating access logging for the "default" stage caused noticeable daily spend.  
 
 #### Configured SNS
 
@@ -82,17 +82,17 @@ EditProfileButton.js
 - Styled profile page.
 
 ### Implemented Migrations Backend Endpoint and Profile Form  
-- Configured migration and rollback database funtions.
-- Setup popup form for capturing bio information.
-    - Note: Be sure to call your own @handle when viewing profile.
+- Configured migration and rollback database functions.
+- Set up popup form for capturing bio information.
+    - Note: Be sure to call your own @handle when viewing your profile.
 
 ### Implemented Avatar Uploading
-- Implement client side upload for S3.
+- Implement client-side upload for S3.
 - Leveraged API gateway
 - Installed aws jwt verify using `npm install aws-jwt-verify --save`
 
 ### Fixed CORS API Gateway Issue
-- Conducted extensive troubleshooting to resovled CORS issues during avatar upload.
+- Conducted extensive troubleshooting to resolve CORS issues during avatar upload.
     - Assessed API Gateway
     - Assessed LambdaAuthorizer function
     - Assessed LambdaUpload function

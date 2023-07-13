@@ -1,6 +1,7 @@
 # Week 10—11 - CloudFormation Part 1&2
 
-The following information outlines tasks that I've completed for Week 10 of the bootcamp. 
+The following information outlines tasks that I've completed for Week 10 of the BootCamp.   
+<img src="/assets/cfn.png" width="450">
 
 The objective is to create and deploy a CloudFormation (CFN) Template for our cluster and load balancer.
 

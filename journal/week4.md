@@ -1,6 +1,7 @@
 # Week 4 — Postgres and RDS
 
 The following information outlines tasks that I've completed for Week 4 of the bootcamp.
+<img src="/assets/rds-postgres.png" width="450">   
 
 Watched a series of videos and attended the live stream.
 #### 1. [Attended Week 4 Live Stream](https://www.youtube.com/watch?v=EtD7Kv5YCUs) 

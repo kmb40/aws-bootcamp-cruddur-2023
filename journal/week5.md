@@ -3,12 +3,12 @@
 The following information outlines tasks that I've completed for Week 5 of the bootcamp.  
 <img src="/assets/dynamodb.png" width="450">   
 
-Due to the complexity of this weeks challenge it should be understood that a combination of conusming video content, reading this journal and having access to an environement for practical application and testing are essential to completing these tasks.
+Due to the complexity of this weeks challenge it should be understood that a combination of consuming video content, reading this journal, and having access to an environment for practical application and testing are essential to completing these tasks.
 
 #### 1. [Attended Week 5 Live Stream](https://www.youtube.com/watch?v=5oZHNOaL8Og) 
 
 ##### DynamoDB Data Modeling for Cruddur
-This critical planning step was perforemd and discussed during the video. The outcome - a single table desgin was the model that wiil be used for this application as illustrated in "Fig Data Modeling".  
+This critical planning step was performed and discussed during the video. The outcome - a single table design was the model that will be used for this application as illustrated in "Fig Data Modeling".  
 <img src="/assets/DynamoDB%20Modelling.png" width=450>
 <figcaption>Fig Data Modeling</figcaption>   
 <br/><br/>  
@@ -18,7 +18,7 @@ This critical planning step was perforemd and discussed during the video. The ou
 
 #### Implemented conversations
 ##### Configured Environment for DynamoDB (local)
-I installed "Boto3" by adding it to the [requirements.txt](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-5/backend-flask/requirements.txt) and running ``` pip intall -r requirments.txt .``` Additionally, I added this to the [gitpod.yml](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-5/.gitpod.yml) file with the name "flask" so that this installation would be automatted for future Gitpod workspace spin ups.  
+I installed "Boto3" by adding it to the [requirements.txt](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-5/backend-flask/requirements.txt) and running ``` pip install -r requirments.txt .``` Additionally, I added this to the [gitpod.yml](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-5/.gitpod.yml) file with the name "flask" so that this installation would be automated for future Gitpod workspace spin ups.  
 
 I created a library for DynamoDB and stored it in a newly created file ```backend-flask/lib/ddb.py```. [Ref](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-5/backend-flask/lib/ddb.py) 
 
@@ -33,7 +33,7 @@ I created a library for DynamoDB and stored it in a newly created file ```backen
 * Created `backend-flask/bin/ddb/patterns/get-conversation` to display messages associated with the hard-coded message_group_uuid. [Ref](https://github.com/kmb40/aws-bootcamp-cruddur-2023/commit/e30026356751b5587406d56c5d9110e0675a01d4)
 * Created `backend-flask/bin/ddb/patterns/list-conversations` to display message groups. [Ref](https://github.com/kmb40/aws-bootcamp-cruddur-2023/commit/e30026356751b5587406d56c5d9110e0675a01d4)
 
-##### Envrionement preperation for implemention and testing
+##### Environment preparation for implementation and testing
 **Note:** An AWS Cognito ID user must exist for this functionality to work. Noted as "Important" above.
 Also, replacing the local cookie authentication method with the AWS Cognito token authentication method is a critical step. I needed to update the `frontend-react-js/MessageGroupPage.js` file **and several others** to replace the cookie method with the token method.  
 
@@ -42,7 +42,7 @@ This is shown with steps in the following section of the video that - https://yo
 ##### Before the functionality can be tested and implemented, the databases must be prepared as follows:
 - Start local postgres database which contains seed data for tables “activity” and “users”?
 - Start local dynamobo database which will receive seed data from postgres db.
-- `./bin/db/setup` - drops, creates, schema-load, seed, updates cognito user ids (specifically those user ids that exists in AWS Cognito). [Ref](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-5/backend-flask/bin/db/seed)
+- `./bin/db/setup` - drops, creates, schema-load, seed, updates cognito user ids (specifically those user ids that exist in AWS Cognito). [Ref](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-5/backend-flask/bin/db/seed)
 - `./bin/ddb/schema-load` - setups up tables for dynamodb. [Ref](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-5/backend-flask/bin/ddb/schema-load)
 - `./bin/ddb/seed` - loads “activities” and “users” data into dynamodb. [Ref](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-5/backend-flask/bin/ddb/seed)
 
@@ -74,8 +74,8 @@ Objective - As a user, I need the ability to update an existing conversation wit
 #### Implemented (Pattern E) Updating a Message Group using DynamoDB Streams
 
 Update dynamoDB records for all messages.  
-Preperations are as follows:
-- Point to the production instanse of DynamoDB instead of the local so I commented out `AWS_ENDPOINT_URL` in the docker-compose.yml.
+Preparations are as follows:
+- Point to the production instance of DynamoDB instead of the local so I commented out `AWS_ENDPOINT_URL` in the docker-compose.yml.
 - Then complete the steps [outlined above.](https://github.com/kmb40/aws-bootcamp-cruddur-2023/edit/week-5/journal/week5.md#before-the-functionality-can-be-tested-and-implemented-the-databases-must-be-prepared-as-follows)
 - Create a table named "cruddur-messages" in AWS DynamoDB.
   - Turn on DynamoDB stream with "new image".
@@ -95,4 +95,4 @@ Preperations are as follows:
 <figcaption>Lambda Table</figcaption>   
 <br/><br/>     
 
-#### Objective met error free and fully functional.
+#### Objective met error-free and fully functional.

@@ -1,6 +1,7 @@
 # Week 3 — Decentralized Authentication
 
 The following information outlines tasks that I've completed for Week 3 of the bootcamp.
+<img src="/assets/aws-cognito.png" width="450">   
 
 Watched a series of videos and attended the live stream.
 #### 1. [Attended Week 3 Live Stream](https://www.youtube.com/watch?v=9obl7rVgzJw&list=PLBfufR7vyJJ7k25byhRXJldB5AiwgNnWv&index=40) 

@@ -1,4 +1,4 @@
-# FREE AWS Cloud Project Bootcamp 2023
+# AWS Cloud Project Bootcamp 2023
 
 <img src="https://codefactory-us-east-1-prod-default-build-badges.s3.amazonaws.com/passing.svg"/>
 

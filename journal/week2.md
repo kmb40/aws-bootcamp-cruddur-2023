@@ -4,7 +4,7 @@ The following information outlines tasks that I've completed for Week 2 of the b
 <img src="/assets/tracebility.png" width="450">   
 
 Watched a series of videos and attended the live stream.
-#### 1. [Attended Week 2 Live Stream]() 
+#### 1. [Attended Week 2 Live Stream](https://www.youtube.com/live/2GD9xCzRId4?feature=share) 
 #### 2. [Watched Spending Considerations](https://www.youtube.com/watch?v=2W3KeqCjtDY)
 #### 3. [Watched Security Observability](https://www.youtube.com/watch?v=bOf4ITxAcXc&list=PLBfufR7vyJJ7k25byhRXJldB5AiwgNnWv&index=31)
 #### 4. [Watched Instrument Honeycomb with OTEL](https://www.youtube.com/watch?v=2GD9xCzRId4&list=PLBfufR7vyJJ7k25byhRXJldB5AiwgNnWv&index=30)
@@ -19,7 +19,7 @@ Integrated Honeycomb into the Cruddur application. Configured tracing and a cust
 Integrated AWS Xray into the Cruddur application. Configured tracing, a custom segment and a custom subsegment as commented in [user activities](https://github.com/kmb40/aws-bootcamp-cruddur-2023/blob/week-2/backend-flask/services/user_activities.py)
 
 #### Instrumented AWS X-Ray Subsegments
-Made and tested the suggested changes succesfully.  See [details](https://github.com/kmb40/aws-bootcamp-cruddur-2023/edit/week-3/journal/week3.md#note-revisited-week-2---x-ray-subsegments-solved-as-it-was-added-after-i-had-submitted-homework-for-week-2-updated-week-2-journal-to-reflect-made-and-tested-the-suggested-changes-succesfully-hat-tip-to-olley-article-which-is-referenced-in-the-video--httpsolleyhashnodedevaws-free-cloud-bootcamp-instrumenting-aws-x-ray-subsegments).   
+Made and tested the suggested changes successfully.  See [details](https://github.com/kmb40/aws-bootcamp-cruddur-2023/edit/week-3/journal/week3.md#note-revisited-week-2---x-ray-subsegments-solved-as-it-was-added-after-i-had-submitted-homework-for-week-2-updated-week-2-journal-to-reflect-made-and-tested-the-suggested-changes-succesfully-hat-tip-to-olley-article-which-is-referenced-in-the-video--httpsolleyhashnodedevaws-free-cloud-bootcamp-instrumenting-aws-x-ray-subsegments).   
 <img src="/assets/xray-subsegment.png" width="450"> 
 
 #### Instrumented Cloudwatch Logs
